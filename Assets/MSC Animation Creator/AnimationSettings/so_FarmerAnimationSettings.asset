@@ -1,0 +1,1072 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52dd19a868651384290c347f42145580, type: 3}
+  m_Name: so_FarmerAnimationSettings
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::ManaSeedTools.CharacterAnimator.SO_FarmerAnimationSettings
+  list:
+  - animationType: run
+    animationName: down
+    keys: 30000000310000003300000030000000310000003300000033000000
+    keyXFlips: 00000001010101
+    keyTimer:
+    - 0
+    - 0.08
+    - 0.13
+    - 0.23
+    - 0.31
+    - 0.36
+    - 0.45
+    xFlip: 0
+  - animationType: run
+    animationName: up
+    keys: 34000000350000003700000034000000350000003700000037000000
+    keyXFlips: 00000001010101
+    keyTimer:
+    - 0
+    - 0.08
+    - 0.13
+    - 0.23
+    - 0.31
+    - 0.36
+    - 0.45
+    xFlip: 0
+  - animationType: run
+    animationName: left
+    keys: 40000000410000004600000043000000440000004700000047000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.08
+    - 0.13
+    - 0.23
+    - 0.31
+    - 0.36
+    - 0.45
+    xFlip: 1
+  - animationType: run
+    animationName: right
+    keys: 40000000410000004600000043000000440000004700000047000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.08
+    - 0.13
+    - 0.23
+    - 0.31
+    - 0.36
+    - 0.45
+    xFlip: 0
+  - animationType: walk
+    animationName: down
+    keys: 30000000310000003200000030000000310000003200000032000000
+    keyXFlips: 00000001010101
+    keyTimer:
+    - 0
+    - 0.1
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+    - 0.6
+    xFlip: 0
+  - animationType: walk
+    animationName: up
+    keys: 34000000350000003600000034000000350000003600000036000000
+    keyXFlips: 00000001010101
+    keyTimer:
+    - 0
+    - 0.1
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+    - 0.6
+    xFlip: 0
+  - animationType: walk
+    animationName: right
+    keys: 40000000410000004200000043000000440000004500000045000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.1
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+    - 0.6
+    xFlip: 0
+  - animationType: walk
+    animationName: left
+    keys: 40000000410000004200000043000000440000004500000045000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.1
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+    - 0.6
+    xFlip: 1
+  - animationType: jump
+    animationName: down
+    keys: 010000000200000001000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.45
+    xFlip: 0
+  - animationType: jump
+    animationName: up
+    keys: 110000001200000011000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.45
+    xFlip: 0
+  - animationType: jump
+    animationName: right
+    keys: 210000002200000021000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.45
+    xFlip: 0
+  - animationType: jump
+    animationName: left
+    keys: 210000002200000021000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.45
+    xFlip: 1
+  - animationType: push
+    animationName: down
+    keys: 080000000900000008000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.3
+    - 1
+    xFlip: 0
+  - animationType: push
+    animationName: up
+    keys: 180000001900000018000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.3
+    - 1
+    xFlip: 0
+  - animationType: push
+    animationName: right
+    keys: 280000002900000028000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.3
+    - 1
+    xFlip: 0
+  - animationType: push
+    animationName: left
+    keys: 280000002900000028000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.3
+    - 1
+    xFlip: 1
+  - animationType: pull
+    animationName: down
+    keys: 0a0000000b0000000a000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 1.1
+    xFlip: 0
+  - animationType: pull
+    animationName: up
+    keys: 1a0000001b0000001a000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 1.1
+    xFlip: 0
+  - animationType: pull
+    animationName: right
+    keys: 2a0000002b0000002a000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 1.1
+    xFlip: 0
+  - animationType: pull
+    animationName: left
+    keys: 2a0000002b0000002a000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 1.1
+    xFlip: 1
+  - animationType: plant
+    animationName: down
+    keys: 830000000c0000000c0000000c000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 0.5
+    - 0.6
+    xFlip: 0
+  - animationType: plant
+    animationName: up
+    keys: 930000001c0000001c0000001c000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 0.5
+    - 0.6
+    xFlip: 0
+  - animationType: plant
+    animationName: right
+    keys: a30000002c0000002c0000002c000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 0.5
+    - 0.6
+    xFlip: 0
+  - animationType: plant
+    animationName: left
+    keys: a30000002c0000002c0000002c000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 0.5
+    - 0.6
+    xFlip: 1
+  - animationType: water
+    animationName: down
+    keys: 83000000850000008500000085000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.35
+    - 0.45
+    - 0.55
+    xFlip: 0
+  - animationType: water
+    animationName: up
+    keys: 93000000950000009500000095000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.35
+    - 0.45
+    - 0.55
+    xFlip: 0
+  - animationType: water
+    animationName: right
+    keys: a3000000a5000000a5000000a5000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.35
+    - 0.45
+    - 0.55
+    xFlip: 0
+  - animationType: water
+    animationName: left
+    keys: a3000000a4000000a4000000a4000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.35
+    - 0.45
+    - 0.55
+    xFlip: 1
+  - animationType: carrywalk
+    animationName: down
+    keys: 50000000510000005200000050000000510000005200000052000000
+    keyXFlips: 00000001010101
+    keyTimer:
+    - 0
+    - 0.135
+    - 0.27
+    - 0.405
+    - 0.54
+    - 0.675
+    - 0.81
+    xFlip: 0
+  - animationType: carrywalk
+    animationName: up
+    keys: 54000000550000005600000054000000550000005600000056000000
+    keyXFlips: 00000001010101
+    keyTimer:
+    - 0
+    - 0.135
+    - 0.27
+    - 0.405
+    - 0.54
+    - 0.675
+    - 0.81
+    xFlip: 0
+  - animationType: carrywalk
+    animationName: right
+    keys: 60000000610000006200000063000000640000006500000065000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.135
+    - 0.27
+    - 0.405
+    - 0.54
+    - 0.675
+    - 0.81
+    xFlip: 0
+  - animationType: carrywalk
+    animationName: left
+    keys: 60000000610000006200000063000000640000006500000065000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.135
+    - 0.27
+    - 0.405
+    - 0.54
+    - 0.675
+    - 0.81
+    xFlip: 1
+  - animationType: workstand
+    animationName: up
+    keys: 7e0000007e0000007e000000
+    keyXFlips: 000101
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    xFlip: 0
+  - animationType: worksit
+    animationName: up
+    keys: 7f0000007f0000007f000000
+    keyXFlips: 000101
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    xFlip: 0
+  - animationType: wave
+    animationName: down
+    keys: 5c0000005d0000005d000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    xFlip: 0
+  - animationType: sing
+    animationName: down
+    keys: 3c0000003d0000003d000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.36
+    xFlip: 0
+  - animationType: guitar
+    animationName: down
+    keys: 4c0000004d0000004d000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.36
+    xFlip: 0
+  - animationType: horn
+    animationName: down
+    keys: 3e0000003f0000003f000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.36
+    xFlip: 0
+  - animationType: drums
+    animationName: down
+    keys: 4e0000004f0000004f000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.36
+    xFlip: 0
+  - animationType: thumbsup
+    animationName: down
+    keys: f3000000f3000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: stomp
+    animationName: down
+    keys: f5000000f5000000f5000000
+    keyXFlips: 000101
+    keyTimer:
+    - 0
+    - 0.16
+    - 0.32
+    xFlip: 0
+  - animationType: shocked
+    animationName: down
+    keys: f4000000f4000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: laugh
+    animationName: down
+    keys: f6000000f7000000f7000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.16
+    - 0.32
+    xFlip: 0
+  - animationType: sitsleep
+    animationName: down
+    keys: c4000000c4000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitsleep
+    animationName: up
+    keys: d4000000d4000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitsleep
+    animationName: right
+    keys: e4000000e4000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitsleep
+    animationName: left
+    keys: e4000000e4000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: sleep
+    animationName: down
+    keys: c7000000c7000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sleep
+    animationName: up
+    keys: d7000000d7000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sleep
+    animationName: right
+    keys: e7000000e7000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sleep
+    animationName: left
+    keys: e7000000e7000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: meditate
+    animationName: down
+    keys: 0f0000000f000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.6
+    xFlip: 0
+  - animationType: meditate
+    animationName: up
+    keys: 1f0000001f000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.6
+    xFlip: 0
+  - animationType: meditate
+    animationName: right
+    keys: 2f0000002f000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.6
+    xFlip: 0
+  - animationType: meditate
+    animationName: left
+    keys: 2f0000002f000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.6
+    xFlip: 1
+  - animationType: sitchair
+    animationName: down
+    keys: c3000000c3000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitchair
+    animationName: up
+    keys: d3000000d3000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitchair
+    animationName: right
+    keys: e3000000e3000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitchair
+    animationName: left
+    keys: e3000000e3000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: idle
+    animationName: down
+    keys: 0000000000000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: idle
+    animationName: up
+    keys: 1000000010000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: idle
+    animationName: right
+    keys: 2000000020000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: idle
+    animationName: left
+    keys: 2000000020000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: idle2
+    animationName: down
+    keys: c0000000c0000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: idle2
+    animationName: up
+    keys: d0000000d0000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: idle2
+    animationName: right
+    keys: e0000000e0000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitchair
+    animationName: left
+    keys: e0000000e0000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: impatient
+    animationName: down
+    keys: c1000000c2000000c2000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    xFlip: 0
+  - animationType: impatient
+    animationName: up
+    keys: d1000000d2000000d2000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    xFlip: 0
+  - animationType: impatient
+    animationName: right
+    keys: e1000000e2000000e2000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    xFlip: 0
+  - animationType: impatient
+    animationName: left
+    keys: e1000000e2000000e2000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    xFlip: 1
+  - animationType: sitfloor
+    animationName: down
+    keys: c5000000c5000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitfloor
+    animationName: up
+    keys: d5000000d5000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitfloor
+    animationName: right
+    keys: e5000000e5000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 0
+  - animationType: sitfloor
+    animationName: left
+    keys: e5000000e5000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: sitfloor2
+    animationName: down
+    keys: c6000000c6000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: sitfloor2
+    animationName: up
+    keys: d6000000d6000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: sitfloor2
+    animationName: right
+    keys: e6000000e6000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: sitfloor2
+    animationName: left
+    keys: e6000000e6000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.45
+    xFlip: 1
+  - animationType: carryrun
+    animationName: down
+    keys: 50000000510000005300000050000000510000005300000053000000
+    keyXFlips: 00000001010101
+    keyTimer:
+    - 0
+    - 0.08
+    - 0.13
+    - 0.23
+    - 0.31
+    - 0.36
+    - 0.45
+    xFlip: 0
+  - animationType: carryrun
+    animationName: up
+    keys: 54000000550000005700000054000000550000005700000057000000
+    keyXFlips: 00000001010101
+    keyTimer:
+    - 0
+    - 0.08
+    - 0.13
+    - 0.23
+    - 0.31
+    - 0.35
+    - 0.45
+    xFlip: 0
+  - animationType: carryrun
+    animationName: right
+    keys: 60000000610000006600000063000000640000006700000067000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.08
+    - 0.13
+    - 0.23
+    - 0.31
+    - 0.36
+    - 0.45
+    xFlip: 0
+  - animationType: carryrun
+    animationName: left
+    keys: 60000000610000006600000063000000640000008200000082000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.08
+    - 0.13
+    - 0.23
+    - 0.31
+    - 0.36
+    - 0.45
+    xFlip: 1
+  - animationType: carryjump
+    animationName: down
+    keys: 04000000050000000400000004000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.3
+    - 0.55
+    xFlip: 0
+  - animationType: carryjump
+    animationName: up
+    keys: 14000000150000001400000014000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.3
+    - 0.55
+    xFlip: 0
+  - animationType: carryjump
+    animationName: right
+    keys: 24000000250000002400000024000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.3
+    - 0.55
+    xFlip: 0
+  - animationType: carryjump
+    animationName: left
+    keys: 24000000250000002400000024000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.3
+    - 0.55
+    xFlip: 1
+  - animationType: carrythrow
+    animationName: down
+    keys: 060000000700000007000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.12
+    - 0.52
+    xFlip: 0
+  - animationType: carrythrow
+    animationName: up
+    keys: 160000001700000017000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.12
+    - 0.52
+    xFlip: 0
+  - animationType: carrythrow
+    animationName: right
+    keys: 260000002700000027000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.12
+    - 0.52
+    xFlip: 0
+  - animationType: carrythrow
+    animationName: left
+    keys: 260000002700000027000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.12
+    - 0.52
+    xFlip: 1
+  - animationType: pickup
+    animationName: down
+    keys: 820000000300000003000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 0.6
+    xFlip: 0
+  - animationType: pickup
+    animationName: up
+    keys: 920000001300000013000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 0.6
+    xFlip: 0
+  - animationType: pickup
+    animationName: right
+    keys: a20000002300000023000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 0.6
+    xFlip: 0
+  - animationType: pickup
+    animationName: left
+    keys: a20000002300000023000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.4
+    - 0.6
+    xFlip: 1
+  - animationType: carryidle
+    animationName: down
+    keys: 03000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    xFlip: 0
+  - animationType: carryidle
+    animationName: up
+    keys: 13000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    xFlip: 0
+  - animationType: carryidle
+    animationName: right
+    keys: 23000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    xFlip: 0
+  - animationType: carryidle
+    animationName: left
+    keys: 23000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    xFlip: 1
+  - animationType: overhandstrike
+    animationName: down
+    keys: 8000000081000000820000008200000082000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 0
+  - animationType: overhandstrike
+    animationName: up
+    keys: 9000000091000000920000009200000092000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 0
+  - animationType: overhandstrike
+    animationName: right
+    keys: a0000000a1000000a2000000a2000000a2000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 0
+  - animationType: overhandstrike
+    animationName: left
+    keys: a0000000a1000000a2000000a2000000a2000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 1
+  - animationType: forehandstrike
+    animationName: down
+    keys: 8300000084000000850000008500000085000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 1
+  - animationType: forehandstrike
+    animationName: up
+    keys: 9300000094000000950000009500000095000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 1
+  - animationType: forehandstrike
+    animationName: right
+    keys: a3000000a4000000a5000000a5000000a5000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 1
+  - animationType: forehandstrike
+    animationName: left
+    keys: a3000000a4000000a5000000a5000000a5000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 1
+  - animationType: backhandstrike
+    animationName: down
+    keys: 84000000850000000c0000000c0000000c000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 0
+  - animationType: backhandstrike
+    animationName: up
+    keys: 94000000950000001c0000001c0000001c000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 0
+  - animationType: backhandstrike
+    animationName: right
+    keys: a4000000a50000002c0000002c0000002c000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 0
+  - animationType: backhandstrike
+    animationName: left
+    keys: a4000000a50000002c0000002c0000002c000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.18
+    - 0.26
+    - 0.34
+    - 0.64
+    xFlip: 1

@@ -1,0 +1,236 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrarySourceAsset
+  m_Library:
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: animal_walk_down_0
+      m_Hash: 538361728
+      m_Sprite: {fileID: -1357572876, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1357572876, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_left_0
+      m_Hash: 1071723280
+      m_Sprite: {fileID: -1635727213, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1635727213, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_right_0
+      m_Hash: 404887136
+      m_Sprite: {fileID: 1769969994, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1769969994, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_up_0
+      m_Hash: 295894819
+      m_Sprite: {fileID: 239713947, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 239713947, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: Walk
+    m_Hash: 765711723
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: animal_walk_down_0
+      m_Hash: 538361728
+      m_Sprite: {fileID: -1357572876, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1357572876, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_down_1
+      m_Hash: 387026710
+      m_Sprite: {fileID: -1697352558, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1697352558, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_down_2
+      m_Hash: 236510892
+      m_Sprite: {fileID: 1545001325, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1545001325, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_down_3
+      m_Hash: 958393914
+      m_Sprite: {fileID: 16654965, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 16654965, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_down_4
+      m_Hash: 662403993
+      m_Sprite: {fileID: -1627570277, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1627570277, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_down_5
+      m_Hash: 276581135
+      m_Sprite: {fileID: -1153585186, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1153585186, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_left_0
+      m_Hash: 1071723280
+      m_Sprite: {fileID: -1635727213, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1635727213, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_left_1
+      m_Hash: 149291910
+      m_Sprite: {fileID: -114657465, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -114657465, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_left_2
+      m_Hash: 300896828
+      m_Sprite: {fileID: -1669930927, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1669930927, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_left_3
+      m_Hash: 652763818
+      m_Sprite: {fileID: -1161763200, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1161763200, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_left_4
+      m_Hash: 948762377
+      m_Sprite: {fileID: -1983183400, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1983183400, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_left_5
+      m_Hash: 260818847
+      m_Sprite: {fileID: 828942605, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 828942605, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_right_0
+      m_Hash: 404887136
+      m_Sprite: {fileID: 1769969994, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1769969994, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_right_1
+      m_Hash: 790963958
+      m_Sprite: {fileID: 1844586722, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1844586722, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_right_2
+      m_Hash: 908883788
+      m_Sprite: {fileID: -1069629432, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1069629432, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_right_3
+      m_Hash: 19613658
+      m_Sprite: {fileID: -1534094191, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1534094191, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_right_4
+      m_Hash: 525324921
+      m_Sprite: {fileID: 817372355, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 817372355, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_right_5
+      m_Hash: 675865327
+      m_Sprite: {fileID: 1718712318, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1718712318, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_up_0
+      m_Hash: 295894819
+      m_Sprite: {fileID: 239713947, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 239713947, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_up_1
+      m_Hash: 648400821
+      m_Sprite: {fileID: -54605921, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -54605921, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_up_2
+      m_Hash: 1068277263
+      m_Sprite: {fileID: 989234441, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 989234441, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_up_3
+      m_Hash: 145469081
+      m_Sprite: {fileID: 1954105734, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1954105734, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_up_4
+      m_Hash: 382679866
+      m_Sprite: {fileID: 772197635, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 772197635, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_walk_up_5
+      m_Hash: 566758316
+      m_Sprite: {fileID: -777611150, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -777611150, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 24
+  - m_Name: chEat
+    m_Hash: 1006470532
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: animal_eat_down_0
+      m_Hash: 410144413
+      m_Sprite: {fileID: -1099035524, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1099035524, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_down_1
+      m_Hash: 796229131
+      m_Sprite: {fileID: -1216081493, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1216081493, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_down_2
+      m_Hash: 914108337
+      m_Sprite: {fileID: 1492899481, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1492899481, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_left_0
+      m_Hash: 126206477
+      m_Sprite: {fileID: 666724061, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 666724061, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_left_1
+      m_Hash: 813888155
+      m_Sprite: {fileID: 1202008958, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1202008958, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_left_2
+      m_Hash: 697017121
+      m_Sprite: {fileID: -1176109112, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1176109112, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_right_0
+      m_Hash: 995892808
+      m_Sprite: {fileID: -1246174570, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1246174570, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_right_1
+      m_Hash: 207302366
+      m_Sprite: {fileID: -1571657273, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1571657273, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_right_2
+      m_Hash: 357728100
+      m_Sprite: {fileID: -1645872662, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1645872662, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_up_0
+      m_Hash: 795962942
+      m_Sprite: {fileID: 219697878, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 219697878, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_up_1
+      m_Hash: 410410664
+      m_Sprite: {fileID: -1299490999, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1299490999, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    - m_Name: animal_eat_up_2
+      m_Hash: 25104146
+      m_Sprite: {fileID: 1182409748, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1182409748, guid: 693d135c31f92bb44ada66a6bf7f7377, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 12
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 639060607434103402
+  m_Version: 1

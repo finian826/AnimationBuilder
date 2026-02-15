@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57832b317eeede43ba5d15bc6eba84a, type: 3}
+  m_Name: so_FarmerHorseAnimationSettings
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::ManaSeedTools.CharacterAnimator.SO_FarmerHorseAnimationSettings
+  list:
+  - animationType: idle
+    animationName: down
+    bottomCategory: IdleBottom
+    bottomHorseKeyLabels:
+    - idle-down-0
+    - idle-down-1
+    - idle-down-2
+    - idle-down-2
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    topCategory: IdleTop
+    topHorseKeyLabels:
+    - idle-down-0
+    - idle-down-1
+    - idle-down-2
+    - idle-down-2
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    horseXFlip: 0
+    buildFarmer: 0
+    farmerKeys: 
+    farmerFrameOffset: {x: 0, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer: []
+    farmerXFlip: 0
+  - animationType: walk
+    animationName: down
+    bottomCategory: WalkBottom
+    bottomHorseKeyLabels:
+    - walk-down-0
+    - walk-down-1
+    - walk-down-2
+    - walk-down-3
+    - walk-down-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    topCategory: WalkTop
+    topHorseKeyLabels:
+    - walk-down-0
+    - walk-down-1
+    - walk-down-2
+    - walk-down-3
+    - walk-down-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    horseXFlip: 0
+    buildFarmer: 0
+    farmerKeys: 
+    farmerFrameOffset: {x: 0, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer: []
+    farmerXFlip: 0

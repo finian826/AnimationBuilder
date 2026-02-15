@@ -1,0 +1,6023 @@
+fileFormatVersion: 2
+guid: 703e4369cd019f94198a93b60831a862
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5338130529677619602
+    second: mana seed 3-color ramps_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ec5edd0962be5b0800000000000000
+      internalID: -5338130529677619602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 126
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37aefdf3413cde34d9b6146c3d9e73a0
+      internalID: -2080650271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 126
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c465134fdc0ed9e439799ceb24fc7acb
+      internalID: 781607476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 126
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d40539f72241d49ac897d8e73efa55
+      internalID: 173368362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f4a2b746c8b554285c18abf5080879
+      internalID: 1201683429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 124
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28c328c4dcb9ce439d1457d7a265ea0
+      internalID: -2125109153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 124
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728710df4816e324880c64c00d735237
+      internalID: 809690863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_7
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 124
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d32f228e4f1e146ba36931e48d7a21
+      internalID: 630703637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6053631a43680f54db7ec0a791e2c082
+      internalID: 1576705498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 122
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e14a7309b2e584fafe79edaafbb8ee
+      internalID: 979275449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 122
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121f485f1dfc26e4aad6826c2262d158
+      internalID: 2135540748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_11
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 122
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e8f9e21a14dbd448e1204c33ecaa95
+      internalID: -99217797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d12b3e1fb7b15749b38296cc707459b
+      internalID: -670132174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_13
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 120
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88a687ab5377a64cbe7340dd13fdaec
+      internalID: -750990932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 120
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccde6a99d510bfa4e9a4dbd060b1e156
+      internalID: -1175499919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 120
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b116506cf138149865940f37defaf2
+      internalID: 809556994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 118
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977fd91531e499d488b92e25d1f1803e
+      internalID: 968704035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 118
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a0800bf617dc54faabedf4bdbf55cb
+      internalID: 654638463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_18
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 118
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ada79eeb2b83fa4e9550af6d1ba1429
+      internalID: 1011078286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_19
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 118
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ef19eea69f99847a6efee11636e983
+      internalID: 864682856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9720b8739f24c6499d335a8b694de0f
+      internalID: 1326582537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 116
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466ff209c0a63444c8bf906e0a7b753c
+      internalID: -719010428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_22
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 116
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5aac17ae2a600488b23f9560c67e7e
+      internalID: -1812256467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_23
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 116
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4475adcc490195c43abc55025eacf6d5
+      internalID: 630564994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b389c8a60a236d84fa35ff6dac2e5398
+      internalID: 951710598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_25
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 114
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae9553d7c9fdf64ab146469096ceb78
+      internalID: -1885402217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_26
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 114
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbe1ec7ef9f93047b65a3397ac8c6bd
+      internalID: 385877883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_27
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 114
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a867098a4f7b2848900a26d766fcb48
+      internalID: 576188064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7fe9e550315f4469d20e82bcc29455
+      internalID: 1556796305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_29
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 112
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4680012e314533743b4e642cbda74ca2
+      internalID: 2028504211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_30
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 112
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34906737e52cf245bf166254f987658
+      internalID: 1150405862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_31
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 112
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ae5bca0891936438d529bbf276741e
+      internalID: 370724773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4cf30f48f40f74d9e5e4c012707167
+      internalID: 45500917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_33
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 110
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b68475a76503084c8487e3d6f5026e8
+      internalID: -1763647098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_34
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 110
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d0d7033fae97f489ab0304a3d01a6f
+      internalID: 29365346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_35
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 110
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75839a5f837d6314faa36540e05a6adb
+      internalID: 2137726134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b68c2bbf0a6950419dde34e544954ad
+      internalID: 1966155639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_37
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 108
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86dc00e4ffffbff42b0e093f8fd7fd34
+      internalID: -344176035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_38
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 108
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0b8457a37b0624abb570332b7d3177
+      internalID: 111124198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_39
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 108
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3627155e199942243a63e7796e9a1193
+      internalID: -1615907073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 106
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54bca7a38e6fbbb4c83d8c1d81350aaa
+      internalID: 721042845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_41
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 106
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26dca8e14f45d3c4a961a0b5a271ddcc
+      internalID: -835891178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_42
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 106
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa4d458f26632444a9905955acd4182
+      internalID: 1414703327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_43
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 106
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea31aea9c9fa7fe44a179af05d8fe314
+      internalID: -1433839877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146cf43e3d7ac10429c6597e221892f2
+      internalID: 1407915814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_45
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d1579117cd8ee43b707803d33a5f0a
+      internalID: 1997304256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_46
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 104
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56110abc5d2fef418c23f1b7fcb9c13
+      internalID: -376901892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_47
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 104
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2b9fa2b4b85e1449682a527480007b
+      internalID: 927569949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1a5dab96ec25e4baf1d5462dc87acb
+      internalID: -1349480550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_49
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 102
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac4414b8c74760458278a1b91083a3e
+      internalID: -695605214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_50
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 102
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2ce624d139fb64e9c46cab818f6373
+      internalID: -1812856673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_51
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 102
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa4a1cc359fa84478454b7e5c853944
+      internalID: -348352871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928b24732b017634c94b68b45776eb50
+      internalID: -1341339058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_53
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 100
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab22dcbf578202d4d8748e73ffaa6954
+      internalID: 639129249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_54
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 100
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e2daaa151b0704abcc440bcaefd3b6
+      internalID: 119476365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_55
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 100
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a7b81f865f8e2449b0eac8d92716ae
+      internalID: 786767758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56ec8984fa2fdf419a4e102fbecd56b
+      internalID: -1222920820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_57
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 98
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a11708ff95c93468ff0fb5c9acc910
+      internalID: -2123880254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_58
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 98
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dcafb5da9b851d419b0ad1e68c4d4cd
+      internalID: -2112080710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_59
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 98
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22ccf6c440f4b949bb2650f2c9056b4
+      internalID: -2110128523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac77952641ef7b408d8b3b8baa82701
+      internalID: -231149355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_61
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 96
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421ea8a377eed074e9d4b2f85db3688a
+      internalID: 1219746512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_62
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 96
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c975369f9c5eb394ebcfa2c7a9f7cbef
+      internalID: 1205611593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_63
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 96
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443b2e38b178bda44830211a14f75752
+      internalID: -630502982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bb332b614a4a24e85e1aededb142aa
+      internalID: -1630690082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_65
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 94
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ab383cc6bd76d4aa3dc0f091cd100b
+      internalID: 2006331256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_66
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 94
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ae73d08e047934bad66c8e4065e9c0
+      internalID: -657933367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_67
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 94
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ba4bfeefd461e45a2eafa7587cc722
+      internalID: 1549225384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e066a6ad77879e94ab62397e23e255dc
+      internalID: 1891743033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_69
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 92
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962e8d8d9dfcd7d4189bafe714fb3039
+      internalID: 761848760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_70
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 92
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036749649e780754592eb9f70046caee
+      internalID: -729790320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_71
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 92
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbf9c258e1b1fa45a99bbae3b4f8425
+      internalID: -556884120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3505826fd8823f8449ca1b3db2a6766b
+      internalID: 714472709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_73
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 90
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026cef1cd3d980343817c8d4d147e01d
+      internalID: 1156537263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_74
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 90
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccecb8ec53e9a1548bf27069a44d0456
+      internalID: -2086620605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_75
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 90
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb34fbe667959c47a18964f53732839
+      internalID: -856963516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486ef90120fa7b240ac3a7b51ac6c958
+      internalID: -684225369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_77
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 88
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3396a92528138c4f8936cb5836a7aa6
+      internalID: -1399664283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_78
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 88
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c0c21ef6441524ab377ebc66c2570f
+      internalID: -1698287971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_79
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 88
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198f853cf863ead4d9945d052936c0bb
+      internalID: -103332775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 86
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18a89df0c2615e468b552453adf40f8
+      internalID: -1808521889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_81
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 86
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec0d31b93e416b45b2b09c65ee7be8c
+      internalID: 670435527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_82
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 86
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f267c0e93a46414787ce8d2da71122c
+      internalID: -1924389190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_83
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 86
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fa791c8030ebc48a1c9318cfed4206
+      internalID: -2099431606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451e21f60b8ac1244bb64b5aba6acabe
+      internalID: 1830620731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_85
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 84
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da23834420e2e65429e1fa87fef9550e
+      internalID: 201105238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_86
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 84
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9ddd4ba6a13b5458b3ca6437f05c93
+      internalID: 230800957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_87
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 84
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3721a7a1dc0b7439242b2cad9eb57d
+      internalID: 701784705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 82
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adeacc3d110ed674db96bfeb4cf8f38a
+      internalID: -262035818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_89
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 82
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac014d93cd6b7264db4a4d98eb26f7f5
+      internalID: -237805759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_90
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 82
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4726eed5df0e7b4a8abdc10228ef388
+      internalID: 2065712655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_91
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 82
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b06e2868ae542141bdc237754ad5615
+      internalID: 49323080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4606fb7ee8fa04044ac29ee613074916
+      internalID: -1585853233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_93
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 80
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebe74dcc9e780941b0bb80c7fd9a45e
+      internalID: 2052904072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_94
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 80
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814a838b5ffee4545ad65e0174014a64
+      internalID: -164977765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_95
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 80
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6128832dc0ec95249a9edc246ee5c77d
+      internalID: 656956673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132b60b3c0b95fe4497b7d9a8dd17a8d
+      internalID: -541198771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_97
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 78
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d92c0e697fcb545906d49ec75c8122
+      internalID: 1781840445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_98
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 78
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44fd6b0ef3a553408b06c672b029af2
+      internalID: 1118468782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_99
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 78
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be27b960faa4714b80b6dc70fe9e47e
+      internalID: 1041820585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04b0530a15047e4e8dcc4e2109a904b
+      internalID: -401818815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_101
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 76
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b465fd1aa4c08445a6498d066e7378c
+      internalID: -1964399065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_102
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 76
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a908d61af3f384d834d0fd001d5d80
+      internalID: -591334194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_103
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 76
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0f37a0247fc50448cf32496a994451
+      internalID: 2038320720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2409fcbeb9ef14abdf82ac48b65326
+      internalID: -1422621104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_105
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 74
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b160a3fdee978de478a4f0aff297df86
+      internalID: -1453165283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_106
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 74
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2afb3aed8551c4aa86b9402d573062
+      internalID: -1357913764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_107
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 74
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267b5c454d9f7264a9e20257a5464870
+      internalID: -55951354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eece90d792bc9664383d59d9d514564a
+      internalID: -2109999315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_109
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 72
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca81ea494ac72e148a96e1deffbfde07
+      internalID: 1193304751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_110
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 72
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ededa0f2afd93046bd172181db1b047
+      internalID: 1707469863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_111
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 72
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c653601dfe6a4dc44833c1da401c0713
+      internalID: 663823699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 70
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20fee211cc478a74ca63ad576036da26
+      internalID: 1247179980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_113
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 70
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37382a588dc22eb42b7bd8e93d37e04e
+      internalID: 2107647982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_114
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 70
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a78f834c4025248826f36c6d15d436
+      internalID: -623886301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_115
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 70
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2e8c36630fbaf4480873b0f33ac905
+      internalID: -1758037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_116
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e61f3eae54e7444a28e60af3adcf0b
+      internalID: 154477115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_117
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 68
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed9694629555c94f90a3f2ee520bf7e
+      internalID: 1671638070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_118
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 68
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5d2d834d50a254a83c40ce0d40f564
+      internalID: -1631564656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_119
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 68
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38c4792d1427f84f979725100cf3b8c
+      internalID: 1847280181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c1aacd4731c2148a3da53a43321a11
+      internalID: -1470189097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_121
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 66
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58eb8c37a24363148b3757e3377d5365
+      internalID: -1711803496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_122
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 66
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4bda431f00b5642b36135bb29d3b95
+      internalID: -979389887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_123
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 66
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362dc773917d3f8429d7b0b3a0061b6b
+      internalID: 1322154382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde5d426b9f8a3a42b00f06e5b793897
+      internalID: -1256706851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_125
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 64
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2db4585296dd604e93e1a3ea1b33342
+      internalID: 171792818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_126
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 64
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3bb933f58e7c844b1c156f9f616668
+      internalID: 935917353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_127
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 64
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079af7595627e7744900abaaca834849
+      internalID: -1706943699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ba79856b6da2c46bf23b200055e306
+      internalID: -1646160266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_129
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 62
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60705cf47d7f54141a460e2928d9b11d
+      internalID: 1023343638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_130
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 62
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d338bf65e35144280eadade582b863
+      internalID: -195455780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_131
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 62
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf762915d2814649ab4e7e11a5732ea
+      internalID: -59977673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a313d2283419b54c8abcab8876ab880
+      internalID: 705622283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_133
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 60
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a997b96dd45d284aa8104995f6d21e4
+      internalID: 1574195052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_134
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 60
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6709e495fdc2ccc4b80be80ec258b452
+      internalID: 2098636610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_135
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 60
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5773ac17c8d1cee40972881d9bf94b6a
+      internalID: -1906296308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_136
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7818399164c66284a945cf4974ed688d
+      internalID: 1543458240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_137
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 58
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fa11100c64149468d2fc768442c296
+      internalID: -28031849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_138
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 58
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20233bf58581cc8488e95be9f1d10bbb
+      internalID: 2001504181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_139
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 58
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bde60fab81aa145a952060879f149c
+      internalID: -1357874531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f899e3ea2e48784882cc2dd154ba857
+      internalID: -1212357200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_141
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 56
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea72f29980de9dd4f9382d4fbef5ace4
+      internalID: 1548017006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_142
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 56
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2e3f6f5335565438127abbf93ad2c9
+      internalID: 1340364974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_143
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 56
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50712a3009c7de642a1e2be85fb45d56
+      internalID: -1639972794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30bf0a4da926a3f4f8a542314a68f0c5
+      internalID: 1253161402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_145
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 54
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba2e7f6c8e77c043ac11285a246916d
+      internalID: 1018118176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_146
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 54
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c6b7fea3ded574d9a9ecfda5e8f428
+      internalID: 523317091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_147
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 54
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2ddf1bf394c3a41a23f802e361e925
+      internalID: -1712618613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_148
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 52
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b3450619865664691978438c31e85d
+      internalID: -714354807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_149
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 52
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4139bc4f01b02d94fbf2d60f10ed7e11
+      internalID: 579252990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_150
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 52
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040dff5f251570f45b52620f4d71d412
+      internalID: 2025346183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_151
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 52
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcc8f937a9c5bb459151337e20f9aa6
+      internalID: -405245624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_152
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695f94ddda4e41b4c90506814cedc448
+      internalID: -1472335541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_153
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 50
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f22ab119b430447afc603c2123f55a
+      internalID: -1184858340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_154
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 50
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5140135de1f0a04b89c443db8cd5fa8
+      internalID: 1891024648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_155
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 50
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd503f5b54694b74c95e1053117d4755
+      internalID: 432266020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cffd3eef1f1d3a4ab322a5be440c49b
+      internalID: -301578722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_157
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 48
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef533828e6e0f44091df45ee5bfeeb8
+      internalID: -775994807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_158
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 48
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dce18651618c9b478698eb7ebae99d2
+      internalID: -1436140363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_159
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 48
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f4fec9b220feb428fc29021eb9a525
+      internalID: -74763232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc44f249c2c62c498c33d0394b52d72
+      internalID: -402587850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_161
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 46
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f97d95c80b211a4e96772fbb0b1287e
+      internalID: 1678643589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_162
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 46
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc227ac5dce62c247825962499453c09
+      internalID: -372342226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_163
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 46
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3966983c6766064baa8418f4d8ecb6c
+      internalID: 535046145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_164
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c97605182330b48a77e10825a92687
+      internalID: 1937777022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_165
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 44
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789e6b563c6f9384a812a23fd44e7512
+      internalID: -530957369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_166
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 44
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf8bab9eb597c24c87213cb2645e378
+      internalID: 37796224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_167
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 44
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362a5e3d1b4f5f240b20210518db4ead
+      internalID: -1467495369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65342c73ed8e0844abdded4e4dfe1a35
+      internalID: 638171942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_169
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 42
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3414b3643231214c9eca30fd6a3f7d7
+      internalID: -1235043437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_170
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 42
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1e7595b9e2282439c13cea7a2a4a5e
+      internalID: -1245021391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_171
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 42
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c80cf5fb699de647b9191bd2ca1e1a6
+      internalID: -789925249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_172
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cea70ed9e12a474bbfb04910f546199
+      internalID: -260645718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_173
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 40
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d88dbc7031381f46abbd2a3081e24f9
+      internalID: -1733882717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_174
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 40
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a25dfbd6e65af4ca279c951decb909
+      internalID: -777288254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_175
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 40
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ebe99ae60a310439ef23c5825e11f4
+      internalID: -1523104088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d58b3cf4572aa46bf4837df59ef715
+      internalID: 1113996119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_177
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 38
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9aae78080b74c4eae862c611977e8d
+      internalID: 1938121389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_178
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 38
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865ea07bbb3115d48b779ee56b51a1f1
+      internalID: -1866124395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_179
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 38
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0962a6c8fae204a986f1bf3c67d0e4
+      internalID: 783951560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a6edf5c4df3ef4b9201f368819eff2
+      internalID: -670826227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_181
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 36
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250bd1eb3d1d2f64f9dd3c4acb93c9a5
+      internalID: -742905650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_182
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3ed68a4f50a7d4082934d1baaaf48a
+      internalID: 1838464389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_183
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 36
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58eebc8a5350f434285abe7f6c80e091
+      internalID: 827938792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_184
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43261cea0e5ed3b41ba78faa18bc14d6
+      internalID: -1982880768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_185
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 34
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea57c28913fd25e44a592c6fc6068c4b
+      internalID: -157440769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_186
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 34
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03573f6c242676d45aaa3dcd427cfa51
+      internalID: -359028793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_187
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 34
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805da6e0f8622124d965d1c89810d83c
+      internalID: 1560238567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_188
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076d2c628f2a17d489a2bf859153ed69
+      internalID: 403281257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_189
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 32
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89f9a7a37d98d34ab06bd2d4161b0fe
+      internalID: -360402351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_190
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 32
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b8a75a39bfc16488fcf2c56359763e
+      internalID: 769042923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_191
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 32
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea013f6679e1604db088e655d31c729
+      internalID: 1251464397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_192
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a90e23aebdeac439db2e029973658e
+      internalID: 1074038911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_193
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 30
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9e2e491d2686248b35d07f6565b970
+      internalID: -209569493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_194
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 30
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0739d9088a6f11e4ebbf7dcaa9b012b6
+      internalID: -1525483436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_195
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 30
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde851d33648e384c9efc511477efbba
+      internalID: -2120683417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_196
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91533e09a2a00a42b9a0eb20064fbbf
+      internalID: 174482461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_197
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 28
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effe92409d21d3a4a884d2dd47b0e260
+      internalID: -1007136751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_198
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 28
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd597ba60fb14b74a804989b896877d0
+      internalID: -1266625935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_199
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 28
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c073e73eaf0b8464a89d0a6a1b741ade
+      internalID: 979674085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_200
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3ea2de64c85f44689c411c60d5ee7e
+      internalID: -1122591417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_201
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 26
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb061fde046e4e4b8086e298d13dc39
+      internalID: -1802951086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_202
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 26
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c800b30c4195284eadf2811656c942c
+      internalID: -1037981733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_203
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 26
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76e65c468003d94895d8587c8bcd0a3
+      internalID: 2527488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_204
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35340ca88f520ac4782a122883c47093
+      internalID: -1864546292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_205
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 24
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc398b00d2660cd4eb3e2a65d3ac5e42
+      internalID: 420092873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_206
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 24
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf402cc9df97c1e4b8404f42e70514d5
+      internalID: 1194370176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_207
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 24
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a141a8bca9b5c49b7afd88c9b69980
+      internalID: 2109285686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_208
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d8ddd79ca86364690031d54a8c4a23
+      internalID: 978159848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_209
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 22
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114ecfd0f4d2ee842a6a8a5365e511c0
+      internalID: 1361403390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_210
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 22
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8aab7ccc641dd041b8ed1337608a638
+      internalID: -753109216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_211
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 22
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500f9ade1153c744b9899e2c20c20e2a
+      internalID: 662448397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_212
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7accdcf76626443bdfbd7b16a596e7
+      internalID: -329916720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_213
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 20
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6b3efa50b088943835471a5b44531a
+      internalID: -192140988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_214
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 20
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d69c49153151148bcff57b2c8ece86
+      internalID: 637820709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_215
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 20
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9397249704a9ec245b7feb33dca44c01
+      internalID: 2067899657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_216
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20294e77abe588c4991c20263d120437
+      internalID: 1369748790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_217
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 18
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4445e3eaae4db6646a102712f97314bb
+      internalID: -540057409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_218
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 18
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f8b34123c889542940602b71da09ec
+      internalID: -1745104087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_219
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 18
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed158ae3a842194f86e9b8578468f17
+      internalID: 1055154337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_220
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f723d889ea1fff84e88cf18974f2d0d2
+      internalID: 366478732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_221
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 16
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3030432d486c724099f15671b5049b9
+      internalID: 712631375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_222
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 16
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ae094b825921c46a16bd8687ae825b
+      internalID: 1723344159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_223
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 16
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d056c200eed567d48a174633d7b28bc2
+      internalID: -69938326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_224
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193bdbef031091341837c4efc2466644
+      internalID: -1421412796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_225
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 14
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de97fc6dd36db34580ddcd59c9594bf
+      internalID: -388910539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_226
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 14
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dad32d9a8bb249428dc5f0814fae582
+      internalID: -782975816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_227
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 14
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51d73584eac5014e9ffc95e5975dec1
+      internalID: -1172029323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_228
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b083ccf303a634d9f0c53421ac8be9
+      internalID: 1622352768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_229
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 12
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8f05748752c594cbfff4d63304ed76
+      internalID: -96020206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_230
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 12
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc394cbd5b42ed4b8d1cdeaec3533e8
+      internalID: 1982516445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_231
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 12
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b404e20013b080b4ebd5d5dcf6d92200
+      internalID: 2072043671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_232
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5fc463cf400e643b566fd01d8d41c7
+      internalID: 1292433849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_233
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 10
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a762cd60a0562429ce52086220ae35
+      internalID: 2093831078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_234
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 10
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38ab16d0c9fd29448a9d5e6c158c801
+      internalID: 1875256849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_235
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 10
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ed38bfb26534040bd361de0e1317d8
+      internalID: 758206535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_236
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6406ff8ff3b05454181612fb188687b1
+      internalID: -1159460275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_237
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 8
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e36e08042ab88c47b20e585c09657b3
+      internalID: 1660752956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_238
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 8
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536bf111524cf3c4694f8d7c57c31f83
+      internalID: 771633439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_239
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b696fe83e620454a815cbfc11040209
+      internalID: -334990875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_240
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a48043f8cd9a148a7640bfe3a20fb0
+      internalID: 2005609309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_241
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774d78e44cbf7bf47a1be1bfa64cd79b
+      internalID: -1501261890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_242
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 6
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a1907ca8d1f584bb3b6315d20c6cc9
+      internalID: -196799573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_243
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793fc6f1892f1ed438d3a263142382d1
+      internalID: -274182587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_244
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1212670038954d479036669fb885c58
+      internalID: -1501224790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_245
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2196403edb4a8448aa04ac99a848c0
+      internalID: 1272919080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_246
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464e48e781f4d0c4cbe428d4751dbc98
+      internalID: 808152311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_247
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4687e5f11a854d24db17ddb72ec7ae65
+      internalID: 2132012158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_248
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ae97bea0d363041bd17b7cd695a7d4
+      internalID: 1470943126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_249
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1008701b47f5c0740baf4e1b3f5c51c3
+      internalID: 633976034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_250
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53afcbaf3c8108d4dad7eaa9aa7b826a
+      internalID: 1401478033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_251
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ed66b52db55c14f8bbedc72060bf6d
+      internalID: -521911573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_252
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c6ba6deee0dea4596a1780945a85e3
+      internalID: -232626175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_253
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796bd749225350b4995e6cfde8f6de06
+      internalID: 1920057842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_254
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6385c5903fc51e1499825b0a0485231b
+      internalID: -398512528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana seed 3-color ramps_255
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3cba8981900eb4aa9c3020ceff0f66
+      internalID: -968048297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2.0,"y":2.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":true,"isAlternate":false}'
+    nameFileIdTable:
+      mana seed 3-color ramps_0: -5338130529677619602
+      mana seed 3-color ramps_1: -2080650271
+      mana seed 3-color ramps_10: 2135540748
+      mana seed 3-color ramps_100: -401818815
+      mana seed 3-color ramps_101: -1964399065
+      mana seed 3-color ramps_102: -591334194
+      mana seed 3-color ramps_103: 2038320720
+      mana seed 3-color ramps_104: -1422621104
+      mana seed 3-color ramps_105: -1453165283
+      mana seed 3-color ramps_106: -1357913764
+      mana seed 3-color ramps_107: -55951354
+      mana seed 3-color ramps_108: -2109999315
+      mana seed 3-color ramps_109: 1193304751
+      mana seed 3-color ramps_11: -99217797
+      mana seed 3-color ramps_110: 1707469863
+      mana seed 3-color ramps_111: 663823699
+      mana seed 3-color ramps_112: 1247179980
+      mana seed 3-color ramps_113: 2107647982
+      mana seed 3-color ramps_114: -623886301
+      mana seed 3-color ramps_115: -1758037
+      mana seed 3-color ramps_116: 154477115
+      mana seed 3-color ramps_117: 1671638070
+      mana seed 3-color ramps_118: -1631564656
+      mana seed 3-color ramps_119: 1847280181
+      mana seed 3-color ramps_12: -670132174
+      mana seed 3-color ramps_120: -1470189097
+      mana seed 3-color ramps_121: -1711803496
+      mana seed 3-color ramps_122: -979389887
+      mana seed 3-color ramps_123: 1322154382
+      mana seed 3-color ramps_124: -1256706851
+      mana seed 3-color ramps_125: 171792818
+      mana seed 3-color ramps_126: 935917353
+      mana seed 3-color ramps_127: -1706943699
+      mana seed 3-color ramps_128: -1646160266
+      mana seed 3-color ramps_129: 1023343638
+      mana seed 3-color ramps_13: -750990932
+      mana seed 3-color ramps_130: -195455780
+      mana seed 3-color ramps_131: -59977673
+      mana seed 3-color ramps_132: 705622283
+      mana seed 3-color ramps_133: 1574195052
+      mana seed 3-color ramps_134: 2098636610
+      mana seed 3-color ramps_135: -1906296308
+      mana seed 3-color ramps_136: 1543458240
+      mana seed 3-color ramps_137: -28031849
+      mana seed 3-color ramps_138: 2001504181
+      mana seed 3-color ramps_139: -1357874531
+      mana seed 3-color ramps_14: -1175499919
+      mana seed 3-color ramps_140: -1212357200
+      mana seed 3-color ramps_141: 1548017006
+      mana seed 3-color ramps_142: 1340364974
+      mana seed 3-color ramps_143: -1639972794
+      mana seed 3-color ramps_144: 1253161402
+      mana seed 3-color ramps_145: 1018118176
+      mana seed 3-color ramps_146: 523317091
+      mana seed 3-color ramps_147: -1712618613
+      mana seed 3-color ramps_148: -714354807
+      mana seed 3-color ramps_149: 579252990
+      mana seed 3-color ramps_15: 809556994
+      mana seed 3-color ramps_150: 2025346183
+      mana seed 3-color ramps_151: -405245624
+      mana seed 3-color ramps_152: -1472335541
+      mana seed 3-color ramps_153: -1184858340
+      mana seed 3-color ramps_154: 1891024648
+      mana seed 3-color ramps_155: 432266020
+      mana seed 3-color ramps_156: -301578722
+      mana seed 3-color ramps_157: -775994807
+      mana seed 3-color ramps_158: -1436140363
+      mana seed 3-color ramps_159: -74763232
+      mana seed 3-color ramps_16: 968704035
+      mana seed 3-color ramps_160: -402587850
+      mana seed 3-color ramps_161: 1678643589
+      mana seed 3-color ramps_162: -372342226
+      mana seed 3-color ramps_163: 535046145
+      mana seed 3-color ramps_164: 1937777022
+      mana seed 3-color ramps_165: -530957369
+      mana seed 3-color ramps_166: 37796224
+      mana seed 3-color ramps_167: -1467495369
+      mana seed 3-color ramps_168: 638171942
+      mana seed 3-color ramps_169: -1235043437
+      mana seed 3-color ramps_17: 654638463
+      mana seed 3-color ramps_170: -1245021391
+      mana seed 3-color ramps_171: -789925249
+      mana seed 3-color ramps_172: -260645718
+      mana seed 3-color ramps_173: -1733882717
+      mana seed 3-color ramps_174: -777288254
+      mana seed 3-color ramps_175: -1523104088
+      mana seed 3-color ramps_176: 1113996119
+      mana seed 3-color ramps_177: 1938121389
+      mana seed 3-color ramps_178: -1866124395
+      mana seed 3-color ramps_179: 783951560
+      mana seed 3-color ramps_18: 1011078286
+      mana seed 3-color ramps_180: -670826227
+      mana seed 3-color ramps_181: -742905650
+      mana seed 3-color ramps_182: 1838464389
+      mana seed 3-color ramps_183: 827938792
+      mana seed 3-color ramps_184: -1982880768
+      mana seed 3-color ramps_185: -157440769
+      mana seed 3-color ramps_186: -359028793
+      mana seed 3-color ramps_187: 1560238567
+      mana seed 3-color ramps_188: 403281257
+      mana seed 3-color ramps_189: -360402351
+      mana seed 3-color ramps_19: 864682856
+      mana seed 3-color ramps_190: 769042923
+      mana seed 3-color ramps_191: 1251464397
+      mana seed 3-color ramps_192: 1074038911
+      mana seed 3-color ramps_193: -209569493
+      mana seed 3-color ramps_194: -1525483436
+      mana seed 3-color ramps_195: -2120683417
+      mana seed 3-color ramps_196: 174482461
+      mana seed 3-color ramps_197: -1007136751
+      mana seed 3-color ramps_198: -1266625935
+      mana seed 3-color ramps_199: 979674085
+      mana seed 3-color ramps_2: 781607476
+      mana seed 3-color ramps_20: 1326582537
+      mana seed 3-color ramps_200: -1122591417
+      mana seed 3-color ramps_201: -1802951086
+      mana seed 3-color ramps_202: -1037981733
+      mana seed 3-color ramps_203: 2527488
+      mana seed 3-color ramps_204: -1864546292
+      mana seed 3-color ramps_205: 420092873
+      mana seed 3-color ramps_206: 1194370176
+      mana seed 3-color ramps_207: 2109285686
+      mana seed 3-color ramps_208: 978159848
+      mana seed 3-color ramps_209: 1361403390
+      mana seed 3-color ramps_21: -719010428
+      mana seed 3-color ramps_210: -753109216
+      mana seed 3-color ramps_211: 662448397
+      mana seed 3-color ramps_212: -329916720
+      mana seed 3-color ramps_213: -192140988
+      mana seed 3-color ramps_214: 637820709
+      mana seed 3-color ramps_215: 2067899657
+      mana seed 3-color ramps_216: 1369748790
+      mana seed 3-color ramps_217: -540057409
+      mana seed 3-color ramps_218: -1745104087
+      mana seed 3-color ramps_219: 1055154337
+      mana seed 3-color ramps_22: -1812256467
+      mana seed 3-color ramps_220: 366478732
+      mana seed 3-color ramps_221: 712631375
+      mana seed 3-color ramps_222: 1723344159
+      mana seed 3-color ramps_223: -69938326
+      mana seed 3-color ramps_224: -1421412796
+      mana seed 3-color ramps_225: -388910539
+      mana seed 3-color ramps_226: -782975816
+      mana seed 3-color ramps_227: -1172029323
+      mana seed 3-color ramps_228: 1622352768
+      mana seed 3-color ramps_229: -96020206
+      mana seed 3-color ramps_23: 630564994
+      mana seed 3-color ramps_230: 1982516445
+      mana seed 3-color ramps_231: 2072043671
+      mana seed 3-color ramps_232: 1292433849
+      mana seed 3-color ramps_233: 2093831078
+      mana seed 3-color ramps_234: 1875256849
+      mana seed 3-color ramps_235: 758206535
+      mana seed 3-color ramps_236: -1159460275
+      mana seed 3-color ramps_237: 1660752956
+      mana seed 3-color ramps_238: 771633439
+      mana seed 3-color ramps_239: -334990875
+      mana seed 3-color ramps_24: 951710598
+      mana seed 3-color ramps_240: 2005609309
+      mana seed 3-color ramps_241: -1501261890
+      mana seed 3-color ramps_242: -196799573
+      mana seed 3-color ramps_243: -274182587
+      mana seed 3-color ramps_244: -1501224790
+      mana seed 3-color ramps_245: 1272919080
+      mana seed 3-color ramps_246: 808152311
+      mana seed 3-color ramps_247: 2132012158
+      mana seed 3-color ramps_248: 1470943126
+      mana seed 3-color ramps_249: 633976034
+      mana seed 3-color ramps_25: -1885402217
+      mana seed 3-color ramps_250: 1401478033
+      mana seed 3-color ramps_251: -521911573
+      mana seed 3-color ramps_252: -232626175
+      mana seed 3-color ramps_253: 1920057842
+      mana seed 3-color ramps_254: -398512528
+      mana seed 3-color ramps_255: -968048297
+      mana seed 3-color ramps_26: 385877883
+      mana seed 3-color ramps_27: 576188064
+      mana seed 3-color ramps_28: 1556796305
+      mana seed 3-color ramps_29: 2028504211
+      mana seed 3-color ramps_3: 173368362
+      mana seed 3-color ramps_30: 1150405862
+      mana seed 3-color ramps_31: 370724773
+      mana seed 3-color ramps_32: 45500917
+      mana seed 3-color ramps_33: -1763647098
+      mana seed 3-color ramps_34: 29365346
+      mana seed 3-color ramps_35: 2137726134
+      mana seed 3-color ramps_36: 1966155639
+      mana seed 3-color ramps_37: -344176035
+      mana seed 3-color ramps_38: 111124198
+      mana seed 3-color ramps_39: -1615907073
+      mana seed 3-color ramps_4: 1201683429
+      mana seed 3-color ramps_40: 721042845
+      mana seed 3-color ramps_41: -835891178
+      mana seed 3-color ramps_42: 1414703327
+      mana seed 3-color ramps_43: -1433839877
+      mana seed 3-color ramps_44: 1407915814
+      mana seed 3-color ramps_45: 1997304256
+      mana seed 3-color ramps_46: -376901892
+      mana seed 3-color ramps_47: 927569949
+      mana seed 3-color ramps_48: -1349480550
+      mana seed 3-color ramps_49: -695605214
+      mana seed 3-color ramps_5: -2125109153
+      mana seed 3-color ramps_50: -1812856673
+      mana seed 3-color ramps_51: -348352871
+      mana seed 3-color ramps_52: -1341339058
+      mana seed 3-color ramps_53: 639129249
+      mana seed 3-color ramps_54: 119476365
+      mana seed 3-color ramps_55: 786767758
+      mana seed 3-color ramps_56: -1222920820
+      mana seed 3-color ramps_57: -2123880254
+      mana seed 3-color ramps_58: -2112080710
+      mana seed 3-color ramps_59: -2110128523
+      mana seed 3-color ramps_6: 809690863
+      mana seed 3-color ramps_60: -231149355
+      mana seed 3-color ramps_61: 1219746512
+      mana seed 3-color ramps_62: 1205611593
+      mana seed 3-color ramps_63: -630502982
+      mana seed 3-color ramps_64: -1630690082
+      mana seed 3-color ramps_65: 2006331256
+      mana seed 3-color ramps_66: -657933367
+      mana seed 3-color ramps_67: 1549225384
+      mana seed 3-color ramps_68: 1891743033
+      mana seed 3-color ramps_69: 761848760
+      mana seed 3-color ramps_7: 630703637
+      mana seed 3-color ramps_70: -729790320
+      mana seed 3-color ramps_71: -556884120
+      mana seed 3-color ramps_72: 714472709
+      mana seed 3-color ramps_73: 1156537263
+      mana seed 3-color ramps_74: -2086620605
+      mana seed 3-color ramps_75: -856963516
+      mana seed 3-color ramps_76: -684225369
+      mana seed 3-color ramps_77: -1399664283
+      mana seed 3-color ramps_78: -1698287971
+      mana seed 3-color ramps_79: -103332775
+      mana seed 3-color ramps_8: 1576705498
+      mana seed 3-color ramps_80: -1808521889
+      mana seed 3-color ramps_81: 670435527
+      mana seed 3-color ramps_82: -1924389190
+      mana seed 3-color ramps_83: -2099431606
+      mana seed 3-color ramps_84: 1830620731
+      mana seed 3-color ramps_85: 201105238
+      mana seed 3-color ramps_86: 230800957
+      mana seed 3-color ramps_87: 701784705
+      mana seed 3-color ramps_88: -262035818
+      mana seed 3-color ramps_89: -237805759
+      mana seed 3-color ramps_9: 979275449
+      mana seed 3-color ramps_90: 2065712655
+      mana seed 3-color ramps_91: 49323080
+      mana seed 3-color ramps_92: -1585853233
+      mana seed 3-color ramps_93: 2052904072
+      mana seed 3-color ramps_94: -164977765
+      mana seed 3-color ramps_95: 656956673
+      mana seed 3-color ramps_96: -541198771
+      mana seed 3-color ramps_97: 1781840445
+      mana seed 3-color ramps_98: 1118468782
+      mana seed 3-color ramps_99: 1041820585
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

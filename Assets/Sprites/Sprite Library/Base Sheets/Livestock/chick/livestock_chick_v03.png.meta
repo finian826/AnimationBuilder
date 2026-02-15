@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 9ba924331035fd24683f0b5c881383bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4796502556431005170
+    second: livestock_chick_v03_0
+  - first:
+      213: -8047761044637587586
+    second: livestock_chick_v03_1
+  - first:
+      213: 1827534245235677035
+    second: livestock_chick_v03_2
+  - first:
+      213: -6329740937058395796
+    second: livestock_chick_v03_3
+  - first:
+      213: 635189990297192181
+    second: livestock_chick_v03_4
+  - first:
+      213: 374769232675102370
+    second: livestock_chick_v03_5
+  - first:
+      213: 1591088073297339749
+    second: livestock_chick_v03_6
+  - first:
+      213: 5192694938736253976
+    second: livestock_chick_v03_7
+  - first:
+      213: 6658680817114461534
+    second: livestock_chick_v03_8
+  - first:
+      213: 3199738730002522300
+    second: livestock_chick_v03_9
+  - first:
+      213: -445761312710238909
+    second: livestock_chick_v03_10
+  - first:
+      213: 7078780727101879390
+    second: livestock_chick_v03_11
+  - first:
+      213: 5610154833936459621
+    second: livestock_chick_v03_12
+  - first:
+      213: 507313008026608191
+    second: livestock_chick_v03_13
+  - first:
+      213: -4452508742832209407
+    second: livestock_chick_v03_14
+  - first:
+      213: -6135472603263923599
+    second: livestock_chick_v03_15
+  - first:
+      213: 2717306254720542739
+    second: livestock_chick_v03_16
+  - first:
+      213: -425780634836338505
+    second: livestock_chick_v03_17
+  - first:
+      213: 5566589964676697153
+    second: livestock_chick_v03_18
+  - first:
+      213: -3466633379206174841
+    second: livestock_chick_v03_19
+  - first:
+      213: -7816872769323202148
+    second: livestock_chick_v03_20
+  - first:
+      213: -3653014545644044424
+    second: livestock_chick_v03_21
+  - first:
+      213: -8023621337465798284
+    second: livestock_chick_v03_22
+  - first:
+      213: -4079958954434415652
+    second: livestock_chick_v03_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: livestock_chick_v03_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 114
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5b25089a9909240800000000000000
+      internalID: 4796502556431005170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 114
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77662108fb905090800000000000000
+      internalID: -8047761044637587586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 114
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67522e96b4bc5910800000000000000
+      internalID: 1827534245235677035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 114
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69d266772e3828a0800000000000000
+      internalID: -6329740937058395796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 114
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f64c884ee5a0d800800000000000000
+      internalID: 635189990297192181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_5
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 114
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae585aa1a2733500800000000000000
+      internalID: 374769232675102370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_6
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 114
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565af373c2ea41610800000000000000
+      internalID: 1591088073297339749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_7
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 114
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81cd752e888201840800000000000000
+      internalID: 5192694938736253976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 98
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55b0d88ce2686c50800000000000000
+      internalID: 6658680817114461534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 98
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb02cd70c61c76c20800000000000000
+      internalID: 3199738730002522300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 98
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34d5b45a27650d9f0800000000000000
+      internalID: -445761312710238909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 98
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54f9c9f091ec3260800000000000000
+      internalID: 7078780727101879390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_12
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 98
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56729bbf8164bdd40800000000000000
+      internalID: 5610154833936459621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_13
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 98
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f326c513e765a0700800000000000000
+      internalID: 507313008026608191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 98
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1024a2883e28532c0800000000000000
+      internalID: -4452508742832209407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_15
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 98
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a0059ac2c6adaa0800000000000000
+      internalID: -6135472603263923599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 81
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318a09a44afc5b520800000000000000
+      internalID: 2717306254720542739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_17
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 81
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8f65cb4c2571af0800000000000000
+      internalID: -425780634836338505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_18
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 81
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c0fce6410804d40800000000000000
+      internalID: 5566589964676697153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_19
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 81
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78767e10f4b04efc0800000000000000
+      internalID: -3466633379206174841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_20
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 81
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c990112c1a3e48390800000000000000
+      internalID: -7816872769323202148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_21
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 81
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f3d8f00a2ed4dc0800000000000000
+      internalID: -3653014545644044424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_22
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 81
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4714b1097ee56a090800000000000000
+      internalID: -8023621337465798284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: livestock_chick_v03_23
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 81
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd333ce82f21167c0800000000000000
+      internalID: -4079958954434415652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      livestock_chick_v03_0: 4796502556431005170
+      livestock_chick_v03_1: -8047761044637587586
+      livestock_chick_v03_10: -445761312710238909
+      livestock_chick_v03_11: 7078780727101879390
+      livestock_chick_v03_12: 5610154833936459621
+      livestock_chick_v03_13: 507313008026608191
+      livestock_chick_v03_14: -4452508742832209407
+      livestock_chick_v03_15: -6135472603263923599
+      livestock_chick_v03_16: 2717306254720542739
+      livestock_chick_v03_17: -425780634836338505
+      livestock_chick_v03_18: 5566589964676697153
+      livestock_chick_v03_19: -3466633379206174841
+      livestock_chick_v03_2: 1827534245235677035
+      livestock_chick_v03_20: -7816872769323202148
+      livestock_chick_v03_21: -3653014545644044424
+      livestock_chick_v03_22: -8023621337465798284
+      livestock_chick_v03_23: -4079958954434415652
+      livestock_chick_v03_3: -6329740937058395796
+      livestock_chick_v03_4: 635189990297192181
+      livestock_chick_v03_5: 374769232675102370
+      livestock_chick_v03_6: 1591088073297339749
+      livestock_chick_v03_7: 5192694938736253976
+      livestock_chick_v03_8: 6658680817114461534
+      livestock_chick_v03_9: 3199738730002522300
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
