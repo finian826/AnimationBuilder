@@ -42,7 +42,7 @@ namespace ManaSeedTools.CharacterAnimator
         //animation key ints
         public int[] farmerKeys;
         [Header("Sprite offset in pixels")]
-        public Vector2Int farmerFrameOffset;
+        public Vector2Int[] farmerFrameOffset;
 
         //animation key xflips
         public bool[] farmerKeyXFlips;
