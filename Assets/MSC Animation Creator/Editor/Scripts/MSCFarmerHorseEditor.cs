@@ -36,6 +36,7 @@ namespace ManaSeedTools.CharacterAnimator
         private AnimatorController baseAnimController = null;
         private SpriteResolver horseSpriteResolver = null;
         private SpriteLibrary horseSpriteLibrary = null;
+        private SpriteLibraryAsset horseSpriteLibraryAsset = null;
         private SpriteResolver horseResolver = null;
 
         private static float keyTimerModifier = 100f / 60f;
@@ -65,12 +66,27 @@ namespace ManaSeedTools.CharacterAnimator
                 horseSettings, typeof(SO_FarmerHorseAnimationSettings), false);
 
             GUILayout.Space(_space);
-            GUILayout.Label("Horse Prefab with Sprite Library and Resolver", EditorStyles.largeLabel);
-            GUILayout.Label("Found as Game Object or Prefab in the Prefab Folder");
+            GUILayout.Label("Horse Sprite Library", EditorStyles.largeLabel);
+            GUILayout.Label("Found as Sprite Library Asset");
 
-            horsePrefab = (GameObject)EditorGUILayout.ObjectField("Horse Prefab",
-                horsePrefab, typeof(GameObject), false);
-            if (horsePrefab != null)
+            horseSpriteLibraryAsset = (SpriteLibraryAsset)EditorGUILayout.ObjectField("Horse Prefab",
+                horseSpriteLibraryAsset, typeof(SpriteLibraryAsset), false);
+            if (horseSpriteLibraryAsset != null)
+            {
+                EditorGUILayout.HelpBox(
+                    "Sprite Library Asset: " + horseSpriteLibraryAsset.name.ToString(),
+                    MessageType.Info,
+                    true);
+            }
+            else
+            {
+                EditorGUILayout.HelpBox(
+                    "Not valid!",
+                    MessageType.Warning,
+                    true);
+            }
+
+            /*if (horsePrefab != null)
             {
                 horseSpriteResolver = horsePrefab.GetComponent<SpriteResolver>();
                 horseSpriteLibrary = horsePrefab.GetComponent<SpriteLibrary>();
@@ -102,7 +118,7 @@ namespace ManaSeedTools.CharacterAnimator
                     EditorGUILayout.HelpBox("No Sprite Library Found!", MessageType.Warning, true);
 
                 }
-            }
+            }*/
 
 
             GUILayout.Space(_space);
@@ -191,6 +207,9 @@ namespace ManaSeedTools.CharacterAnimator
             if (GUILayout.Button("Create Animations"))
             {
                 CreateBaseAnimations();
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+
             }
 
         }
@@ -199,7 +218,7 @@ namespace ManaSeedTools.CharacterAnimator
         {
             foreach (MSCFarmerHorseAnimation anim in horseSettings.list)
             {
-                Debug.Log("Create Horse Bottom Animations");
+                //Debug.Log("Create Horse Bottom Animations");
                 string animSavePath = animationHorseSavePath + "/";
                 string animSaveName = anim.animationType + anim.animationName + "bottom";
                 if (!AssetDatabase.IsValidFolder(animationHorseSavePath + "/" + anim.animationType.ToString()))
@@ -207,12 +226,12 @@ namespace ManaSeedTools.CharacterAnimator
                     AssetDatabase.CreateFolder(System.IO.Path.GetDirectoryName(animationHorseSavePath + "/"), anim.animationType.ToString());
                 }
 
-                Debug.Log($"Building clip: {animSaveName} at {animSavePath}");
+                //Debug.Log($"Building clip: {animSaveName} at {animSavePath}");
                 CreateHorseAnimationClip(anim.bottomCategory, anim.bottomHorseKeyLabels, anim.bottomHorseKeyXFlips,
                     anim.bottomHorsekeyTimer, animSaveName, animSavePath, anim.animationType, anim.horseXFlip);
 
                 animSaveName = anim.animationType + anim.animationName + "top";
-                Debug.Log($"Building clip: {animSaveName} at {animSavePath}");
+                //Debug.Log($"Building clip: {animSaveName} at {animSavePath}");
                 CreateHorseAnimationClip(anim.topCategory, anim.topHorseKeyLabels, anim.topHorseKeyXFlips, anim.topHorsekeyTimer,
                     animSaveName, animSavePath, anim.animationType, anim.horseXFlip);
                 if (anim.buildFarmer)
@@ -223,7 +242,7 @@ namespace ManaSeedTools.CharacterAnimator
                     {
                         spriteSheet = null;
                         spriteSheet = Resources.LoadAll<Sprite>(thisSpritePath + layer);
-                        Debug.Log($"loaded {spriteSheet.Length.ToString()}");
+                        //Debug.Log($"loaded {spriteSheet.Length.ToString()}");
                             string playerAnimSavePath = animationPlayerSavePath + "/" + layer.ToString() + "/";
                             if (!AssetDatabase.IsValidFolder(animationPlayerSavePath + "/" + layer.ToString()))
                             {
@@ -231,7 +250,7 @@ namespace ManaSeedTools.CharacterAnimator
                             }
 
                             string playerAnimSaveName = layer + anim.animationType + anim.animationName;
-                            Debug.Log($"Building clip: {animSaveName} at {animSavePath}");
+                            //Debug.Log($"Building clip: {animSaveName} at {animSavePath}");
                             CreateFarmerAnimationClip(spriteSheet, anim.farmerKeys, anim.farmerKeyXFlips, anim.farmerKeyTimer, anim.farmerFrameOffset, playerAnimSaveName, playerAnimSavePath, 
                                 anim.animationType, layer, anim.farmerXFlip);
                         
@@ -242,7 +261,7 @@ namespace ManaSeedTools.CharacterAnimator
 
         }
 
-        public void CreateHorseAnimationClip(string category, string[] keys, bool[] keyxFlips, float[] keyTimer, string animName, string savePathParent, string savePathAdd, bool xFlip)
+        /*public void BadCreateHorseAnimationClip(string category, string[] keys, bool[] keyxFlips, float[] keyTimer, string animName, string savePathParent, string savePathAdd, bool xFlip)
         {
 
             //Test for any frames that have to be flipped instead of the whole clip flipped on the x axis
@@ -263,13 +282,124 @@ namespace ManaSeedTools.CharacterAnimator
             newClip.frameRate = 60f;
 
             //define the sprite curve binding properties for the animation
-            EditorCurveBinding spriteBinding = new EditorCurveBinding
+            EditorCurveBinding catagoryBinding = new EditorCurveBinding
             {
                 path = "",
                 type = typeof(SpriteResolver),
-                propertyName = "m_SpriteHash"
+                propertyName = "m_CategoryHash"
+            };
+            
+
+            EditorCurveBinding labelBinding = new EditorCurveBinding
+            {
+                path = "",
+                type = typeof(SpriteResolver),
+                propertyName = "m_labelHash"                
+            };
+            
+
+            //define the SpriteResolver Enable curve binding property for the animation
+            EditorCurveBinding enableResolver = new EditorCurveBinding
+            {
+                path = "",
+                type = typeof(SpriteResolver),
+                propertyName = "m_Enabled"
             };
 
+            //create the SpriteResolver Enable curve
+            AnimationCurve resolverEnabled = new AnimationCurve();
+            resolverEnabled.AddKey(0f, 1f);
+
+
+            AnimationClipSettings animClipSett = new AnimationClipSettings();
+            animClipSett.loopTime = true;
+
+            AnimationUtility.SetAnimationClipSettings(newClip, animClipSett);
+
+            //build label hash curve
+            AnimationCurve labelCurve = new AnimationCurve();
+            AnimationCurve categoryCurve=new AnimationCurve();
+            for(int j = 0; j < keys.Length; j++)
+            {
+                Keyframe resolverKey = new Keyframe(keyTimer[j] * keyTimerModifier, (float)GetHash(keys[j]));
+                Keyframe categoryKey = new Keyframe(keyTimer[j] * keyTimerModifier, (float)GetHash(category));
+                resolverKey.weightedMode = WeightedMode.None;
+                resolverKey.inTangent = 0f;
+                resolverKey.outTangent = 0f;
+                categoryKey.weightedMode= WeightedMode.None;
+                categoryKey.inTangent = 0f;
+                categoryKey.outTangent = 0f;
+
+                int index = labelCurve.AddKey(resolverKey);
+                int index2 = categoryCurve.AddKey(categoryKey);
+                Debug.Log($"Hash for category: {category}: {GetHash(category)}");
+                Debug.Log($"Hash for label: {keys[j]}: {GetHash(keys[j])}");
+                //AnimationUtility.SetKeyLeftTangentMode(labelCurve, index, AnimationUtility.TangentMode.Constant);
+                //AnimationUtility.SetKeyRightTangentMode(labelCurve, index, AnimationUtility.TangentMode.Constant);
+                //AnimationUtility.SetKeyLeftTangentMode(categoryCurve, index2, AnimationUtility.TangentMode.Constant);
+                //AnimationUtility.SetKeyRightTangentMode(categoryCurve, index2, AnimationUtility.TangentMode.Constant);
+
+            }
+
+            //bind the bindings and curves to the animation
+            AnimationUtility.SetEditorCurve(newClip, catagoryBinding, categoryCurve);
+            AnimationUtility.SetEditorCurve(newClip, enableResolver, resolverEnabled);
+            AnimationUtility.SetEditorCurve(newClip, labelBinding, labelCurve);
+
+            //do the individual sprite flips if it is required
+            if (spriteFlips)
+            {
+                EditorCurveBinding flipSpriteX = EditorCurveBinding.FloatCurve("", typeof(SpriteRenderer), "m_FlipX");
+                AnimationCurve flipac = new AnimationCurve(CreateSpriteFlipKeyframes(keyxFlips, keyTimer));
+                newClip.SetCurve("", typeof(SpriteRenderer), "m_FlipX", flipac);
+            }
+
+            //do the full clip flip if it is required
+            if (xFlip)
+            {
+                EditorCurveBinding flipX = new EditorCurveBinding();
+                flipX.type = typeof(SpriteRenderer);
+                flipX.path = "";
+                flipX.propertyName = "m_FlipX";
+                AnimationCurve ac = new AnimationCurve();
+                ac.AddKey(0f, 1f);
+                AnimationUtility.SetEditorCurve(newClip, flipX, ac);
+            }
+
+            //Debug.Log(savePathParent);
+            //Debug.Log(savePathAdd);
+            //save the clip
+            if (!AssetDatabase.IsValidFolder(savePathParent + savePathAdd))
+            {
+                AssetDatabase.CreateFolder(System.IO.Path.GetDirectoryName(savePathParent), savePathAdd);
+            }
+            AssetDatabase.CreateAsset(newClip, savePathParent + savePathAdd + "/" + newClip.name + ".anim");
+        }*/
+
+        public void CreateHorseAnimationClip(string category, string[] keys, bool[] keyxFlips, float[] keyTimer, string animName, string savePathParent, string savePathAdd, bool xFlip)
+        {
+
+            //Test for any frames that have to be flipped instead of the whole clip flipped on the x axis
+            bool spriteFlips = false;
+            if (keyxFlips.Length > 0)
+            {
+                for (int ij = 0; ij < keyxFlips.Length; ij++)
+                {
+                    if (keyxFlips[ij])
+                    {
+                        spriteFlips = true;
+                    }
+                }
+            }
+            //create the clip and name, setting the frame rate to 60
+            AnimationClip newClip = new AnimationClip();
+            newClip.name = animName;
+            newClip.frameRate = 60f;
+            
+
+            //define the sprite curve binding properties for the animation
+            EditorCurveBinding spriteBinding = EditorCurveBinding.FloatCurve("", typeof(SpriteResolver), "m_SpriteHash");
+            
             //define the SpriteResolver Enable curve binding property for the animation
             EditorCurveBinding enableResolver = new EditorCurveBinding
             {
@@ -289,20 +419,30 @@ namespace ManaSeedTools.CharacterAnimator
 
             //create the animation curve for the clip
             AnimationCurve resolverCurve = new AnimationCurve();
+            
+            //IEnumerable<string> categoryList = horseSpriteLibraryAsset.GetCategoryNames();
 
             //loop through all the label keys for the clip
             for (int j = 0; j < keys.Length; j++)
             {
                 //generate the hash based on the passed category and the key label
                 int resolverHash = GetSpriteHash(category, keys[j]);
-                Debug.Log($"Has for: {category}_{keys[j]} is {resolverHash}");
+                Debug.Log($"Hash for: {category}_{keys[j]} is {resolverHash}");
+                Debug.Log($"Hash for: {category}_{keys[j]} is {(float)resolverHash}");
                 Debug.Log($"Hash for category: {category}: {GetHash(category)}");
                 Debug.Log($"Hash for label: {keys[j]}: {GetHash(keys[j])}");
-                Keyframe resolverKey = new Keyframe(keyTimer[j] * keyTimerModifier, (resolverHash));
+                float curveFloat = GetAnimationFloatFromHash(resolverHash);
+                //build the keyframe based on the calculated time and generated hash
+                Keyframe resolverKey = new Keyframe();
+                resolverKey.time = keyTimer[j] * keyTimerModifier;
+                resolverKey.value = curveFloat;
+                resolverKey.weightedMode = WeightedMode.None;
+                resolverKey.inTangent = 0f;
+                resolverKey.outTangent = 0f;
 
                 int index = resolverCurve.AddKey(resolverKey);
-                AnimationUtility.SetKeyLeftTangentMode(resolverCurve, index, AnimationUtility.TangentMode.Constant);
-                AnimationUtility.SetKeyRightTangentMode(resolverCurve, index, AnimationUtility.TangentMode.Constant);
+                //AnimationUtility.SetKeyLeftTangentMode(resolverCurve, index, AnimationUtility.TangentMode.Constant);
+                //AnimationUtility.SetKeyRightTangentMode(resolverCurve, index, AnimationUtility.TangentMode.Constant);
 
             }
 
@@ -337,8 +477,6 @@ namespace ManaSeedTools.CharacterAnimator
                 AssetDatabase.CreateFolder(System.IO.Path.GetDirectoryName(savePathParent), savePathAdd);
             }
             AssetDatabase.CreateAsset(newClip, savePathParent + savePathAdd + "/" + newClip.name + ".anim");
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
         }
 
         public static Keyframe[] CreateSpriteFlipKeyframes(bool[] flipXSprite, float[] keyTimer)
@@ -415,8 +553,6 @@ namespace ManaSeedTools.CharacterAnimator
                 AssetDatabase.CreateFolder(System.IO.Path.GetDirectoryName(savePathParent), savePathAdd);
             }
             AssetDatabase.CreateAsset(newClip, savePathParent + savePathAdd + "/" + newClip.name + ".anim");
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
         }
 
         public static ObjectReferenceKeyframe[] CreateSpriteKeyframes(Sprite[] sprites, int[] spritesNumbers, float[] keyTimer)
@@ -465,8 +601,8 @@ namespace ManaSeedTools.CharacterAnimator
         // This mimics Unity's internal Bit30Hash hashing for Sprite Resolver
         private static int GetSpriteHash(string category, string label)
         {
-
-            int hash = Animator.StringToHash($"{category}_{label}");
+            string combined = category + "_" + label;
+            int hash = Animator.StringToHash(combined);
             hash = Preserve30Bits(hash);
             return hash; // Preserves first 30 bits as required by Unity 6
         }
@@ -484,5 +620,14 @@ namespace ManaSeedTools.CharacterAnimator
             return hash; // Preserves first 30 bits as required by Unity 6
 
         }
+
+        public static float GetAnimationFloatFromHash(int spriteHash)
+        {
+            // This takes the integer bits and puts them into a float 
+            // without performing a mathematical conversion.
+            byte[] bytes = BitConverter.GetBytes(spriteHash);
+            return BitConverter.ToSingle(bytes, 0);
+        }
+
     }
 }
