@@ -1070,3 +1070,67 @@ MonoBehaviour:
     - 0.34
     - 0.64
     xFlip: 1
+  - animationType: sitthrone
+    animationName: down
+    keys: 74000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    xFlip: 0
+  - animationType: lookaround
+    animationName: down
+    keys: f0000000f1000000f1000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 1.5
+    - 2.5
+    xFlip: 0
+  - animationType: hurt
+    animationName: down
+    keys: b2000000b3000000b4000000b3000000b4000000b4000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.5
+    - 0.7
+    - 0.9
+    xFlip: 0
+  - animationType: hurt
+    animationName: right
+    keys: b2000000b3000000b4000000b3000000b4000000b4000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.5
+    - 0.7
+    - 0.9
+    xFlip: 0
+  - animationType: hurt
+    animationName: left
+    keys: b2000000b3000000b4000000b3000000b4000000b4000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.5
+    - 0.7
+    - 0.9
+    xFlip: 1
+  - animationType: hurt
+    animationName: up
+    keys: b5000000b6000000b7000000b6000000b7000000b7000000
+    keyXFlips: 
+    keyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.5
+    - 0.7
+    - 0.9
+    xFlip: 0

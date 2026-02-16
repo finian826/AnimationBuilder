@@ -2353,11 +2353,11 @@ PrefabInstance:
     - target: {fileID: 7114362302158075905, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_SpriteLibraryAsset
       value: 
-      objectReference: {fileID: 7108339969198208228, guid: 559586edc05c3bb4384ad32dd8992807, type: 3}
+      objectReference: {fileID: 7108339969198208228, guid: 731b3c7cd0007874c9a02e44d7b436dc, type: 3}
     - target: {fileID: 7872709468597293400, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -754197589, guid: 4473ac73a63000c4fa1aff00ff7ea426, type: 3}
+      objectReference: {fileID: -2073008713, guid: 783751a21bd27054582f278261dd20e1, type: 3}
     - target: {fileID: 8331371384131463011, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_Name
       value: BasicNPC
@@ -2437,7 +2437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5820363112317856268, guid: e12ea97ef90d1444a9794e42028d557d, type: 3}
       propertyPath: m_SpriteHash
-      value: 0
+      value: 19803382
       objectReference: {fileID: 0}
     - target: {fileID: 5820363112317856268, guid: e12ea97ef90d1444a9794e42028d557d, type: 3}
       propertyPath: m_CategoryHash
@@ -2675,6 +2675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventAnimationNPC
       objectReference: {fileID: 0}
+    - target: {fileID: 4364806847739282453, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_SpriteLibraryAsset
+      value: 
+      objectReference: {fileID: 7108339969198208228, guid: a0e51fafd777f4c49955efd3f0ab3ad9, type: 3}
     - target: {fileID: 6535058471987340516, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_labelHash
       value: 6.085802e-29

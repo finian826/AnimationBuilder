@@ -1322,3 +1322,383 @@ MonoBehaviour:
     - 1.3
     - 1.5
     farmerXFlip: 1
+  - animationType: kick
+    animationName: bottom
+    bottomCategory: KickBottom
+    bottomHorseKeyLabels:
+    - kick-down-0
+    - kick-down-1
+    - kick-down-1
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.6
+    topCategory: KickTop
+    topHorseKeyLabels:
+    - kick-down-0
+    - kick-down-1
+    - kick-down-1
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 390000003900000039000000
+    farmerFrameOffset:
+    - {x: 0, y: -5}
+    - {x: 0, y: 0}
+    - {x: 0, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.6
+    farmerXFlip: 0
+  - animationType: kick
+    animationName: right
+    bottomCategory: KickBottom
+    bottomHorseKeyLabels:
+    - kick-right-0
+    - kick-right-1
+    - kick-right-1
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.6
+    topCategory: KickTop
+    topHorseKeyLabels:
+    - kick-right-0
+    - kick-right-1
+    - kick-right-1
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 590000005900000059000000
+    farmerFrameOffset:
+    - {x: 8, y: -1}
+    - {x: 2, y: 2}
+    - {x: 2, y: 2}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.6
+    farmerXFlip: 0
+  - animationType: kick
+    animationName: up
+    bottomCategory: KickBottom
+    bottomHorseKeyLabels:
+    - kick-up-0
+    - kick-up-1
+    - kick-up-1
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.6
+    topCategory: KickTop
+    topHorseKeyLabels:
+    - kick-up-0
+    - kick-up-1
+    - kick-up-1
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 480000004800000048000000
+    farmerFrameOffset:
+    - {x: 0, y: -5}
+    - {x: 0, y: -8}
+    - {x: 0, y: -8}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.6
+    farmerXFlip: 0
+  - animationType: kick
+    animationName: left
+    bottomCategory: KickBottom
+    bottomHorseKeyLabels:
+    - kick-left-0
+    - kick-left-1
+    - kick-left-1
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.6
+    topCategory: KickTop
+    topHorseKeyLabels:
+    - kick-left-0
+    - kick-left-1
+    - kick-left-1
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 590000005900000059000000
+    farmerFrameOffset:
+    - {x: -8, y: -1}
+    - {x: -2, y: 2}
+    - {x: -2, y: 2}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.6
+    farmerXFlip: 1
+  - animationType: sleep
+    animationName: right
+    bottomCategory: SleepBottom
+    bottomHorseKeyLabels:
+    - sleep-right-0
+    - sleep-right-1
+    - sleep-right-2
+    - sleep-right-2
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.5
+    - 1
+    - 1.5
+    topCategory: SleepTop
+    topHorseKeyLabels:
+    - sleep-right-0
+    - sleep-right-1
+    - sleep-right-2
+    - sleep-right-2
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.5
+    - 1
+    - 1.5
+    horseXFlip: 0
+    buildFarmer: 0
+    farmerKeys: 
+    farmerFrameOffset: []
+    farmerKeyXFlips: 
+    farmerKeyTimer: []
+    farmerXFlip: 0
+  - animationType: sleep
+    animationName: left
+    bottomCategory: SleepBottom
+    bottomHorseKeyLabels:
+    - sleep-left-0
+    - sleep-left-1
+    - sleep-left-2
+    - sleep-left-2
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.5
+    - 1
+    - 1.5
+    topCategory: SleepTop
+    topHorseKeyLabels:
+    - sleep-left-0
+    - sleep-left-1
+    - sleep-left-2
+    - sleep-left-2
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.5
+    - 1
+    - 1.5
+    horseXFlip: 0
+    buildFarmer: 0
+    farmerKeys: 
+    farmerFrameOffset: []
+    farmerKeyXFlips: 
+    farmerKeyTimer: []
+    farmerXFlip: 0
+  - animationType: hurt
+    animationName: right
+    bottomCategory: HurtBottom
+    bottomHorseKeyLabels:
+    - hurt-right-0
+    - hurt-right-0
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.5
+    topCategory: HurtTop
+    topHorseKeyLabels:
+    - hurt-right-0
+    - hurt-right-0
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 0
+    farmerKeys: b5000000b5000000
+    farmerFrameOffset:
+    - {x: -8, y: 7}
+    - {x: -8, y: 7}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.5
+    farmerXFlip: 0
+  - animationType: hurt
+    animationName: left
+    bottomCategory: HurtBottom
+    bottomHorseKeyLabels:
+    - hurt-left-0
+    - hurt-left-0
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.5
+    topCategory: HurtTop
+    topHorseKeyLabels:
+    - hurt-left-0
+    - hurt-left-0
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: b5000000b5000000
+    farmerFrameOffset:
+    - {x: 8, y: 7}
+    - {x: 8, y: 7}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.5
+    farmerXFlip: 1
+  - animationType: fall
+    animationName: right
+    bottomCategory: FallBottom
+    bottomHorseKeyLabels:
+    - fall-right-0
+    - fall-right-0
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.5
+    topCategory: FallTop
+    topHorseKeyLabels:
+    - fall-right-0
+    - fall-right-0
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: b6000000b6000000
+    farmerFrameOffset:
+    - {x: -12, y: -6}
+    - {x: -12, y: -6}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.5
+    farmerXFlip: 0
+  - animationType: fall
+    animationName: left
+    bottomCategory: FallBottom
+    bottomHorseKeyLabels:
+    - fall-left-0
+    - fall-left-0
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.5
+    topCategory: FallTop
+    topHorseKeyLabels:
+    - fall-left-0
+    - fall-left-0
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: b6000000b6000000
+    farmerFrameOffset:
+    - {x: 12, y: -6}
+    - {x: 12, y: -6}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.5
+    farmerXFlip: 1
+  - animationType: dead
+    animationName: right
+    bottomCategory: DeadBottom
+    bottomHorseKeyLabels:
+    - dead-right-0
+    - dead-right-0
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.5
+    topCategory: DeadTop
+    topHorseKeyLabels:
+    - dead-right-0
+    - dead-right-0
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: b7000000b7000000
+    farmerFrameOffset:
+    - {x: -13, y: -16}
+    - {x: -13, y: -16}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.5
+    farmerXFlip: 0
+  - animationType: dead
+    animationName: right
+    bottomCategory: DeadBottom
+    bottomHorseKeyLabels:
+    - dead-left-0
+    - dead-left-0
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.5
+    topCategory: DeadTop
+    topHorseKeyLabels:
+    - dead-left-0
+    - dead-left-0
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.5
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: b7000000b7000000
+    farmerFrameOffset:
+    - {x: 13, y: -16}
+    - {x: 13, y: -16}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.5
+    farmerXFlip: 0
