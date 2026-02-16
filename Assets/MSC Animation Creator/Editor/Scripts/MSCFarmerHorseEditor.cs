@@ -68,7 +68,7 @@ namespace ManaSeedTools.CharacterAnimator
             GUILayout.Label("Horse Prefab with Sprite Library and Resolver", EditorStyles.largeLabel);
             GUILayout.Label("Found as Game Object or Prefab in the Prefab Folder");
 
-            horsePrefab = (GameObject)EditorGUILayout.ObjectField("Horse and Player Animation Settings",
+            horsePrefab = (GameObject)EditorGUILayout.ObjectField("Horse Prefab",
                 horsePrefab, typeof(GameObject), false);
             if (horsePrefab != null)
             {
@@ -109,7 +109,7 @@ namespace ManaSeedTools.CharacterAnimator
             GUILayout.Label("Directory to save Horse Animations", EditorStyles.largeLabel);
             GUILayout.Label("Must be in a resources directory");
 
-            animationHorseFolder = (DefaultAsset)EditorGUILayout.ObjectField("Save Path for Animations",
+            animationHorseFolder = (DefaultAsset)EditorGUILayout.ObjectField("Save Path for Horse Animations",
                 animationHorseFolder, typeof(DefaultAsset), false);
 
             if (animationHorseFolder != null)
@@ -133,7 +133,7 @@ namespace ManaSeedTools.CharacterAnimator
             GUILayout.Label("Directory to save Player Horse Animations", EditorStyles.largeLabel);
             GUILayout.Label("Must be in a resources directory");
 
-            animationPlayerFolder = (DefaultAsset)EditorGUILayout.ObjectField("Save Path for Animations",
+            animationPlayerFolder = (DefaultAsset)EditorGUILayout.ObjectField("Save Path for Player on Horse Animations",
                 animationPlayerFolder, typeof(DefaultAsset), false);
 
             if (animationPlayerFolder != null)
@@ -224,11 +224,12 @@ namespace ManaSeedTools.CharacterAnimator
                         spriteSheet = null;
                         spriteSheet = Resources.LoadAll<Sprite>(thisSpritePath + layer);
                         Debug.Log($"loaded {spriteSheet.Length.ToString()}");
-                            string playerAnimSavePath = animationPlayerSavePath + "/horse/" + layer.ToString() + "/";
-                            if (!AssetDatabase.IsValidFolder(animationPlayerSavePath + "/horse/" + layer.ToString()))
+                            string playerAnimSavePath = animationPlayerSavePath + "/" + layer.ToString() + "/";
+                            if (!AssetDatabase.IsValidFolder(animationPlayerSavePath + "/" + layer.ToString()))
                             {
-                                AssetDatabase.CreateFolder(System.IO.Path.GetDirectoryName(animationPlayerSavePath + "/horse/"), layer.ToString());
+                            AssetDatabase.CreateFolder(System.IO.Path.GetDirectoryName(animationPlayerSavePath + "/"), layer.ToString());
                             }
+
                             string playerAnimSaveName = layer + anim.animationType + anim.animationName;
                             Debug.Log($"Building clip: {animSaveName} at {animSavePath}");
                             CreateFarmerAnimationClip(spriteSheet, anim.farmerKeys, anim.farmerKeyXFlips, anim.farmerKeyTimer, anim.farmerFrameOffset, playerAnimSaveName, playerAnimSavePath, 

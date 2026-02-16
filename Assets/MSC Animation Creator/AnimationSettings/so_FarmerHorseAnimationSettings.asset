@@ -40,11 +40,138 @@ MonoBehaviour:
     - 0.3
     - 0.45
     horseXFlip: 0
-    buildFarmer: 0
-    farmerKeys: 
-    farmerFrameOffset: {x: 0, y: 0}
+    buildFarmer: 1
+    farmerKeys: 38000000380000003800000038000000
+    farmerFrameOffset:
+    - {x: 0, y: -1}
+    - {x: 0, y: -1}
+    - {x: 0, y: -1}
+    - {x: 0, y: -1}
     farmerKeyXFlips: 
-    farmerKeyTimer: []
+    farmerKeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    farmerXFlip: 0
+  - animationType: idle
+    animationName: down
+    bottomCategory: IdleBottom
+    bottomHorseKeyLabels:
+    - idle-right-0
+    - idle-right-1
+    - idle-right-2
+    - idle-right-2
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    topCategory: IdleTop
+    topHorseKeyLabels:
+    - idle-right-0
+    - idle-right-1
+    - idle-right-2
+    - idle-right-2
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 58000000580000005800000058000000
+    farmerFrameOffset:
+    - {x: 1, y: 0}
+    - {x: 1, y: 0}
+    - {x: 1, y: 0}
+    - {x: 1, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    farmerXFlip: 0
+  - animationType: idle
+    animationName: up
+    bottomCategory: IdleBottom
+    bottomHorseKeyLabels:
+    - idle-up-0
+    - idle-up-1
+    - idle-up-2
+    - idle-up-2
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    topCategory: IdleTop
+    topHorseKeyLabels:
+    - idle-up-0
+    - idle-up-1
+    - idle-up-2
+    - idle-up-2
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 48000000480000004800000048000000
+    farmerFrameOffset: []
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    farmerXFlip: 0
+  - animationType: idle
+    animationName: left
+    bottomCategory: IdleBottom
+    bottomHorseKeyLabels:
+    - idle-left-0
+    - idle-left-1
+    - idle-left-2
+    - idle-left-2
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    topCategory: IdleTop
+    topHorseKeyLabels:
+    - idle-left-0
+    - idle-left-1
+    - idle-left-2
+    - idle-left-2
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 58000000580000005800000058000000
+    farmerFrameOffset:
+    - {x: -1, y: 0}
+    - {x: -1, y: 0}
+    - {x: -1, y: 0}
+    - {x: -1, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.15
+    - 0.3
+    - 0.45
     farmerXFlip: 0
   - animationType: walk
     animationName: down
@@ -77,9 +204,627 @@ MonoBehaviour:
     - 0.9
     - 1.2
     horseXFlip: 0
-    buildFarmer: 0
-    farmerKeys: 
-    farmerFrameOffset: {x: 0, y: 0}
+    buildFarmer: 1
+    farmerKeys: 3800000038000000380000003800000038000000
+    farmerFrameOffset:
+    - {x: 0, y: 0}
+    - {x: 0, y: -1}
+    - {x: 0, y: 0}
+    - {x: 0, y: -1}
+    - {x: 0, y: -1}
     farmerKeyXFlips: 
-    farmerKeyTimer: []
+    farmerKeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    farmerXFlip: 0
+  - animationType: walk
+    animationName: right
+    bottomCategory: WalkBottom
+    bottomHorseKeyLabels:
+    - walk-right-0
+    - walk-right-1
+    - walk-right-2
+    - walk-right-3
+    - walk-right-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    topCategory: WalkTop
+    topHorseKeyLabels:
+    - walk-right-0
+    - walk-right-1
+    - walk-right-2
+    - walk-right-3
+    - walk-right-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 5800000058000000580000005800000058000000
+    farmerFrameOffset:
+    - {x: 1, y: -1}
+    - {x: 1, y: 0}
+    - {x: 1, y: -1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    farmerXFlip: 0
+  - animationType: walk
+    animationName: up
+    bottomCategory: WalkBottom
+    bottomHorseKeyLabels:
+    - walk-up-0
+    - walk-up-1
+    - walk-up-2
+    - walk-up-3
+    - walk-up-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    topCategory: WalkTop
+    topHorseKeyLabels:
+    - walk-up-0
+    - walk-up-1
+    - walk-up-2
+    - walk-up-3
+    - walk-up-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 4800000048000000480000004800000048000000
+    farmerFrameOffset:
+    - {x: 0, y: 1}
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 0, y: 0}
+    - {x: 0, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    farmerXFlip: 0
+  - animationType: walk
+    animationName: left
+    bottomCategory: WalkBottom
+    bottomHorseKeyLabels:
+    - walk-left-0
+    - walk-left-1
+    - walk-left-2
+    - walk-left-3
+    - walk-left-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    topCategory: WalkTop
+    topHorseKeyLabels:
+    - walk-left-0
+    - walk-left-1
+    - walk-left-2
+    - walk-left-3
+    - walk-left-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 5800000058000000580000005800000058000000
+    farmerFrameOffset:
+    - {x: -1, y: -1}
+    - {x: -1, y: 0}
+    - {x: -1, y: -1}
+    - {x: -1, y: 0}
+    - {x: -1, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.3
+    - 0.6
+    - 0.9
+    - 1.2
+    farmerXFlip: 0
+  - animationType: stand
+    animationName: down
+    bottomCategory: StandBottom
+    bottomHorseKeyLabels:
+    - stand-down
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    topCategory: StandTop
+    topHorseKeyLabels:
+    - stand-down
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 38000000
+    farmerFrameOffset:
+    - {x: 0, y: -1}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    farmerXFlip: 0
+  - animationType: stand
+    animationName: right
+    bottomCategory: StandBottom
+    bottomHorseKeyLabels:
+    - stand-right
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    topCategory: StandTop
+    topHorseKeyLabels:
+    - stand-right
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 58000000
+    farmerFrameOffset:
+    - {x: 1, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    farmerXFlip: 0
+  - animationType: stand
+    animationName: up
+    bottomCategory: StandBottom
+    bottomHorseKeyLabels:
+    - stand-up
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    topCategory: WalkTop
+    topHorseKeyLabels:
+    - stand-up
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 48000000
+    farmerFrameOffset: []
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    farmerXFlip: 0
+  - animationType: stand
+    animationName: left
+    bottomCategory: StandBottom
+    bottomHorseKeyLabels:
+    - stand-left
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    topCategory: StandTop
+    topHorseKeyLabels:
+    - stand-left
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 58000000
+    farmerFrameOffset:
+    - {x: -1, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    farmerXFlip: 0
+  - animationType: trot
+    animationName: down
+    bottomCategory: TrotBottom
+    bottomHorseKeyLabels:
+    - trot-down-0
+    - trot-down-1
+    - trot-down-2
+    - trot-down-3
+    - trot-down-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    topCategory: TrotTop
+    topHorseKeyLabels:
+    - trot-down-0
+    - trot-down-1
+    - trot-down-2
+    - trot-down-3
+    - trot-down-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 3900000038000000390000003800000038000000
+    farmerFrameOffset:
+    - {x: 0, y: 0}
+    - {x: 0, y: -1}
+    - {x: 0, y: 0}
+    - {x: 0, y: -1}
+    - {x: 0, y: -1}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    farmerXFlip: 0
+  - animationType: trot
+    animationName: right
+    bottomCategory: TrotBottom
+    bottomHorseKeyLabels:
+    - trot-right-0
+    - trot-right-1
+    - trot-right-2
+    - trot-right-3
+    - trot-right-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    topCategory: TrotTop
+    topHorseKeyLabels:
+    - trot-right-0
+    - trot-right-1
+    - trot-right-2
+    - trot-right-3
+    - trot-right-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 5900000058000000590000005800000058000000
+    farmerFrameOffset:
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 1, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    farmerXFlip: 0
+  - animationType: trot
+    animationName: up
+    bottomCategory: TrotBottom
+    bottomHorseKeyLabels:
+    - trot-up-0
+    - trot-up-1
+    - trot-up-2
+    - trot-up-3
+    - trot-up-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    topCategory: TrotTop
+    topHorseKeyLabels:
+    - trot-up-0
+    - trot-up-1
+    - trot-up-2
+    - trot-up-3
+    - trot-up-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 4900000048000000490000004800000048000000
+    farmerFrameOffset:
+    - {x: 0, y: 1}
+    - {x: 0, y: 0}
+    - {x: 0, y: 1}
+    - {x: 0, y: 0}
+    - {x: 0, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    farmerXFlip: 0
+  - animationType: trot
+    animationName: left
+    bottomCategory: TrotBottom
+    bottomHorseKeyLabels:
+    - trot-left-0
+    - trot-left-1
+    - trot-left-2
+    - trot-left-3
+    - trot-left-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    topCategory: TrotTop
+    topHorseKeyLabels:
+    - trot-left-0
+    - trot-left-1
+    - trot-left-2
+    - trot-left-3
+    - trot-left-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 5900000058000000590000005800000058000000
+    farmerFrameOffset:
+    - {x: 0, y: 1}
+    - {x: -1, y: 0}
+    - {x: 0, y: 1}
+    - {x: -1, y: 0}
+    - {x: -1, y: 0}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.6
+    - 0.8
+    farmerXFlip: 0
+  - animationType: gallop
+    animationName: down
+    bottomCategory: GallopBottom
+    bottomHorseKeyLabels:
+    - gallop-down-0
+    - gallop-down-1
+    - gallop-down-2
+    - gallop-down-3
+    - gallop-down-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    topCategory: GallopTop
+    topHorseKeyLabels:
+    - gallop-down-0
+    - gallop-down-1
+    - gallop-down-2
+    - gallop-down-3
+    - gallop-down-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 3900000039000000380000003800000038000000
+    farmerFrameOffset:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 0, y: 0}
+    - {x: 0, y: -1}
+    - {x: 0, y: -1}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    farmerXFlip: 0
+  - animationType: gallop
+    animationName: right
+    bottomCategory: GallopBottom
+    bottomHorseKeyLabels:
+    - gallop-right-0
+    - gallop-right-1
+    - gallop-right-2
+    - gallop-right-3
+    - gallop-right-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    topCategory: GallopTop
+    topHorseKeyLabels:
+    - gallop-right-0
+    - gallop-right-1
+    - gallop-right-2
+    - gallop-right-3
+    - gallop-right-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 5900000059000000580000005800000058000000
+    farmerFrameOffset:
+    - {x: 2, y: 1}
+    - {x: 1, y: 1}
+    - {x: 1, y: 0}
+    - {x: 2, y: 1}
+    - {x: 2, y: 1}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    farmerXFlip: 0
+  - animationType: gallop
+    animationName: up
+    bottomCategory: GallopBottom
+    bottomHorseKeyLabels:
+    - gallop-up-0
+    - gallop-up-1
+    - gallop-up-2
+    - gallop-up-3
+    - gallop-up-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    topCategory: GallopTop
+    topHorseKeyLabels:
+    - gallop-up-0
+    - gallop-up-1
+    - gallop-up-2
+    - gallop-up-3
+    - gallop-up-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 4900000049000000480000004800000048000000
+    farmerFrameOffset:
+    - {x: 0, y: 1}
+    - {x: 0, y: 3}
+    - {x: 0, y: 3}
+    - {x: 0, y: 1}
+    - {x: 0, y: 1}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    farmerXFlip: 0
+  - animationType: gallop
+    animationName: left
+    bottomCategory: GallopBottom
+    bottomHorseKeyLabels:
+    - gallop-left-0
+    - gallop-left-1
+    - gallop-left-2
+    - gallop-left-3
+    - gallop-left-3
+    bottomHorseKeyXFlips: 
+    bottomHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    topCategory: GallopTop
+    topHorseKeyLabels:
+    - gallop-left-0
+    - gallop-left-1
+    - gallop-left-2
+    - gallop-left-3
+    - gallop-left-3
+    topHorseKeyXFlips: 
+    topHorsekeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
+    horseXFlip: 0
+    buildFarmer: 1
+    farmerKeys: 5900000059000000580000005800000058000000
+    farmerFrameOffset:
+    - {x: -2, y: 1}
+    - {x: -1, y: 1}
+    - {x: -1, y: 0}
+    - {x: -2, y: 1}
+    - {x: -2, y: 1}
+    farmerKeyXFlips: 
+    farmerKeyTimer:
+    - 0
+    - 0.2
+    - 0.4
+    - 0.55
+    - 0.7
     farmerXFlip: 0
