@@ -30,7 +30,7 @@ public enum QuestObjectiveType
     Courier = 10,
     Collect = 20,
     Task = 30,
-    Defend=40,
+    Defend = 40,
     none = 0
 }
 
@@ -44,19 +44,23 @@ public enum QuestTaskType
 
 public enum QuestInventoryStatus
 {
-    Add=10,
-    Remove=20,
-    Hidden=30,
-    none=0
+    Add = 10,
+    Remove = 20,
+    Hidden = 30,
+    none = 0
 }
 
 public enum CurrentWorkingNode
 {
-    QuestStart,
-    QuestEnd,
-    QuestCollect,
-    QuestCourier,
-    QuestTask,
-    none
-};
+    QuestStart = 10,
+    QuestEnd = 20,
+    QuestCollect = 30,
+    QuestCourier = 40,
+    QuestTask = 50,
+    DialogStart = 60,
+    DialogBasic = 70,
+    DialogBranch = 80,
+    DialogEnd = 90,
+    none = 0
+}
 

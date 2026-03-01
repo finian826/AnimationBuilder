@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public class DialogBranchDetails 
 {
-    public string branchText;
+    
     
 
 }

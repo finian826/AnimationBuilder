@@ -232,9 +232,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.taskDetails.Count > 0)
+        if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask so_node in questBody.taskDetails)
+            foreach (SO_ObjectiveTask so_node in questBody.questTaskDetailsList)
             {
                 if (so_node != null)
                 {
@@ -248,9 +248,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.couierDetails.Count > 0)
+        if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier so_node in questBody.couierDetails)
+            foreach (SO_ObjectiveCourier so_node in questBody.questCouierDetailsList)
             {
                 if (so_node != null)
                 {
@@ -264,9 +264,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.collectDetails.Count > 0)
+        if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect so_node in questBody.collectDetails)
+            foreach (SO_ObjectiveCollect so_node in questBody.questCollectDetailsList)
             {
                 if (so_node != null)
                 {
@@ -366,36 +366,36 @@ public class QuestDetailsEditor : EditorWindow
                 questEndDetails = questBody.questEndDetails;
             }
         }
-        if (questBody.taskDetails.Count > 0)
+        if (questBody.questTaskDetailsList.Count > 0)
         {
-            for (int i = questBody.taskDetails.Count - 1; i >= 0; i--)
+            for (int i = questBody.questTaskDetailsList.Count - 1; i >= 0; i--)
             {
-                if (questBody.taskDetails[i].rect.Contains(currentEvent.mousePosition))
+                if (questBody.questTaskDetailsList[i].rect.Contains(currentEvent.mousePosition))
                 {
                     currentNode = CurrentWorkingNode.QuestTask;
-                    taskDetails = questBody.taskDetails[i];
+                    taskDetails = questBody.questTaskDetailsList[i];
                 }
             }
         }
-        if (questBody.collectDetails.Count > 0)
+        if (questBody.questCollectDetailsList.Count > 0)
         {
-            for (int i = questBody.collectDetails.Count - 1; i >= 0; i--)
+            for (int i = questBody.questCollectDetailsList.Count - 1; i >= 0; i--)
             {
-                if (questBody.collectDetails[i].rect.Contains(currentEvent.mousePosition))
+                if (questBody.questCollectDetailsList[i].rect.Contains(currentEvent.mousePosition))
                 {
                     currentNode = CurrentWorkingNode.QuestCollect;
-                    collectDetails = questBody.collectDetails[i];
+                    collectDetails = questBody.questCollectDetailsList[i];
                 }
             }
         }
-        if (questBody.couierDetails.Count > 0)
+        if (questBody.questCouierDetailsList.Count > 0)
         {
-            for (int i = questBody.couierDetails.Count - 1; i >= 0; i--)
+            for (int i = questBody.questCouierDetailsList.Count - 1; i >= 0; i--)
             {
-                if (questBody.couierDetails[i].rect.Contains(currentEvent.mousePosition))
+                if (questBody.questCouierDetailsList[i].rect.Contains(currentEvent.mousePosition))
                 {
                     currentNode = CurrentWorkingNode.QuestCourier;
-                    courierDetails = questBody.couierDetails[i];
+                    courierDetails = questBody.questCouierDetailsList[i];
                 }
             }
         }
@@ -422,33 +422,33 @@ public class QuestDetailsEditor : EditorWindow
                 nodeIDToReturn=questBody.questEndDetails.questEndID;
             }
         }
-        if (questBody.taskDetails.Count > 0)
+        if (questBody.questTaskDetailsList.Count > 0)
         {
-            for (int i = questBody.taskDetails.Count - 1; i >= 0; i--)
+            for (int i = questBody.questTaskDetailsList.Count - 1; i >= 0; i--)
             {
-                if (questBody.taskDetails[i].rect.Contains(currentEvent.mousePosition))
+                if (questBody.questTaskDetailsList[i].rect.Contains(currentEvent.mousePosition))
                 {
-                    nodeIDToReturn = questBody.taskDetails[i].taskQuestStepID;
+                    nodeIDToReturn = questBody.questTaskDetailsList[i].taskQuestStepID;
                 }
             }
         }
-        if (questBody.collectDetails.Count > 0)
+        if (questBody.questCollectDetailsList.Count > 0)
         {
-            for (int i = questBody.collectDetails.Count - 1; i >= 0; i--)
+            for (int i = questBody.questCollectDetailsList.Count - 1; i >= 0; i--)
             {
-                if (questBody.collectDetails[i].rect.Contains(currentEvent.mousePosition))
+                if (questBody.questCollectDetailsList[i].rect.Contains(currentEvent.mousePosition))
                 {
-                    nodeIDToReturn = questBody.collectDetails[i].collectQuestStepID;
+                    nodeIDToReturn = questBody.questCollectDetailsList[i].collectQuestStepID;
                 }
             }
         }
-        if (questBody.couierDetails.Count > 0)
+        if (questBody.questCouierDetailsList.Count > 0)
         {
-            for (int i = questBody.couierDetails.Count - 1; i >= 0; i--)
+            for (int i = questBody.questCouierDetailsList.Count - 1; i >= 0; i--)
             {
-                if (questBody.couierDetails[i].rect.Contains(currentEvent.mousePosition))
+                if (questBody.questCouierDetailsList[i].rect.Contains(currentEvent.mousePosition))
                 {
-                    nodeIDToReturn = questBody.couierDetails[i].courierQuestStepID;
+                    nodeIDToReturn = questBody.questCouierDetailsList[i].courierQuestStepID;
                 }
             }
         }
@@ -781,25 +781,25 @@ public class QuestDetailsEditor : EditorWindow
         {
             questBody.questEndDetails.DragNode(dragDelta);
         }
-        if (questBody.taskDetails.Count>0)
+        if (questBody.questTaskDetailsList.Count>0)
         {
-            for(int i=0;i<questBody.taskDetails.Count;i++)
+            for(int i=0;i<questBody.questTaskDetailsList.Count;i++)
             {
-                    questBody.taskDetails[i].DragNode(dragDelta);
+                    questBody.questTaskDetailsList[i].DragNode(dragDelta);
             }
         }
-        if (questBody.collectDetails.Count>0)
+        if (questBody.questCollectDetailsList.Count>0)
         {
-            for(int i=0;i<questBody.collectDetails.Count; i++)
+            for(int i=0;i<questBody.questCollectDetailsList.Count; i++)
             {
-                    questBody.collectDetails[i].DragNode(dragDelta);
+                    questBody.questCollectDetailsList[i].DragNode(dragDelta);
             }
         }
-        if (questBody.couierDetails.Count>0)
+        if (questBody.questCouierDetailsList.Count>0)
         {
-            for(int i = 0; i < questBody.couierDetails.Count; i++)
+            for(int i = 0; i < questBody.questCouierDetailsList.Count; i++)
             {
-                    questBody.couierDetails[i].DragNode(dragDelta);
+                    questBody.questCouierDetailsList[i].DragNode(dragDelta);
             }
         }
             GUI.changed = true;
@@ -842,9 +842,9 @@ public class QuestDetailsEditor : EditorWindow
                 questBody.questEndDetails.isSelected = false;
             }
         }
-        if (questBody.collectDetails.Count > 0)
+        if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect collect in questBody.collectDetails)
+            foreach (SO_ObjectiveCollect collect in questBody.questCollectDetailsList)
             {
                 if (collect.isSelected)
                 {
@@ -852,9 +852,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.couierDetails.Count > 0)
+        if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier courier in questBody.couierDetails)
+            foreach (SO_ObjectiveCourier courier in questBody.questCouierDetailsList)
             {
                 if (courier.isSelected)
                 {
@@ -862,9 +862,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.taskDetails.Count > 0)
+        if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask task in questBody.taskDetails)
+            foreach (SO_ObjectiveTask task in questBody.questTaskDetailsList)
             {
                 if (task.isSelected)
                 {
@@ -981,7 +981,7 @@ public class QuestDetailsEditor : EditorWindow
         string childID;
 
         if (questBody.questStartDetails != null && questBody.questStartDetails.isSelected && questBody.questEndDetails == null &&
-            questBody.taskDetails.Count == 0 && questBody.collectDetails.Count == 0 && questBody.couierDetails.Count == 0)
+            questBody.questTaskDetailsList.Count == 0 && questBody.questCollectDetailsList.Count == 0 && questBody.questCouierDetailsList.Count == 0)
         {
             nodeIDToDelete.Enqueue(questBody.questStartDetails.questStartID);
             for (int i = questBody.questStartDetails.childQuestStepID.Count - 1; i >= 0; i--)
@@ -1007,9 +1007,9 @@ public class QuestDetailsEditor : EditorWindow
                 DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestEnd, questBody.questEndDetails.questEndID, childID, true);
             }
         }
-        if(questBody.collectDetails.Count>0)
+        if(questBody.questCollectDetailsList.Count>0)
         {
-            foreach(SO_ObjectiveCollect node in questBody.collectDetails)
+            foreach(SO_ObjectiveCollect node in questBody.questCollectDetailsList)
             {
                 if (node.isSelected)
                 {
@@ -1032,9 +1032,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.couierDetails.Count > 0)
+        if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier node in questBody.couierDetails)
+            foreach (SO_ObjectiveCourier node in questBody.questCouierDetailsList)
             {
                 if (node.isSelected)
                 {
@@ -1057,9 +1057,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.taskDetails.Count > 0)
+        if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask node in questBody.taskDetails)
+            foreach (SO_ObjectiveTask node in questBody.questTaskDetailsList)
             {
                 if (node.isSelected)
                 {
@@ -1301,9 +1301,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.collectDetails.Count > 0)
+        if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect collectNode in questBody.collectDetails)
+            foreach (SO_ObjectiveCollect collectNode in questBody.questCollectDetailsList)
             {
                 if (collectNode.isSelected && collectNode.parentQuestStepID.Count > 0)
                 {
@@ -1331,9 +1331,9 @@ public class QuestDetailsEditor : EditorWindow
             }
 
         }
-        if (questBody.couierDetails.Count > 0)
+        if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier courierNode in questBody.couierDetails)
+            foreach (SO_ObjectiveCourier courierNode in questBody.questCouierDetailsList)
             {
                 if (courierNode.isSelected && courierNode.parentQuestStepID.Count > 0)
                 {
@@ -1347,9 +1347,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.taskDetails.Count > 0)
+        if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask taskNode in questBody.taskDetails)
+            foreach (SO_ObjectiveTask taskNode in questBody.questTaskDetailsList)
             {
                 if (taskNode.isSelected && taskNode.parentQuestStepID.Count > 0)
                 {
@@ -1380,9 +1380,9 @@ public class QuestDetailsEditor : EditorWindow
         {
             questBody.questEndDetails.isSelected = false;
         }
-        if (questBody.collectDetails.Count > 0)
+        if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect collect in questBody.collectDetails)
+            foreach (SO_ObjectiveCollect collect in questBody.questCollectDetailsList)
             {
                 if (collect.isSelected)
                 {
@@ -1390,9 +1390,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.couierDetails.Count > 0)
+        if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier courier in questBody.couierDetails)
+            foreach (SO_ObjectiveCourier courier in questBody.questCouierDetailsList)
             {
                 if (courier.isSelected)
                 {
@@ -1400,9 +1400,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.taskDetails.Count > 0)
+        if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask task in questBody.taskDetails)
+            foreach (SO_ObjectiveTask task in questBody.questTaskDetailsList)
             {
                 if (task.isSelected)
                 {
@@ -1424,23 +1424,23 @@ public class QuestDetailsEditor : EditorWindow
         {
             questBody.questEndDetails.isSelected = true;
         }
-        if (questBody.collectDetails.Count > 0)
+        if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCollect collect in questBody.collectDetails)
+            foreach(SO_ObjectiveCollect collect in questBody.questCollectDetailsList)
             {
                 collect.isSelected = true;
             }
         }
-        if(questBody.couierDetails.Count > 0)
+        if(questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier courier in questBody.couierDetails)
+            foreach (SO_ObjectiveCourier courier in questBody.questCouierDetailsList)
             {
                 courier.isSelected = true;
             }
         }
-        if(questBody.taskDetails.Count > 0)
+        if(questBody.questTaskDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveTask task in questBody.taskDetails)
+            foreach(SO_ObjectiveTask task in questBody.questTaskDetailsList)
             {
                 task.isSelected = true;
             }
@@ -1457,8 +1457,8 @@ public class QuestDetailsEditor : EditorWindow
     {
         Vector2 mousePosition = (Vector2)mousePositionObject;
         //if current quest nodes are empty then add quest start node first
-        if (questBody.questStartDetails == null && questBody.questEndDetails == null && questBody.collectDetails.Count == 0 &&
-            questBody.taskDetails.Count == 0 && questBody.couierDetails.Count == 0 && nodeToCreate != CurrentWorkingNode.QuestStart)
+        if (questBody.questStartDetails == null && questBody.questEndDetails == null && questBody.questCollectDetailsList.Count == 0 &&
+            questBody.questTaskDetailsList.Count == 0 && questBody.questCouierDetailsList.Count == 0 && nodeToCreate != CurrentWorkingNode.QuestStart)
         {
             SO_QuestStartDetails startNode = ScriptableObject.CreateInstance<SO_QuestStartDetails>();
             startNode.Initialise(new Rect(new Vector2(375f, 25f), new Vector2(nodeWidth, nodeHeight)), questBody);
@@ -1472,7 +1472,7 @@ public class QuestDetailsEditor : EditorWindow
         {
             case CurrentWorkingNode.QuestCollect:
                 SO_ObjectiveCollect collectNode = ScriptableObject.CreateInstance<SO_ObjectiveCollect>();
-                questBody.collectDetails.Add(collectNode);
+                questBody.questCollectDetailsList.Add(collectNode);
                 collectNode.Initialise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), questBody);
                 collectNode.questID = questBody.questNodeID;               
                 AssetDatabase.AddObjectToAsset(collectNode, questBody);
@@ -1480,7 +1480,7 @@ public class QuestDetailsEditor : EditorWindow
                 break;
             case CurrentWorkingNode.QuestCourier:
                 SO_ObjectiveCourier courierNode = ScriptableObject.CreateInstance<SO_ObjectiveCourier>();
-                questBody.couierDetails.Add(courierNode);
+                questBody.questCouierDetailsList.Add(courierNode);
                 courierNode.Initialise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), questBody);
                 AssetDatabase.AddObjectToAsset(courierNode, questBody);
                 AssetDatabase.SaveAssets();
@@ -1488,7 +1488,7 @@ public class QuestDetailsEditor : EditorWindow
                 break;
             case CurrentWorkingNode.QuestTask:
                 SO_ObjectiveTask taskNode = ScriptableObject.CreateInstance<SO_ObjectiveTask>();
-                questBody.taskDetails.Add(taskNode);
+                questBody.questTaskDetailsList.Add(taskNode);
                 taskNode.Initialise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), questBody);
                 AssetDatabase.AddObjectToAsset(taskNode, questBody);
                 AssetDatabase.SaveAssets();
@@ -1535,9 +1535,9 @@ public class QuestDetailsEditor : EditorWindow
                 questBody.questEndDetails.Draw(questNodeStyle);
             }
         }
-        if (questBody.collectDetails.Count > 0)
+        if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCollect quests in questBody.collectDetails)
+            foreach(SO_ObjectiveCollect quests in questBody.questCollectDetailsList)
             {
                 if (quests.isSelected)
                 {
@@ -1549,9 +1549,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.couierDetails.Count > 0)
+        if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier quests in questBody.couierDetails)
+            foreach (SO_ObjectiveCourier quests in questBody.questCouierDetailsList)
             {
                 if (quests.isSelected)
                 {
@@ -1563,9 +1563,9 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
-        if (questBody.taskDetails.Count > 0)
+        if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask quests in questBody.taskDetails)
+            foreach (SO_ObjectiveTask quests in questBody.questTaskDetailsList)
             {
                 if (quests.isSelected)
                 {

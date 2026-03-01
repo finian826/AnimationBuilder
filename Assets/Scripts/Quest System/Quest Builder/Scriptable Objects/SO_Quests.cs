@@ -18,9 +18,13 @@ public class SO_Quests : ScriptableObject
     [HideInInspector] public SO_QuestNode questNode;
      public SO_QuestStartDetails questStartDetails = null;
      public SO_QuestEndDetails questEndDetails = null;
-     public List<SO_ObjectiveCollect> collectDetails = new List<SO_ObjectiveCollect>();
-     public List<SO_ObjectiveCourier> couierDetails = new List<SO_ObjectiveCourier>();
-     public List<SO_ObjectiveTask> taskDetails = new List<SO_ObjectiveTask>();
+     public List<SO_ObjectiveCollect> questCollectDetailsList = new List<SO_ObjectiveCollect>();
+     public List<SO_ObjectiveCourier> questCouierDetailsList = new List<SO_ObjectiveCourier>();
+     public List<SO_ObjectiveTask> questTaskDetailsList = new List<SO_ObjectiveTask>();
+    public SO_ObjectiveDialogStart dialogStartDetails = null;
+    public SO_ObjectiveDialogEnd dialogEndDetails = null;
+    public List<SO_ObjectiveDialogBasic> dialogBasicDetailsList = new List<SO_ObjectiveDialogBasic>();
+    public List<SO_ObjectiveDialogBranch> dialogBranchDetailsList = new List<SO_ObjectiveDialogBranch>();
     [HideInInspector] public Dictionary<string, CurrentWorkingNode> questStepDictionary = new Dictionary<string, CurrentWorkingNode>();
 
     private void Awake()
@@ -31,6 +35,7 @@ public class SO_Quests : ScriptableObject
     private void BuildStepDictionary()
     {
         questStepDictionary.Clear();
+        //Add quest nodes
         if(questStartDetails != null)
         {
             questStepDictionary[questStartDetails.questStartID] = CurrentWorkingNode.QuestStart;
@@ -39,25 +44,48 @@ public class SO_Quests : ScriptableObject
         {
             questStepDictionary[questEndDetails.questEndID] = CurrentWorkingNode.QuestEnd;
         }
-        if(collectDetails.Count > 0)
+        if(questCollectDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCollect nodeID in collectDetails)
+            foreach(SO_ObjectiveCollect nodeID in questCollectDetailsList)
             {
                 questStepDictionary[nodeID.collectQuestStepID] = CurrentWorkingNode.QuestCollect;
             }
         }
-        if (couierDetails.Count > 0)
+        if (questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier nodeID in couierDetails)
+            foreach (SO_ObjectiveCourier nodeID in questCouierDetailsList)
             {
                 questStepDictionary[nodeID.courierQuestStepID] = CurrentWorkingNode.QuestCourier;
             }
         }
-        if (taskDetails.Count > 0)
+        if (questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask nodeID in taskDetails)
+            foreach (SO_ObjectiveTask nodeID in questTaskDetailsList)
             {
                 questStepDictionary[nodeID.taskQuestStepID] = CurrentWorkingNode.QuestTask;
+            }
+        }
+        //Add dialog nodes
+        if (dialogStartDetails != null)
+        {
+            questStepDictionary[dialogStartDetails.dialogStartStepID] = CurrentWorkingNode.DialogStart;
+        }
+        if (dialogEndDetails != null)
+        {
+            questStepDictionary[dialogEndDetails.dialogEndStepID] = CurrentWorkingNode.DialogEnd;
+        }
+        if (dialogBasicDetailsList.Count > 0)
+        {
+            foreach (SO_ObjectiveDialogBasic nodeID in dialogBasicDetailsList)
+            {
+                questStepDictionary[nodeID.dialogBasicStepID] = CurrentWorkingNode.DialogBasic;
+            }
+        }
+        if (dialogBranchDetailsList.Count > 0)
+        {
+            foreach (SO_ObjectiveDialogBranch nodeID in dialogBranchDetailsList)
+            {
+                questStepDictionary[nodeID.dialogBranchStepID] = CurrentWorkingNode.DialogBranch;
             }
         }
 #if UNITY_EDITOR
@@ -99,9 +127,9 @@ public class SO_Quests : ScriptableObject
 
     public SO_ObjectiveTask GetTaskNodeByID(string nodeID)
     {
-        if (taskDetails.Count > 0)
+        if (questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask item in taskDetails)
+            foreach (SO_ObjectiveTask item in questTaskDetailsList)
             {
                 if (nodeID == item.taskQuestStepID)
                 {
@@ -114,9 +142,9 @@ public class SO_Quests : ScriptableObject
 
     public SO_ObjectiveCollect GetCollectNodeByID(string nodeID)
     {
-        if (collectDetails.Count > 0)
+        if (questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect item in collectDetails)
+            foreach (SO_ObjectiveCollect item in questCollectDetailsList)
             {
                 if (nodeID == item.collectQuestStepID)
                 {
@@ -129,9 +157,9 @@ public class SO_Quests : ScriptableObject
 
     public SO_ObjectiveCourier GetCourierNodeByID(string nodeID)
     {
-        if (couierDetails.Count > 0)
+        if (questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier item in couierDetails)
+            foreach (SO_ObjectiveCourier item in questCouierDetailsList)
             {
                 if (nodeID == item.courierQuestStepID)
                 {
@@ -154,6 +182,10 @@ public class SO_Quests : ScriptableObject
     [HideInInspector] public SO_ObjectiveCollect collectNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveCourier couierNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveTask taskNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_ObjectiveDialogBranch branchNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_ObjectiveDialogEnd dialogEndNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_ObjectiveDialogStart dialogStartNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_ObjectiveDialogBasic dialogBasicNodeToDrawLineFrom = null;
     [HideInInspector] public Vector2 linePosition;
     [HideInInspector] public CurrentWorkingNode nodeTypeLineFrom;
     public Dictionary<string,Rect> nodeLocations=new Dictionary<string,Rect>();
@@ -196,6 +228,7 @@ public class SO_Quests : ScriptableObject
     public void BuildNodeLocationDictionary()
     {
         nodeLocations.Clear();
+        //Add quest node rect locations
         if (questStartDetails != null)
         {
             nodeLocations[questStartDetails.questStartID] = questStartDetails.rect;
@@ -204,25 +237,48 @@ public class SO_Quests : ScriptableObject
         {
             nodeLocations[questEndDetails.questEndID] = questEndDetails.rect;
         }
-        if(taskDetails.Count > 0)
+        if(questTaskDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveTask task in taskDetails)
+            foreach(SO_ObjectiveTask task in questTaskDetailsList)
             {
                 nodeLocations[task.taskQuestStepID]=task.rect;
             }
         }
-        if(collectDetails.Count > 0)
+        if(questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect collect in collectDetails)
+            foreach (SO_ObjectiveCollect collect in questCollectDetailsList)
             {
                 nodeLocations[collect.collectQuestStepID] = collect.rect;
             }
         }
-        if(couierDetails.Count > 0)
+        if(questCouierDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCourier couier in couierDetails)
+            foreach(SO_ObjectiveCourier couier in questCouierDetailsList)
             {
                 nodeLocations[couier.courierQuestStepID] = couier.rect;
+            }
+        }
+        //add dialog rect locations
+        if (dialogStartDetails != null)
+        {
+            nodeLocations[dialogStartDetails.dialogStartStepID] = dialogStartDetails.rect;
+        }
+        if (dialogEndDetails != null)
+        {
+            nodeLocations[dialogEndDetails.dialogEndStepID] = dialogEndDetails.rect;
+        }
+        if (dialogBasicDetailsList.Count > 0)
+        {
+            foreach (SO_ObjectiveDialogBasic dialogBasic in dialogBasicDetailsList)
+            {
+                nodeLocations[dialogBasic.dialogBasicStepID] = dialogBasic.rect;
+            }
+        }
+        if (dialogBranchDetailsList.Count > 0)
+        {
+            foreach (SO_ObjectiveDialogBranch dialogBranch in dialogBranchDetailsList)
+            {
+                nodeLocations[dialogBranch.dialogBranchStepID] = dialogBranch.rect;
             }
         }
     }
@@ -259,13 +315,13 @@ public class SO_Quests : ScriptableObject
 
     public void RemoveNode(SO_ObjectiveCollect node)
     {
-        if(collectDetails.Count > 0)
+        if(questCollectDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCollect item in collectDetails)
+            foreach(SO_ObjectiveCollect item in questCollectDetailsList)
             {
                 if (item == node)
                 {
-                    collectDetails.Remove(node);
+                    questCollectDetailsList.Remove(node);
                     //remove node from assets database
                     DestroyImmediate(node, true);
 
@@ -281,13 +337,13 @@ public class SO_Quests : ScriptableObject
 
     public void RemoveNode(SO_ObjectiveCourier node)
     {
-        if (couierDetails.Count > 0)
+        if (questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier item in couierDetails)
+            foreach (SO_ObjectiveCourier item in questCouierDetailsList)
             {
                 if (item == node)
                 {
-                    couierDetails.Remove(node);
+                    questCouierDetailsList.Remove(node);
                     //remove node from assets database
                     DestroyImmediate(node, true);
 
@@ -303,13 +359,13 @@ public class SO_Quests : ScriptableObject
 
     public void RemoveNode(SO_ObjectiveTask node)
     {
-        if (taskDetails.Count > 0)
+        if (questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask item in taskDetails)
+            foreach (SO_ObjectiveTask item in questTaskDetailsList)
             {
                 if (item == node)
                 {
-                    taskDetails.Remove(node);
+                    questTaskDetailsList.Remove(node);
                     //remove node from assets database
                     DestroyImmediate(node, true);
 
@@ -327,6 +383,35 @@ public class SO_Quests : ScriptableObject
     public void OnValidate()
     {
         BuildStepDictionary();
+    }
+
+    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveDialogBasic node, Vector2 position)
+    {
+        dialogBasicNodeToDrawLineFrom = node;
+        linePosition = position;
+        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
+    }
+
+    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveDialogStart node, Vector2 position)
+    {
+        dialogStartNodeToDrawLineFrom = node;
+        linePosition = position;
+        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
+    }
+
+    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveDialogEnd node, Vector2 position)
+    {
+        dialogEndNodeToDrawLineFrom = node;
+        linePosition = position;
+        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
+    }
+
+
+    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveDialogBranch node, Vector2 position)
+    {
+        branchNodeToDrawLineFrom = node;
+        linePosition = position;
+        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
     }
 
 
@@ -383,34 +468,34 @@ public class SO_Quests : ScriptableObject
             //save the asset database
             AssetDatabase.SaveAssets();
         }
-        if(collectDetails.Count > 0)
+        if(questCollectDetailsList.Count > 0)
         {
-            for(int i = 0; i < collectDetails.Count; i++)
+            for(int i = 0; i < questCollectDetailsList.Count; i++)
             {
                 //remove node from assets database
-                DestroyImmediate(collectDetails[i], true);
+                DestroyImmediate(questCollectDetailsList[i], true);
 
                 //save the asset database
                 AssetDatabase.SaveAssets();
             }
         }
-        if(couierDetails.Count > 0)
+        if(questCouierDetailsList.Count > 0)
         {
-            for (int i = 0; i < couierDetails.Count; i++)
+            for (int i = 0; i < questCouierDetailsList.Count; i++)
             {
                 //remove node from assets database
-                DestroyImmediate(couierDetails[i], true);
+                DestroyImmediate(questCouierDetailsList[i], true);
 
                 //save the asset database
                 AssetDatabase.SaveAssets();
             }
         }
-        if(taskDetails.Count > 0)
+        if(questTaskDetailsList.Count > 0)
         {
-            for (int i = 0; i < taskDetails.Count; i++)
+            for (int i = 0; i < questTaskDetailsList.Count; i++)
             {
                 //remove node from assets database
-                DestroyImmediate(taskDetails[i], true);
+                DestroyImmediate(questTaskDetailsList[i], true);
 
                 //save the asset database
                 AssetDatabase.SaveAssets();
