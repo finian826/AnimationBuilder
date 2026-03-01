@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235691a5df93fa444880ffb4b4888ebc, type: 3}
+  m_Name: so_NPCList
+  m_EditorClassIdentifier: Assembly-CSharp::SO_NPCList
+  list:
+  - NPCid: e866edde-e8a2-450f-815b-6a5c7bc83e91
+    NPCName: Nun
+    startingType: 10
+  - NPCid: b9914ce7-ff0a-444c-a50a-4882e6a9c15a
+    NPCName: Jed
+    startingType: 10
+  - NPCid: ac29eb02-2650-4810-8550-cadb22796511
+    NPCName: Giant Pumpkin
+    startingType: 30
+  - NPCid: d8518ff4-9ae8-4d40-9aba-9d146937d4cb
+    NPCName: Scary Beet
+    startingType: 30

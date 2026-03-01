@@ -1,0 +1,609 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8997005496772840508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b4d9e649322684394402a2e288b5b1, type: 3}
+  m_Name: Quest
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Quests
+  questNodeID: 318b69fe-dd41-42d7-8bd3-b31b9549b7ac
+  typeOfQuest: 10
+  questStartStepID: 
+  prerequisateQuests:
+  - cce42ef7-fd73-493b-8a0a-d1dfd6502905
+  - f6a8caa5-d5de-4a2d-98c4-6ff99201ee63
+  - 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  requiredFor:
+  - 4e31bfd5-ab07-4053-a06e-be1b1b71fa4c
+  questStartCondition: 10
+  questStarter: e866edde-e8a2-450f-815b-6a5c7bc83e91
+  status: 10
+  questNode: {fileID: 11400000}
+  questStartDetails: {fileID: 0}
+  questEndDetails: {fileID: 0}
+  collectDetails: []
+  couierDetails: []
+  taskDetails: []
+  rect:
+    serializedVersion: 2
+    x: 409
+    y: 505
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+  startNodeToDrawLineFrom: {fileID: 0}
+  endNodeToDrawLineFrom: {fileID: 0}
+  collectNodeToDrawLineFrom: {fileID: 0}
+  couierNodeToDrawLineFrom: {fileID: 0}
+  taskNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+  nodeTypeLineFrom: 0
+--- !u!114 &-8267174698909868757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b4d9e649322684394402a2e288b5b1, type: 3}
+  m_Name: Quest
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Quests
+  questNodeID: a1dd4763-e5bc-4c76-842e-85aa973ddd66
+  typeOfQuest: 10
+  questStartStepID: 572c4a57-f6b8-4d13-8527-10d419f9b82d
+  prerequisateQuests: []
+  requiredFor:
+  - 4f4c47e5-9f04-40d6-9757-5161ef65ca43
+  - 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  - c2011547-6aa7-4fac-a816-5d3ae7f3e7ac
+  questStartCondition: 10
+  questStarter: e866edde-e8a2-450f-815b-6a5c7bc83e91
+  status: 10
+  questNode: {fileID: 11400000}
+  questStartDetails: {fileID: 0}
+  questEndDetails: {fileID: 0}
+  collectDetails: []
+  couierDetails: []
+  taskDetails: []
+  rect:
+    serializedVersion: 2
+    x: 461
+    y: 74
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 1
+  isConnected: 1
+  callEditor: 0
+  startNodeToDrawLineFrom: {fileID: 0}
+  endNodeToDrawLineFrom: {fileID: 0}
+  collectNodeToDrawLineFrom: {fileID: 0}
+  couierNodeToDrawLineFrom: {fileID: 0}
+  taskNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+  nodeTypeLineFrom: 0
+--- !u!114 &-7670208274387328643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b4d9e649322684394402a2e288b5b1, type: 3}
+  m_Name: Quest
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Quests
+  questNodeID: 4e31bfd5-ab07-4053-a06e-be1b1b71fa4c
+  typeOfQuest: 10
+  questStartStepID: 
+  prerequisateQuests:
+  - 318b69fe-dd41-42d7-8bd3-b31b9549b7ac
+  - bc5ccedd-9a2b-4f93-971c-a710773918f6
+  requiredFor: []
+  questStartCondition: 10
+  questStarter: e866edde-e8a2-450f-815b-6a5c7bc83e91
+  status: 10
+  questNode: {fileID: 11400000}
+  questStartDetails: {fileID: 0}
+  questEndDetails: {fileID: 0}
+  collectDetails: []
+  couierDetails: []
+  taskDetails: []
+  rect:
+    serializedVersion: 2
+    x: 441
+    y: 645
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 1
+  startNodeToDrawLineFrom: {fileID: 0}
+  endNodeToDrawLineFrom: {fileID: 0}
+  collectNodeToDrawLineFrom: {fileID: 0}
+  couierNodeToDrawLineFrom: {fileID: 0}
+  taskNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+  nodeTypeLineFrom: 0
+--- !u!114 &-6837129019188554683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c27df8564f6cd04d83e00f9c3ef8a97, type: 3}
+  m_Name: QuestCourier
+  m_EditorClassIdentifier: Assembly-CSharp::SO_ObjectiveCourier
+  courierQuestStepID: c8ebd404-baa4-4bd8-a9bb-6cc80d91f04d
+  questID: 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  parentQuestStepID:
+  - 6b8512ff-5c04-4bff-92f9-a634c75a75d0
+  childQuestStepID:
+  - c12df248-a86d-4a95-bb62-9f46b19c20c2
+  questNode: {fileID: -3470035951391252711}
+  stepCompleted: 0
+  taskNPC: 
+  npcDialog: 
+  taskItems: []
+  taskItemInventory: 0
+  rect:
+    serializedVersion: 2
+    x: 739
+    y: 234
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+--- !u!114 &-4027547262681627683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b4d9e649322684394402a2e288b5b1, type: 3}
+  m_Name: Quest
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Quests
+  questNodeID: 4f4c47e5-9f04-40d6-9757-5161ef65ca43
+  typeOfQuest: 10
+  questStartStepID: 
+  prerequisateQuests:
+  - a1dd4763-e5bc-4c76-842e-85aa973ddd66
+  requiredFor:
+  - cce42ef7-fd73-493b-8a0a-d1dfd6502905
+  - 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  questStartCondition: 10
+  questStarter: e866edde-e8a2-450f-815b-6a5c7bc83e91
+  status: 10
+  questNode: {fileID: 11400000}
+  questStartDetails: {fileID: 0}
+  questEndDetails: {fileID: 0}
+  collectDetails: []
+  couierDetails: []
+  taskDetails: []
+  rect:
+    serializedVersion: 2
+    x: 151
+    y: 216
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+  startNodeToDrawLineFrom: {fileID: 0}
+  endNodeToDrawLineFrom: {fileID: 0}
+  collectNodeToDrawLineFrom: {fileID: 0}
+  couierNodeToDrawLineFrom: {fileID: 0}
+  taskNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+  nodeTypeLineFrom: 0
+--- !u!114 &-3620601555032491988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b4d9e649322684394402a2e288b5b1, type: 3}
+  m_Name: Quest
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Quests
+  questNodeID: c2011547-6aa7-4fac-a816-5d3ae7f3e7ac
+  typeOfQuest: 10
+  questStartStepID: 
+  prerequisateQuests:
+  - a1dd4763-e5bc-4c76-842e-85aa973ddd66
+  requiredFor:
+  - 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  - f6a8caa5-d5de-4a2d-98c4-6ff99201ee63
+  questStartCondition: 10
+  questStarter: 
+  status: 10
+  questNode: {fileID: 11400000}
+  questStartDetails: {fileID: 0}
+  questEndDetails: {fileID: 0}
+  collectDetails: []
+  couierDetails: []
+  taskDetails: []
+  rect:
+    serializedVersion: 2
+    x: 716
+    y: 204
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+  startNodeToDrawLineFrom: {fileID: 0}
+  endNodeToDrawLineFrom: {fileID: 0}
+  collectNodeToDrawLineFrom: {fileID: 0}
+  couierNodeToDrawLineFrom: {fileID: 0}
+  taskNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+  nodeTypeLineFrom: 0
+--- !u!114 &-3470035951391252711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b4d9e649322684394402a2e288b5b1, type: 3}
+  m_Name: Quest
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Quests
+  questNodeID: 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  typeOfQuest: 10
+  questStartStepID: 6b8512ff-5c04-4bff-92f9-a634c75a75d0
+  prerequisateQuests:
+  - a1dd4763-e5bc-4c76-842e-85aa973ddd66
+  - 4f4c47e5-9f04-40d6-9757-5161ef65ca43
+  - c2011547-6aa7-4fac-a816-5d3ae7f3e7ac
+  requiredFor:
+  - 318b69fe-dd41-42d7-8bd3-b31b9549b7ac
+  questStartCondition: 10
+  questStarter: e866edde-e8a2-450f-815b-6a5c7bc83e91
+  status: 10
+  questNode: {fileID: 11400000}
+  questStartDetails: {fileID: -3459296946322622471}
+  questEndDetails: {fileID: -526761817509610842}
+  collectDetails:
+  - {fileID: -1890043759137425713}
+  couierDetails:
+  - {fileID: -6837129019188554683}
+  taskDetails:
+  - {fileID: 3479939747597994524}
+  rect:
+    serializedVersion: 2
+    x: 452
+    y: 251
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+  startNodeToDrawLineFrom: {fileID: 0}
+  endNodeToDrawLineFrom: {fileID: 0}
+  collectNodeToDrawLineFrom: {fileID: 0}
+  couierNodeToDrawLineFrom: {fileID: 0}
+  taskNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+  nodeTypeLineFrom: 3
+--- !u!114 &-3459296946322622471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7375280f512704445bacbf885028b7f5, type: 3}
+  m_Name: QuestStart
+  m_EditorClassIdentifier: Assembly-CSharp::SO_QuestStartDetails
+  questStartID: 6b8512ff-5c04-4bff-92f9-a634c75a75d0
+  questID: 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  childQuestStepID:
+  - 8fa0f58c-228e-47d1-a3eb-008a3d861038
+  - a40af9a9-304f-4608-be12-f2207dccabe7
+  - c8ebd404-baa4-4bd8-a9bb-6cc80d91f04d
+  questNode: {fileID: -3470035951391252711}
+  questTitle: 
+  questText: 
+  objectiveType: 0
+  trackerTitle: 
+  rect:
+    serializedVersion: 2
+    x: 590
+    y: 22
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+--- !u!114 &-1890043759137425713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284b74d6306e295408eb4aa79e2f9a13, type: 3}
+  m_Name: QuestCollect
+  m_EditorClassIdentifier: Assembly-CSharp::SO_ObjectiveCollect
+  collectQuestStepID: 8fa0f58c-228e-47d1-a3eb-008a3d861038
+  questID: 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  parentQuestStepID:
+  - 6b8512ff-5c04-4bff-92f9-a634c75a75d0
+  childQuestStepID:
+  - c12df248-a86d-4a95-bb62-9f46b19c20c2
+  questNode: {fileID: -3470035951391252711}
+  stepCompleted: 0
+  rect:
+    serializedVersion: 2
+    x: 369
+    y: 227
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 1
+--- !u!114 &-526761817509610842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67f36fa9a7a5594498ee2bedd3ca3a1, type: 3}
+  m_Name: QuestEnd
+  m_EditorClassIdentifier: Assembly-CSharp::SO_QuestEndDetails
+  questEndID: c12df248-a86d-4a95-bb62-9f46b19c20c2
+  questID: 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  parentQuestStepID:
+  - 8fa0f58c-228e-47d1-a3eb-008a3d861038
+  - a40af9a9-304f-4608-be12-f2207dccabe7
+  - c8ebd404-baa4-4bd8-a9bb-6cc80d91f04d
+  questNode: {fileID: -3470035951391252711}
+  guarenteedReward: 0
+  guarentedRewardItems: []
+  choiceReward: 0
+  choiceRewardItems: []
+  questFinishedText: 
+  rect:
+    serializedVersion: 2
+    x: 516
+    y: 412
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32587fa5b2502ce438272765b8b06c60, type: 3}
+  m_Name: so_QuestNode
+  m_EditorClassIdentifier: Assembly-CSharp::SO_QuestNode
+  questList:
+  - {fileID: -4027547262681627683}
+  - {fileID: 1448563772697183657}
+  - {fileID: 291901970405362513}
+  - {fileID: -8997005496772840508}
+  - {fileID: -7670208274387328643}
+  - {fileID: 1340211062739104290}
+  - {fileID: -8267174698909868757}
+  - {fileID: -3470035951391252711}
+  - {fileID: -3620601555032491988}
+  roomNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+--- !u!114 &291901970405362513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b4d9e649322684394402a2e288b5b1, type: 3}
+  m_Name: Quest
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Quests
+  questNodeID: cce42ef7-fd73-493b-8a0a-d1dfd6502905
+  typeOfQuest: 10
+  questStartStepID: 
+  prerequisateQuests:
+  - 4f4c47e5-9f04-40d6-9757-5161ef65ca43
+  requiredFor:
+  - 318b69fe-dd41-42d7-8bd3-b31b9549b7ac
+  questStartCondition: 10
+  questStarter: e866edde-e8a2-450f-815b-6a5c7bc83e91
+  status: 10
+  questNode: {fileID: 11400000}
+  questStartDetails: {fileID: 0}
+  questEndDetails: {fileID: 0}
+  collectDetails: []
+  couierDetails: []
+  taskDetails: []
+  rect:
+    serializedVersion: 2
+    x: 152
+    y: 368
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+  startNodeToDrawLineFrom: {fileID: 0}
+  endNodeToDrawLineFrom: {fileID: 0}
+  collectNodeToDrawLineFrom: {fileID: 0}
+  couierNodeToDrawLineFrom: {fileID: 0}
+  taskNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+  nodeTypeLineFrom: 0
+--- !u!114 &1340211062739104290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b4d9e649322684394402a2e288b5b1, type: 3}
+  m_Name: Quest
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Quests
+  questNodeID: bc5ccedd-9a2b-4f93-971c-a710773918f6
+  typeOfQuest: 10
+  questStartStepID: 
+  prerequisateQuests:
+  - f6a8caa5-d5de-4a2d-98c4-6ff99201ee63
+  requiredFor:
+  - 4e31bfd5-ab07-4053-a06e-be1b1b71fa4c
+  questStartCondition: 10
+  questStarter: 
+  status: 10
+  questNode: {fileID: 11400000}
+  questStartDetails: {fileID: 0}
+  questEndDetails: {fileID: 0}
+  collectDetails: []
+  couierDetails: []
+  taskDetails: []
+  rect:
+    serializedVersion: 2
+    x: 675
+    y: 535
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+  startNodeToDrawLineFrom: {fileID: 0}
+  endNodeToDrawLineFrom: {fileID: 0}
+  collectNodeToDrawLineFrom: {fileID: 0}
+  couierNodeToDrawLineFrom: {fileID: 0}
+  taskNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+  nodeTypeLineFrom: 0
+--- !u!114 &1448563772697183657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b4d9e649322684394402a2e288b5b1, type: 3}
+  m_Name: Quest
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Quests
+  questNodeID: f6a8caa5-d5de-4a2d-98c4-6ff99201ee63
+  typeOfQuest: 10
+  questStartStepID: 
+  prerequisateQuests:
+  - c2011547-6aa7-4fac-a816-5d3ae7f3e7ac
+  requiredFor:
+  - 318b69fe-dd41-42d7-8bd3-b31b9549b7ac
+  - bc5ccedd-9a2b-4f93-971c-a710773918f6
+  questStartCondition: 30
+  questStarter: ac29eb02-2650-4810-8550-cadb22796511
+  status: 10
+  questNode: {fileID: 11400000}
+  questStartDetails: {fileID: 0}
+  questEndDetails: {fileID: 0}
+  collectDetails: []
+  couierDetails: []
+  taskDetails: []
+  rect:
+    serializedVersion: 2
+    x: 641
+    y: 370
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
+  startNodeToDrawLineFrom: {fileID: 0}
+  endNodeToDrawLineFrom: {fileID: 0}
+  collectNodeToDrawLineFrom: {fileID: 0}
+  couierNodeToDrawLineFrom: {fileID: 0}
+  taskNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+  nodeTypeLineFrom: 0
+--- !u!114 &3479939747597994524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c3b62c97011c24296bf07a1415d4d0, type: 3}
+  m_Name: QuestTask
+  m_EditorClassIdentifier: Assembly-CSharp::SO_ObjectiveTask
+  taskQuestStepID: a40af9a9-304f-4608-be12-f2207dccabe7
+  questID: 8d1a599f-5a96-4ab6-a7d4-9dda0b6eaa47
+  parentQuestStepID:
+  - 6b8512ff-5c04-4bff-92f9-a634c75a75d0
+  childQuestStepID:
+  - c12df248-a86d-4a95-bb62-9f46b19c20c2
+  questNode: {fileID: -3470035951391252711}
+  stepCompleted: 0
+  taskNPC: 
+  npcDialog: 
+  taskItems:
+    questItems: 0
+    questItemQuantity: 0
+  taskItemInventory: 0
+  rect:
+    serializedVersion: 2
+    x: 556
+    y: 227
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 0
