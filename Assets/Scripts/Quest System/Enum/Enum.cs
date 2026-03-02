@@ -61,6 +61,14 @@ public enum CurrentWorkingNode
     DialogBasic = 70,
     DialogBranch = 80,
     DialogEnd = 90,
+    QuestDialogResults=100,
     none = 0
 }
 
+public enum DialogActor
+{
+    Player = 10,
+    NPC = 20,
+    EventSystem = 30,
+    none = 0
+}

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
@@ -25,6 +26,7 @@ public class SO_Quests : ScriptableObject
     public SO_ObjectiveDialogEnd dialogEndDetails = null;
     public List<SO_ObjectiveDialogBasic> dialogBasicDetailsList = new List<SO_ObjectiveDialogBasic>();
     public List<SO_ObjectiveDialogBranch> dialogBranchDetailsList = new List<SO_ObjectiveDialogBranch>();
+    public SO_QuestDialogResults resultsDetails = null;
     [HideInInspector] public Dictionary<string, CurrentWorkingNode> questStepDictionary = new Dictionary<string, CurrentWorkingNode>();
 
     private void Awake()
@@ -88,6 +90,11 @@ public class SO_Quests : ScriptableObject
                 questStepDictionary[nodeID.dialogBranchStepID] = CurrentWorkingNode.DialogBranch;
             }
         }
+        //add common nodes
+        if (resultsDetails != null)
+        {
+            questStepDictionary[resultsDetails.questDialogResultsStepID] = CurrentWorkingNode.QuestDialogResults;
+        }
 #if UNITY_EDITOR
         BuildNodeLocationDictionary();
 #endif
@@ -106,6 +113,15 @@ public class SO_Quests : ScriptableObject
         }
     }
 
+    //TODO: Add extra methods for added node types
+    public SO_QuestDialogResults GetResultsNodeByID(string nodeID)
+    {
+        if (nodeID == resultsDetails.questDialogResultsStepID)
+        {
+            return resultsDetails;
+        }
+        return null;
+    }
 
     public SO_QuestStartDetails GetStartNodeByID(string nodeID)
     {
@@ -186,6 +202,7 @@ public class SO_Quests : ScriptableObject
     [HideInInspector] public SO_ObjectiveDialogEnd dialogEndNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveDialogStart dialogStartNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveDialogBasic dialogBasicNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_QuestDialogResults resultsNodeToDrawLineFrom = null;
     [HideInInspector] public Vector2 linePosition;
     [HideInInspector] public CurrentWorkingNode nodeTypeLineFrom;
     public Dictionary<string,Rect> nodeLocations=new Dictionary<string,Rect>();
@@ -281,8 +298,14 @@ public class SO_Quests : ScriptableObject
                 nodeLocations[dialogBranch.dialogBranchStepID] = dialogBranch.rect;
             }
         }
+        //add common nodes
+        if (resultsDetails != null)
+        {
+            nodeLocations[resultsDetails.questDialogResultsStepID] = resultsDetails.rect;
+        }
     }
 
+    //TODO: Add removeNode methods for all added nodes
     public void RemoveNode(SO_QuestStartDetails node)
     {
         if (questStartDetails == node)
@@ -383,6 +406,13 @@ public class SO_Quests : ScriptableObject
     public void OnValidate()
     {
         BuildStepDictionary();
+    }
+
+    public void SetNodeToDrawConnectionLineFrom(SO_QuestDialogResults node, Vector2 position)
+    {
+        resultsNodeToDrawLineFrom = node;
+        linePosition = position;
+        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
     }
 
     public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveDialogBasic node, Vector2 position)
@@ -774,6 +804,7 @@ public class SO_Quests : ScriptableObject
         DragNode(currentEvent.delta);
         GUI.changed = true;
     }
+
 
 
 #endif

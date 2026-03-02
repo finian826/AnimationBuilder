@@ -41,6 +41,7 @@ public class QuestDetailsEditor : EditorWindow
     private static SO_ObjectiveCollect collectDetails = null;
     private static SO_ObjectiveCourier courierDetails = null;
     private static SO_ObjectiveTask taskDetails = null;
+    private static SO_QuestDialogResults resultsDetails = null;
     private CurrentWorkingNode currentNode = CurrentWorkingNode.none;
 
     private Dictionary<string,string> npcStarters = new Dictionary<string,string>();
@@ -232,6 +233,16 @@ public class QuestDetailsEditor : EditorWindow
                 }
             }
         }
+        if(questBody.questEndDetails != null)
+        {
+            if (questBody.questEndDetails.childQuestStepID.Count > 0)
+            {
+                foreach(string node in questBody.questEndDetails.childQuestStepID)
+                {
+                    DrawConnectionLine(questBody.questEndDetails.questEndID, node);
+                }
+            }
+        }
         if (questBody.questTaskDetailsList.Count > 0)
         {
             foreach (SO_ObjectiveTask so_node in questBody.questTaskDetailsList)
@@ -348,7 +359,9 @@ public class QuestDetailsEditor : EditorWindow
         taskDetails = null;
         collectDetails = null;
         courierDetails = null;
+        resultsDetails = null;
         currentNode = CurrentWorkingNode.none;
+        bool rectFound = false;
 
         if (questBody.questStartDetails != null)
         {
@@ -356,6 +369,7 @@ public class QuestDetailsEditor : EditorWindow
             {
                 currentNode = CurrentWorkingNode.QuestStart;
                 questStartDetails = questBody.questStartDetails;
+                rectFound = true;
             }
         }
         if (questBody.questEndDetails != null)
@@ -364,6 +378,16 @@ public class QuestDetailsEditor : EditorWindow
             {
                 currentNode = CurrentWorkingNode.QuestEnd;
                 questEndDetails = questBody.questEndDetails;
+                rectFound = true;
+            }
+        }
+        if (questBody.resultsDetails != null)
+        {
+            if (questBody.resultsDetails.rect.Contains(currentEvent.mousePosition))
+            {
+                currentNode = CurrentWorkingNode.QuestDialogResults;
+                resultsDetails=questBody.resultsDetails;
+                rectFound = true;
             }
         }
         if (questBody.questTaskDetailsList.Count > 0)
@@ -374,6 +398,7 @@ public class QuestDetailsEditor : EditorWindow
                 {
                     currentNode = CurrentWorkingNode.QuestTask;
                     taskDetails = questBody.questTaskDetailsList[i];
+                    rectFound = true;
                 }
             }
         }
@@ -385,6 +410,7 @@ public class QuestDetailsEditor : EditorWindow
                 {
                     currentNode = CurrentWorkingNode.QuestCollect;
                     collectDetails = questBody.questCollectDetailsList[i];
+                    rectFound = true;
                 }
             }
         }
@@ -396,10 +422,11 @@ public class QuestDetailsEditor : EditorWindow
                 {
                     currentNode = CurrentWorkingNode.QuestCourier;
                     courierDetails = questBody.questCouierDetailsList[i];
+                    rectFound = true;
                 }
             }
         }
-        else
+       if(!rectFound)
         {
             currentNode = CurrentWorkingNode.none;
         }
@@ -420,6 +447,13 @@ public class QuestDetailsEditor : EditorWindow
             if (questBody.questEndDetails.rect.Contains(currentEvent.mousePosition))
             {
                 nodeIDToReturn=questBody.questEndDetails.questEndID;
+            }
+        }
+        if (questBody.resultsDetails != null)
+        {
+            if(questBody.resultsDetails.rect.Contains(currentEvent.mousePosition))
+            {
+                nodeIDToReturn = questBody.resultsDetails.questDialogResultsStepID;
             }
         }
         if (questBody.questTaskDetailsList.Count > 0)
@@ -465,7 +499,8 @@ public class QuestDetailsEditor : EditorWindow
             questEndDetails == null || questEndDetails.isLeftClickDragging == false ||
             collectDetails == null || collectDetails.isLeftClickDragging == false ||
             courierDetails == null || courierDetails.isLeftClickDragging == false ||
-            taskDetails == null || taskDetails.isLeftClickDragging == false)
+            taskDetails == null || taskDetails.isLeftClickDragging == false ||
+            resultsDetails == null || resultsDetails.isLeftClickDragging == false)
         {
             //get type of node mouse is over
             IsMouseOverRoomNode(currentEvent);
@@ -475,7 +510,8 @@ public class QuestDetailsEditor : EditorWindow
         //if mouse isn't over a room node or we are currently dragging a line from the room node then process graph events
         if (currentNode == CurrentWorkingNode.none || questBody.startNodeToDrawLineFrom != null ||
             questBody.endNodeToDrawLineFrom != null || questBody.collectNodeToDrawLineFrom != null ||
-            questBody.couierNodeToDrawLineFrom != null || questBody.taskNodeToDrawLineFrom != null)
+            questBody.couierNodeToDrawLineFrom != null || questBody.taskNodeToDrawLineFrom != null||
+            questBody.resultsNodeToDrawLineFrom!=null)
         {
             ProcessRoomNodeGraphEvents(currentEvent);
         }
@@ -505,6 +541,9 @@ public class QuestDetailsEditor : EditorWindow
                     break;
                 case CurrentWorkingNode.QuestCollect:
                     collectDetails.ProcessEvents(currentEvent);
+                    break;
+                case CurrentWorkingNode.QuestDialogResults:
+                    resultsDetails.ProcessEvents(currentEvent);
                     break;
                 default:
                     break;
@@ -589,6 +628,7 @@ public class QuestDetailsEditor : EditorWindow
                     }
                     break;
                 case CurrentWorkingNode.QuestStart:
+                case CurrentWorkingNode.QuestDialogResults:
                     ClearLineDrag();
                     break;
             }
@@ -628,6 +668,7 @@ public class QuestDetailsEditor : EditorWindow
                     }
                     break;
                 case CurrentWorkingNode.QuestStart:
+                case CurrentWorkingNode.QuestDialogResults:
                     ClearLineDrag();
                     break;
             }
@@ -671,6 +712,7 @@ public class QuestDetailsEditor : EditorWindow
 
                     break;
                 case CurrentWorkingNode.QuestStart:
+                case CurrentWorkingNode.QuestDialogResults:
                     ClearLineDrag();
                     break;
             }
@@ -714,6 +756,7 @@ public class QuestDetailsEditor : EditorWindow
 
                     break;
                 case CurrentWorkingNode.QuestStart:
+                case CurrentWorkingNode.QuestDialogResults:
                     ClearLineDrag();
                     break;
             }
@@ -746,7 +789,8 @@ public class QuestDetailsEditor : EditorWindow
     private void ProcessRightMouseDragEvent(Event currentEvent)
     {
         if (questBody.startNodeToDrawLineFrom != null || questBody.endNodeToDrawLineFrom != null || questBody.taskNodeToDrawLineFrom != null ||
-            questBody.couierNodeToDrawLineFrom != null || questBody.collectNodeToDrawLineFrom != null)
+            questBody.couierNodeToDrawLineFrom != null || questBody.collectNodeToDrawLineFrom != null ||
+            questBody.resultsNodeToDrawLineFrom != null)
         {
             DragConnectingLine(currentEvent.delta);
             GUI.changed = true;
@@ -772,14 +816,24 @@ public class QuestDetailsEditor : EditorWindow
         //get node id mouse over
         //string overNode = NodeIDMouseIsOver(currentEvent);
         //CurrentWorkingNode nodeType=quests.GetStepNodeType(overNode);
+        if(questBody.questStartDetails==null&&questBody.questEndDetails==null&& questBody.questTaskDetailsList.Count == 0&&
+            questBody.questCollectDetailsList.Count == 0&& questBody.questCouierDetailsList.Count == 0)
+        {
+            return;
+        }
+
         graphDrag = dragDelta;
-        if (questBody.questStartDetails.questStartID !=null)
+        if (questBody.questStartDetails !=null)
         {
             questBody.questStartDetails.DragNode(dragDelta);
         }
-        if(questBody.questEndDetails.questEndID !=null)
+        if(questBody.questEndDetails !=null)
         {
             questBody.questEndDetails.DragNode(dragDelta);
+        }
+        if(questBody.resultsDetails != null)
+        {
+            questBody.resultsDetails.DragNode(dragDelta);
         }
         if (questBody.questTaskDetailsList.Count>0)
         {
@@ -842,6 +896,13 @@ public class QuestDetailsEditor : EditorWindow
                 questBody.questEndDetails.isSelected = false;
             }
         }
+        if (questBody.resultsDetails != null)
+        {
+            if (questBody.resultsDetails.isSelected)
+            {
+                questBody.resultsDetails.isSelected = false;
+            }
+        }
         if (questBody.questCollectDetailsList.Count > 0)
         {
             foreach (SO_ObjectiveCollect collect in questBody.questCollectDetailsList)
@@ -885,6 +946,7 @@ public class QuestDetailsEditor : EditorWindow
         questBody.collectNodeToDrawLineFrom = null;
         questBody.couierNodeToDrawLineFrom = null;
         questBody.taskNodeToDrawLineFrom = null;
+        questBody.resultsNodeToDrawLineFrom = null;
         questBody.linePosition = Vector2.zero;
         GUI.changed = true;
     }
@@ -998,6 +1060,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questEndDetails != null && questBody.questEndDetails.isSelected)
         {
+            //TODO: add steps to remove results node with end node
             nodeIDToDelete.Enqueue(questBody.questEndDetails.questEndID);
             for (int i = questBody.questEndDetails.parentQuestStepID.Count - 1; i >= 0; i--)
             {
@@ -1089,6 +1152,7 @@ public class QuestDetailsEditor : EditorWindow
 
             //determine step type and delete node
             CurrentWorkingNode nodeTypeToDelete = questBody.GetStepNodeType(roomNodeToDelete);
+            //TODO: Add results node to case list
             switch(nodeTypeToDelete)
             {
                 case CurrentWorkingNode.QuestStart:
@@ -1208,7 +1272,12 @@ public class QuestDetailsEditor : EditorWindow
                 }
                 break;
             case CurrentWorkingNode.QuestEnd:
-                nodeRemoved = true;
+                SO_QuestEndDetails so_EndParent = questBody.GetEndNodeByID(parentID);
+                if ((childSelected && so_EndParent != null))
+                {
+                    so_EndParent.RemoveChild(nodeToRemove);
+                    nodeRemoved = true;
+                }
                 break;
         }
         return nodeRemoved;
@@ -1271,7 +1340,16 @@ public class QuestDetailsEditor : EditorWindow
                     nodeRemoved = true;
                 }
                 break;
-                case CurrentWorkingNode.QuestStart:
+            case CurrentWorkingNode.QuestDialogResults:
+                SO_QuestDialogResults so_Results = questBody.GetResultsNodeByID(nodeToRemove);
+                if ((so_Results != null && so_Results.isSelected) || (so_Results != null && ignoreSelected))
+                {
+                    //remove parent from child
+                    so_Results.RemoveParent(parentID);
+                    nodeRemoved = true;
+                }
+                break;
+            case CurrentWorkingNode.QuestStart:
                 nodeRemoved = true;
                 break;
             default:
@@ -1331,6 +1409,20 @@ public class QuestDetailsEditor : EditorWindow
             }
 
         }
+        if (questBody.resultsDetails != null)
+        {
+            if (questBody.resultsDetails.isSelected && questBody.resultsDetails.parentQuestStepID.Count > 0)
+            {
+                for (int i = questBody.questEndDetails.parentQuestStepID.Count - 1; i >= 0; i--)
+                {
+                    nodeToRemove = questBody.resultsDetails.parentQuestStepID[i];
+                    nodeTypeToRemove = questBody.GetStepNodeType(nodeToRemove);
+                    DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestStart, questBody.questEndDetails.questEndID, nodeToRemove);
+                    DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestStart, questBody.questEndDetails.questEndID, nodeToRemove);
+                }
+            }
+
+        }
         if (questBody.questCouierDetailsList.Count > 0)
         {
             foreach (SO_ObjectiveCourier courierNode in questBody.questCouierDetailsList)
@@ -1380,6 +1472,10 @@ public class QuestDetailsEditor : EditorWindow
         {
             questBody.questEndDetails.isSelected = false;
         }
+        if (questBody.resultsDetails != null && questBody.resultsDetails.isSelected)
+        {
+            questBody.resultsDetails.isSelected = false;
+        }
         if (questBody.questCollectDetailsList.Count > 0)
         {
             foreach (SO_ObjectiveCollect collect in questBody.questCollectDetailsList)
@@ -1424,6 +1520,10 @@ public class QuestDetailsEditor : EditorWindow
         {
             questBody.questEndDetails.isSelected = true;
         }
+        if (questBody.resultsDetails != null)
+        {
+            questBody.resultsDetails.isSelected = true;
+        }
         if (questBody.questCollectDetailsList.Count > 0)
         {
             foreach(SO_ObjectiveCollect collect in questBody.questCollectDetailsList)
@@ -1457,7 +1557,7 @@ public class QuestDetailsEditor : EditorWindow
     {
         Vector2 mousePosition = (Vector2)mousePositionObject;
         //if current quest nodes are empty then add quest start node first
-        if (questBody.questStartDetails == null && questBody.questEndDetails == null && questBody.questCollectDetailsList.Count == 0 &&
+        if (questBody.questStartDetails == null && questBody.questEndDetails == null && questBody.resultsDetails == null && questBody.questCollectDetailsList.Count == 0 &&
             questBody.questTaskDetailsList.Count == 0 && questBody.questCouierDetailsList.Count == 0 && nodeToCreate != CurrentWorkingNode.QuestStart)
         {
             SO_QuestStartDetails startNode = ScriptableObject.CreateInstance<SO_QuestStartDetails>();
@@ -1482,17 +1582,17 @@ public class QuestDetailsEditor : EditorWindow
                 SO_ObjectiveCourier courierNode = ScriptableObject.CreateInstance<SO_ObjectiveCourier>();
                 questBody.questCouierDetailsList.Add(courierNode);
                 courierNode.Initialise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), questBody);
+                courierNode.questID = questBody.questNodeID;
                 AssetDatabase.AddObjectToAsset(courierNode, questBody);
                 AssetDatabase.SaveAssets();
-                courierNode.questID = questBody.questNodeID;
                 break;
             case CurrentWorkingNode.QuestTask:
                 SO_ObjectiveTask taskNode = ScriptableObject.CreateInstance<SO_ObjectiveTask>();
                 questBody.questTaskDetailsList.Add(taskNode);
                 taskNode.Initialise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), questBody);
+                taskNode.questID = questBody.questNodeID;
                 AssetDatabase.AddObjectToAsset(taskNode, questBody);
                 AssetDatabase.SaveAssets();
-                taskNode.questID = questBody.questNodeID;
                 break;
             case CurrentWorkingNode.QuestEnd:
                 if (questBody.questStartDetails != null)
@@ -1500,15 +1600,34 @@ public class QuestDetailsEditor : EditorWindow
                     SO_QuestEndDetails endNode = ScriptableObject.CreateInstance<SO_QuestEndDetails>();
                     questBody.questEndDetails = endNode;
                     endNode.Initialise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), questBody);
+                    endNode.questID = questBody.questNodeID;
                     AssetDatabase.AddObjectToAsset(endNode, questBody);
                     AssetDatabase.SaveAssets();
-                    endNode.questID = questBody.questNodeID;
+                    //add call to automatically draw results node and link it to end node
+                    BuildResultsAndLink(endNode.rect,endNode);
                 }
                 break;
             case CurrentWorkingNode.QuestStart:
                 break;
         }
+        AssetDatabase.Refresh();
         questBody.OnValidate();
+    }
+
+    private void BuildResultsAndLink(Rect nodeLocation,SO_QuestEndDetails endDetails)
+    {
+        //build node
+        SO_QuestDialogResults results = ScriptableObject.CreateInstance<SO_QuestDialogResults>();
+        questBody.resultsDetails = results;
+        
+        nodeLocation.y = nodeLocation.y + (1.5f * nodeHeight);       
+        results.Initialise(nodeLocation, questBody);
+        results.questID = questBody.questNodeID;
+        AssetDatabase.AddObjectToAsset(results, questBody);
+        AssetDatabase.SaveAssets();
+        //link node
+        endDetails.AddChildStepToQuestStep(results.questDialogResultsStepID);
+        results.AddQuestStepIDToParent(endDetails.questEndID);
     }
 
     private void DrawStepNodes()
@@ -1534,6 +1653,18 @@ public class QuestDetailsEditor : EditorWindow
             {
                 questBody.questEndDetails.Draw(questNodeStyle);
             }
+        }
+        if(questBody.resultsDetails != null)
+        {
+            if (questBody.resultsDetails.isSelected)
+            {
+                questBody.resultsDetails.Draw(questNodeSelectedStyle);
+            }
+            else
+            {
+                questBody.resultsDetails.Draw(questNodeStyle);
+            }
+
         }
         if (questBody.questCollectDetailsList.Count > 0)
         {
