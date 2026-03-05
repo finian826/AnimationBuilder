@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "so_ObjectiveTask", menuName = "Scriptable Objects/Quests/Objective Task Step")]
+[CreateAssetMenu(fileName = "so_ObjectiveTask", menuName = "Scriptable Objects/Quest System/Quests/Task Step")]
 public class SO_ObjectiveTask : ScriptableObject
 {
     public string taskQuestStepID;
@@ -21,7 +21,7 @@ public class SO_ObjectiveTask : ScriptableObject
 #if UNITY_EDITOR
     [HideInInspector] public Rect rect;
     [HideInInspector] public bool isLeftClickDragging = false;
-     public bool isSelected = false;
+    [HideInInspector] public bool isSelected = false;
     [HideInInspector] public bool isConnected = false;
     [HideInInspector] public bool callEditor = false;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "so_ObjectiveCollect", menuName = "Scriptable Objects/Quests/Objective Collect Step")]
+[CreateAssetMenu(fileName = "so_ObjectiveCollect", menuName = "Scriptable Objects/Quest System/Quests/Collect Step")]
 public class SO_ObjectiveCollect : ScriptableObject
 {
     public string collectQuestStepID;

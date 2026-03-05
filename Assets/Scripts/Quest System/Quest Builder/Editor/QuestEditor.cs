@@ -527,7 +527,7 @@ public class QuestEditor : EditorWindow
 
         for (int i = 0; i < numNodes; i++)
         {
-            CreateQuestNode(mousePosition, QuestType.none);
+            CreateQuestNode(mousePosition, QuestNodeType.none);
             mousePosition = new Vector2(mousePosition.x + 15f, mousePosition.y + 15f);
         }
     }
@@ -536,10 +536,10 @@ public class QuestEditor : EditorWindow
     {
         //if current room node graph is empty then add enterence room node first
 
-        CreateQuestNode(mousePosition, QuestType.none);
+        CreateQuestNode(mousePosition, QuestNodeType.none);
     }
 
-    private void CreateQuestNode(object mousePositionObject, QuestType questType)
+    private void CreateQuestNode(object mousePositionObject, QuestNodeType questType)
     {
         Vector2 mousePosition = (Vector2)mousePositionObject;
 
@@ -577,18 +577,18 @@ public class QuestEditor : EditorWindow
         Event currentEvent;
         currentEvent = Event.current;
         SO_Quests overNode = IsMouseOverRoomNode(currentEvent);
-        if (overNode != null && overNode.isConnected && overNode.callEditor && overNode.typeOfQuest != QuestType.none &&
+        if (overNode != null && overNode.isConnected && overNode.callEditor && overNode.typeOfQuest != QuestNodeType.none &&
             currentEvent.button == 0 && currentEvent.type == EventType.MouseDown)
         {
 
             overNode.callEditor = false;
             switch (overNode.typeOfQuest)
             {
-                case QuestType.Dialog:
+                case QuestNodeType.Dialog:
                     Debug.Log("Call Dialog Details Editor");
                     DialogDetailsEditor.CallEditor(overNode);
                     break;
-                case QuestType.Quest:
+                case QuestNodeType.Quest:
                     Debug.Log("Call Quest Details Editor");
                     QuestDetailsEditor.CallEditor(overNode);
                     break;

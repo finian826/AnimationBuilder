@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "so_ObjectiveDialogEnd", menuName = "Scriptable Objects/Quests/Dialog/Objective Dialog End")]
+[CreateAssetMenu(fileName = "so_ObjectiveDialogEnd", menuName = "Scriptable Objects/Quest System/Dialog/Dialog End")]
 public class SO_ObjectiveDialogEnd : ScriptableObject
 {
     public string dialogEndStepID;
     public string questID;//id of quest this node belongs to
     public List<string> parentQuestStepID = new List<string>();
+    public List<string> childQuestStepID = new List<string>();
     [HideInInspector] public SO_Quests questNode;
 
 
@@ -16,7 +17,7 @@ public class SO_ObjectiveDialogEnd : ScriptableObject
 #if UNITY_EDITOR
     [HideInInspector] public Rect rect;
     [HideInInspector] public bool isLeftClickDragging = false;
-    public bool isSelected = false;
+    [HideInInspector] public bool isSelected = false;
     [HideInInspector] public bool isConnected = false;
     [HideInInspector] public bool callEditor = false;
 
@@ -28,6 +29,76 @@ public class SO_ObjectiveDialogEnd : ScriptableObject
         this.name = "DialogEnd";
         this.questNode = nodeGraph;
         this.questID = nodeGraph.questNodeID;
+    }
+
+    public void ProcessEvents(Event currentEvent)
+    {
+        switch (currentEvent.type)
+        {
+            //process mouse down events
+            case EventType.MouseDown:
+                ProcessMouseDownEvent(currentEvent);
+                break;
+            //process mouse up event
+            case EventType.MouseUp:
+                ProcessMouseUpEvent(currentEvent);
+                break;
+            //process mouse drag event
+            case EventType.MouseDrag:
+                ProcessMouseDragEvent(currentEvent);
+                break;
+            default:
+                break;
+        }
+    }
+
+    /// <summary>
+    /// process left click up event
+    /// </summary>
+    private void ProcessLeftClickUpEvent()
+    {
+        if (isLeftClickDragging)
+        {
+            isLeftClickDragging = false;
+            questNode.BuildNodeLocationDictionary();
+        }
+    }
+
+    /// <summary>
+    /// process left mouse drag event
+    /// </summary>
+    /// <param name="currentEvent"></param>
+    private void ProcessLeftMouseDragEvent(Event currentEvent)
+    {
+        isLeftClickDragging = true;
+        DragNode(currentEvent.delta);
+        GUI.changed = true;
+    }
+
+    /// <summary>
+    /// process mouse drag event
+    /// </summary>
+    /// <param name="currentEvent"></param>
+    private void ProcessMouseDragEvent(Event currentEvent)
+    {
+        //process left click drag event
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftMouseDragEvent(currentEvent);
+        }
+    }
+
+    /// <summary>
+    /// process mouse up event
+    /// </summary>
+    /// <param name="currentEvent"></param>
+    private void ProcessMouseUpEvent(Event currentEvent)
+    {
+        //if left click up
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftClickUpEvent();
+        }
     }
 
     /// <summary>
@@ -78,6 +149,34 @@ public class SO_ObjectiveDialogEnd : ScriptableObject
     }
 
     /// <summary>
+    /// add childid to the node returns true if node has been added, false otherwise
+    /// </summary>
+    /// <param name="childID"></param>
+    /// <returns></returns>
+    public bool AddChildStepToQuestStep(string childID)
+    {
+        if (IsChildRoomValid(childID))
+        {
+            childQuestStepID.Add(childID);
+            IsNodeConnected();
+            return true;
+        }
+        return false;
+    }
+
+    private bool IsChildRoomValid(string childID)
+    {
+        //TODO: Have to comeup with some rules
+        bool testValid = false;
+        if (childID != dialogEndStepID)
+            testValid = true;
+        if (questNode.GetStepNodeType(childID) == CurrentWorkingNode.QuestStart)
+            testValid = false;
+
+        return testValid;
+    }
+
+    /// <summary>
     /// add parentID to the node returns true if node has been added, false otherwise
     /// </summary>
     /// <param name="parentID"></param>
@@ -103,7 +202,18 @@ public class SO_ObjectiveDialogEnd : ScriptableObject
             return true;
         }
         return false;
+    }
 
+    public bool RemoveChild(string childID)
+    {
+        //if the node contains the child id, remove it
+        if (childQuestStepID.Contains(childID))
+        {
+            childQuestStepID.Remove(childID);
+            IsNodeConnected();
+            return true;
+        }
+        return false;
     }
 
     private void ProcessRightClickDownEvent(Event currentEvent)
@@ -118,7 +228,7 @@ public class SO_ObjectiveDialogEnd : ScriptableObject
         //start region to detect popup selection changes
         EditorGUI.BeginChangeCheck();
         //display a label that can't be changed
-        EditorGUILayout.LabelField("Objective Task");
+        EditorGUILayout.LabelField("End Dialog");
         if (GUILayout.Button("Edit Details"))
         {
             CallEditDetails();

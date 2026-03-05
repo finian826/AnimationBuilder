@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SO_QuestStartDetails", menuName = "Scriptable Objects/Quests/Quest Start Details")]
+[CreateAssetMenu(fileName = "SO_QuestStartDetails", menuName = "Scriptable Objects/Quest System/Quests/Start Details")]
 public class SO_QuestStartDetails : ScriptableObject
 {
     public string questStartID;
@@ -14,8 +14,7 @@ public class SO_QuestStartDetails : ScriptableObject
     public string questText;
     public QuestObjectiveType objectiveType = QuestObjectiveType.none;
     public string trackerTitle;
-    //public bool nextStepPartofStart;
-
+    public DialogTextDetails initialQuestDialog;
 
 #if UNITY_EDITOR
     public Rect rect;

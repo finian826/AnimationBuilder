@@ -1,48 +1,34 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class NPCGameManager : MonoBehaviour
 {
-#if UNITY_EDITOR
     [SerializeField] private SO_NPCList masterNPCList = null;
+    [SerializeField] private List<SO_QuestNode> dialogQuestNodeMaps = new List<SO_QuestNode>();
+    private Dictionary<string, List<string>> dialogQuestDictionary = new Dictionary<string, List<string>>(); // dictionary<questNodeID, list<step nodes>>
+    private Dictionary<string, QuestStatus> dialogQuestStatusDictionary = new Dictionary<string, QuestStatus>();
 
 
+    private void Awake()
+    {
+        //build dictionaries
+
+    }
     private void OnEnable()
     {
-        //only populate in the editor
-        if (!Application.IsPlaying(gameObject))
-        {
-            if (masterNPCList != null)
-            {
-                masterNPCList.list.Clear();
-            }
-        }
+
     }
 
     private void OnDisable()
     {
-        if (!Application.IsPlaying(gameObject))
-        {
-            UpdateQuestStartList();
 
-            if (masterNPCList != null)
-            {
-                // this is required to ensure the update gridproperties game object gets saved.
-                EditorUtility.SetDirty(masterNPCList);
-            }
-        }
     }
 
     private void Update()
     {
-        // only populate in editor
-        if (!Application.IsPlaying(gameObject))
-        {
-            Debug.Log("DISABLE NPC Game Manager");
-        }
+
     }
 
     private void UpdateQuestStartList()
@@ -50,5 +36,4 @@ public class NPCGameManager : MonoBehaviour
 
     }
 
-#endif
 }

@@ -7,5 +7,5 @@ public class DialogTextDetails
     public DialogActor actorDialog;
     public string actorText;
     public string actorPortiatID;
-
+    public float waitTimeBeforeContinuing;
 }

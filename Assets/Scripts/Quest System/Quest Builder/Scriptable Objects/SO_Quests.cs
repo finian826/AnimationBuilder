@@ -5,28 +5,30 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "so_Quests", menuName = "Scriptable Objects/Quests/Quest")]
+[CreateAssetMenu(fileName = "so_Quests", menuName = "Scriptable Objects/Quest System/Quests/Quest Details")]
 public class SO_Quests : ScriptableObject
 {
     public string questNodeID;
-    public QuestType typeOfQuest = QuestType.Quest;
+    public QuestNodeType typeOfQuest = QuestNodeType.Quest;
+    public QuestDialogSubType subQuestDialogType = QuestDialogSubType.none;
     public string questStartStepID;
     public List<string> prerequisateQuests=new List<string>();
     public List<string> requiredFor=new List<string>();
     public QuestGiver questStartCondition = QuestGiver.NPC;
     public string questStarter;
     public QuestStatus status = QuestStatus.Locked;
+
     [HideInInspector] public SO_QuestNode questNode;
-     public SO_QuestStartDetails questStartDetails = null;
-     public SO_QuestEndDetails questEndDetails = null;
-     public List<SO_ObjectiveCollect> questCollectDetailsList = new List<SO_ObjectiveCollect>();
-     public List<SO_ObjectiveCourier> questCouierDetailsList = new List<SO_ObjectiveCourier>();
-     public List<SO_ObjectiveTask> questTaskDetailsList = new List<SO_ObjectiveTask>();
-    public SO_ObjectiveDialogStart dialogStartDetails = null;
-    public SO_ObjectiveDialogEnd dialogEndDetails = null;
-    public List<SO_ObjectiveDialogBasic> dialogBasicDetailsList = new List<SO_ObjectiveDialogBasic>();
-    public List<SO_ObjectiveDialogBranch> dialogBranchDetailsList = new List<SO_ObjectiveDialogBranch>();
-    public SO_QuestDialogResults resultsDetails = null;
+    [HideInInspector] public SO_QuestStartDetails questStartDetails = null;
+    [HideInInspector] public SO_QuestEndDetails questEndDetails = null;
+    [HideInInspector] public List<SO_ObjectiveCollect> questCollectDetailsList = new List<SO_ObjectiveCollect>();
+    [HideInInspector] public List<SO_ObjectiveCourier> questCouierDetailsList = new List<SO_ObjectiveCourier>();
+    [HideInInspector] public List<SO_ObjectiveTask> questTaskDetailsList = new List<SO_ObjectiveTask>();
+    [HideInInspector] public SO_ObjectiveDialogStart dialogStartDetails = null;
+    [HideInInspector] public SO_ObjectiveDialogEnd dialogEndDetails = null;
+    [HideInInspector] public List<SO_ObjectiveDialogBasic> dialogBasicDetailsList = new List<SO_ObjectiveDialogBasic>();
+    [HideInInspector] public List<SO_ObjectiveDialogBranch> dialogBranchDetailsList = new List<SO_ObjectiveDialogBranch>();
+    [HideInInspector] public SO_QuestDialogResults questDialogResultsDetails = null;
     [HideInInspector] public Dictionary<string, CurrentWorkingNode> questStepDictionary = new Dictionary<string, CurrentWorkingNode>();
 
     private void Awake()
@@ -91,9 +93,9 @@ public class SO_Quests : ScriptableObject
             }
         }
         //add common nodes
-        if (resultsDetails != null)
+        if (questDialogResultsDetails != null)
         {
-            questStepDictionary[resultsDetails.questDialogResultsStepID] = CurrentWorkingNode.QuestDialogResults;
+            questStepDictionary[questDialogResultsDetails.questDialogResultsStepID] = CurrentWorkingNode.QuestDialogResults;
         }
 #if UNITY_EDITOR
         BuildNodeLocationDictionary();
@@ -114,11 +116,62 @@ public class SO_Quests : ScriptableObject
     }
 
     //TODO: Add extra methods for added node types
+    public SO_ObjectiveDialogStart GetDialogStartNodeByID(string nodeID)
+    {
+        if (nodeID == dialogStartDetails.dialogStartStepID)
+        {
+            return dialogStartDetails;
+        }
+        return null;
+
+    }
+
+    public SO_ObjectiveDialogEnd GetDialogEndNodeByID(string nodeID)
+    {
+        if (nodeID == dialogEndDetails.dialogEndStepID)
+        {
+            return dialogEndDetails;
+        }
+        return null;
+
+    }
+
+    public SO_ObjectiveDialogBasic GetDialogBasicNodeByID(string nodeID)
+    {
+        if (dialogBasicDetailsList.Count > 0)
+        {
+            foreach (SO_ObjectiveDialogBasic item in dialogBasicDetailsList)
+            {
+                if (nodeID == item.dialogBasicStepID)
+                {
+                    return item;
+                }
+            }
+        }
+        return null;
+    }
+
+    public SO_ObjectiveDialogBranch GetDialogBranchNodeByID(string nodeID)
+    {
+        if (dialogBranchDetailsList.Count > 0)
+        {
+            foreach (SO_ObjectiveDialogBranch item in dialogBranchDetailsList)
+            {
+                if (nodeID == item.dialogBranchStepID)
+                {
+                    return item;
+                }
+            }
+        }
+        return null;
+    }
+
+
     public SO_QuestDialogResults GetResultsNodeByID(string nodeID)
     {
-        if (nodeID == resultsDetails.questDialogResultsStepID)
+        if (nodeID == questDialogResultsDetails.questDialogResultsStepID)
         {
-            return resultsDetails;
+            return questDialogResultsDetails;
         }
         return null;
     }
@@ -198,15 +251,15 @@ public class SO_Quests : ScriptableObject
     [HideInInspector] public SO_ObjectiveCollect collectNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveCourier couierNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveTask taskNodeToDrawLineFrom = null;
-    [HideInInspector] public SO_ObjectiveDialogBranch branchNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_ObjectiveDialogBranch dialogBranchNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveDialogEnd dialogEndNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveDialogStart dialogStartNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveDialogBasic dialogBasicNodeToDrawLineFrom = null;
-    [HideInInspector] public SO_QuestDialogResults resultsNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_QuestDialogResults dialogResultsNodeToDrawLineFrom = null;
     [HideInInspector] public Vector2 linePosition;
     [HideInInspector] public CurrentWorkingNode nodeTypeLineFrom;
-    public Dictionary<string,Rect> nodeLocations=new Dictionary<string,Rect>();
-    public void Initialise(Rect rect, SO_QuestNode nodeGraph, QuestType questType)
+    [HideInInspector] public Dictionary<string,Rect> nodeLocations=new Dictionary<string,Rect>();
+    public void Initialise(Rect rect, SO_QuestNode nodeGraph, QuestNodeType questType)
     {
         this.rect = rect;
         this.questNodeID = Guid.NewGuid().ToString();
@@ -299,13 +352,103 @@ public class SO_Quests : ScriptableObject
             }
         }
         //add common nodes
-        if (resultsDetails != null)
+        if (questDialogResultsDetails != null)
         {
-            nodeLocations[resultsDetails.questDialogResultsStepID] = resultsDetails.rect;
+            nodeLocations[questDialogResultsDetails.questDialogResultsStepID] = questDialogResultsDetails.rect;
         }
     }
 
-    //TODO: Add removeNode methods for all added nodes
+    public void RemoveNode(SO_ObjectiveDialogBasic node)
+    {
+        if (dialogBasicDetailsList.Count > 0)
+        {
+            foreach (SO_ObjectiveDialogBasic item in dialogBasicDetailsList)
+            {
+                if (item == node)
+                {
+                    dialogBasicDetailsList.Remove(node);
+                    //remove node from assets database
+                    DestroyImmediate(node, true);
+
+                    //save the asset database
+                    AssetDatabase.SaveAssets();
+
+                    BuildStepDictionary();
+                    break;
+                }
+            }
+        }
+    }
+
+    public void RemoveNode(SO_ObjectiveDialogBranch node)
+    {
+        if (dialogBranchDetailsList.Count > 0)
+        {
+            foreach (SO_ObjectiveDialogBranch item in dialogBranchDetailsList)
+            {
+                if (item == node)
+                {
+                    dialogBranchDetailsList.Remove(node);
+                    //remove node from assets database
+                    DestroyImmediate(node, true);
+
+                    //save the asset database
+                    AssetDatabase.SaveAssets();
+
+                    BuildStepDictionary();
+                    break;
+                }
+            }
+        }
+    }
+
+    public void RemoveNode(SO_ObjectiveDialogEnd node)
+    {
+        if (dialogEndDetails == node)
+        {
+            //remove node from assets database
+            DestroyImmediate(node, true);
+
+            //save the asset database
+            AssetDatabase.SaveAssets();
+            dialogEndDetails = null;
+
+            BuildStepDictionary();
+        }
+    }
+
+
+    public void RemoveNode(SO_ObjectiveDialogStart node)
+    {
+        if (dialogStartDetails == node)
+        {
+            //remove node from assets database
+            DestroyImmediate(node, true);
+
+            //save the asset database
+            AssetDatabase.SaveAssets();
+            dialogStartDetails = null;
+
+            BuildStepDictionary();
+        }
+    }
+
+    public void RemoveNode(SO_QuestDialogResults node)
+    {
+        if (questDialogResultsDetails == node)
+        {
+            //remove node from assets database
+            DestroyImmediate(node, true);
+
+            //save the asset database
+            AssetDatabase.SaveAssets();
+            questDialogResultsDetails = null;
+
+            BuildStepDictionary();
+        }
+    }
+
+
     public void RemoveNode(SO_QuestStartDetails node)
     {
         if (questStartDetails == node)
@@ -410,40 +553,38 @@ public class SO_Quests : ScriptableObject
 
     public void SetNodeToDrawConnectionLineFrom(SO_QuestDialogResults node, Vector2 position)
     {
-        resultsNodeToDrawLineFrom = node;
+        dialogResultsNodeToDrawLineFrom = node;
         linePosition = position;
-        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
+        nodeTypeLineFrom = CurrentWorkingNode.QuestDialogResults;
     }
 
     public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveDialogBasic node, Vector2 position)
     {
         dialogBasicNodeToDrawLineFrom = node;
         linePosition = position;
-        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
+        nodeTypeLineFrom = CurrentWorkingNode.DialogBasic;
     }
 
     public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveDialogStart node, Vector2 position)
     {
         dialogStartNodeToDrawLineFrom = node;
         linePosition = position;
-        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
+        nodeTypeLineFrom = CurrentWorkingNode.DialogStart;
     }
 
     public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveDialogEnd node, Vector2 position)
     {
         dialogEndNodeToDrawLineFrom = node;
         linePosition = position;
-        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
+        nodeTypeLineFrom = CurrentWorkingNode.DialogEnd;
     }
-
 
     public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveDialogBranch node, Vector2 position)
     {
-        branchNodeToDrawLineFrom = node;
+        dialogBranchNodeToDrawLineFrom = node;
         linePosition = position;
-        nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
+        nodeTypeLineFrom = CurrentWorkingNode.DialogBranch;
     }
-
 
     public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveTask node, Vector2 position)
     {
@@ -482,6 +623,7 @@ public class SO_Quests : ScriptableObject
 
     public void DeleteStepNodes()
     {
+        //Quest Nodes
         if (questStartDetails != null)
         {
             //remove node from assets database
@@ -531,9 +673,9 @@ public class SO_Quests : ScriptableObject
                 AssetDatabase.SaveAssets();
             }
         }
+        //TODO: add dialog steps for removal
     }
 
-    //TODO: Still to be expanded
     public void Draw(GUIStyle nodeStyle)
     {
         //draw node box using begin area
@@ -552,8 +694,8 @@ public class SO_Quests : ScriptableObject
         else
         {
             //display a popup using the RoomNodeType name values that can be selected from(default to the current selected roomNodeType)
-            QuestType selected = typeOfQuest;
-            QuestType selection = (QuestType)EditorGUILayout.EnumPopup("", selected);
+            QuestNodeType selected = typeOfQuest;
+            QuestNodeType selection = (QuestNodeType)EditorGUILayout.EnumPopup("", selected);
 
             typeOfQuest = selection;
             //if the room type selection has changed making child connections possibly invalid
@@ -573,13 +715,11 @@ public class SO_Quests : ScriptableObject
                     }
                 }
             }
-
         }
         if (EditorGUI.EndChangeCheck())
             EditorUtility.SetDirty(this);
 
         GUILayout.EndArea();
-
     }
 
     private void CallEditDetails()
@@ -686,9 +826,9 @@ public class SO_Quests : ScriptableObject
         bool testValid = false;
         if (childID != questNodeID)
             testValid = true;
-        if (typeOfQuest == QuestType.none)
+        if (typeOfQuest == QuestNodeType.none)
             testValid = false;
-        if (questNode.GetRoomNode(childID).typeOfQuest == QuestType.none)
+        if (questNode.GetRoomNode(childID).typeOfQuest == QuestNodeType.none)
             testValid = false;
 
         return testValid;
@@ -804,8 +944,5 @@ public class SO_Quests : ScriptableObject
         DragNode(currentEvent.delta);
         GUI.changed = true;
     }
-
-
-
 #endif
 }

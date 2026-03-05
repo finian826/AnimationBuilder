@@ -57,7 +57,7 @@ public class NPCDetails : MonoBehaviour
     {
         if (this.name == "")
         {
-            Debug.Log("Please re-enable and set a name to the NPC the disable script.");
+            Debug.Log("Please re-enable and set a name to the NPC then disable script.");
             return;
         }
 

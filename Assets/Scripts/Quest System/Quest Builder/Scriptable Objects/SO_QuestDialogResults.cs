@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "so_QuestDialogResults", menuName = "Scriptable Objects/Quests/Quest Dialog Results")]
+[CreateAssetMenu(fileName = "so_QuestDialogResults", menuName = "Scriptable Objects/Quest System/Common Nodes/Quest Dialog Results")]
 public class SO_QuestDialogResults : ScriptableObject
 {
     public string questDialogResultsStepID;
@@ -13,9 +13,9 @@ public class SO_QuestDialogResults : ScriptableObject
 
 
 #if UNITY_EDITOR
-    public Rect rect;
+    [HideInInspector] public Rect rect;
     [HideInInspector] public bool isLeftClickDragging = false;
-    public bool isSelected = false;
+    [HideInInspector] public bool isSelected = false;
     [HideInInspector] public bool isConnected = false;
     [HideInInspector] public bool callEditor = false;
 

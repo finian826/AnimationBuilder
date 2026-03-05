@@ -16,6 +16,7 @@ public class QuestStepEditor : EditorWindow
     private static SO_ObjectiveCollect collectDetails = null;
     private static SO_ObjectiveCourier courierDetails = null;
     private static SO_ObjectiveTask taskDetails = null;
+    private static SO_QuestDialogResults resultsDetail = null;
     private static CurrentWorkingNode currentNode = CurrentWorkingNode.none;
 
     private Dictionary<string, string> npcStarters = new Dictionary<string, string>();
@@ -95,6 +96,7 @@ public class QuestStepEditor : EditorWindow
         collectDetails = null;
         courierDetails = null;
         taskDetails = null;
+        resultsDetail = null;
         if (quest != null && nodeToEdit != "" && nodeType != CurrentWorkingNode.none)
         {
             quests = quest;
@@ -118,6 +120,10 @@ public class QuestStepEditor : EditorWindow
                     break;
                 case CurrentWorkingNode.QuestTask:
                     taskDetails = quests.GetTaskNodeByID(nodeToEdit);
+                    currentNode = nodeType;
+                    break;
+                case CurrentWorkingNode.QuestDialogResults:
+                    resultsDetail=quests.GetResultsNodeByID(nodeToEdit);
                     currentNode = nodeType;
                     break;
             }

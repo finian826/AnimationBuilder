@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SO_QuestEndDetails", menuName = "Scriptable Objects/SO_QuestEndDetails")]
+[CreateAssetMenu(fileName = "SO_QuestEndDetails", menuName = "Scriptable Objects/Quest System/Quests/End Details")]
 public class SO_QuestEndDetails : ScriptableObject
 {
     public string questEndID;
@@ -19,9 +19,9 @@ public class SO_QuestEndDetails : ScriptableObject
 
 
 #if UNITY_EDITOR
-     public Rect rect;
+    [HideInInspector] public Rect rect;
     [HideInInspector] public bool isLeftClickDragging = false;
-     public bool isSelected = false;
+    [HideInInspector] public bool isSelected = false;
     [HideInInspector] public bool isConnected = false;
     [HideInInspector] public bool callEditor = false;
 

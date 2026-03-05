@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "so_ObjectiveCourier", menuName = "Scriptable Objects/Quests/Objective Courier Step")]
+[CreateAssetMenu(fileName = "so_ObjectiveCourier", menuName = "Scriptable Objects/Quest System/Quests/Courier Step")]
 public class SO_ObjectiveCourier : ScriptableObject
 {
     public string courierQuestStepID;

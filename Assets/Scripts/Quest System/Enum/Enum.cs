@@ -18,10 +18,18 @@ public enum QuestGiver
     none=0
 }
 
-public enum QuestType
+public enum QuestNodeType
 {
     Quest=10,
     Dialog=20,
+    none=0
+}
+
+public enum QuestDialogSubType
+{
+    Quest=10,
+    Dialog=20,
+    DailyQuest=30,
     none=0
 }
 

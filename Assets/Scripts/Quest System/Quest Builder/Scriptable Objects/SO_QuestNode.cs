@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 
 
-[CreateAssetMenu(fileName = "so_QuestNode", menuName = "Scriptable Objects/Quests/Quest Node Graph")]
+[CreateAssetMenu(fileName = "so_QuestNode", menuName = "Scriptable Objects/Quest System/Quest Node Graph")]
 public class SO_QuestNode : ScriptableObject
 {
     [HideInInspector] public List<SO_Quests> questList = new List<SO_Quests>();
@@ -44,7 +44,7 @@ public class SO_QuestNode : ScriptableObject
     /// </summary>
     /// <param name="questType"></param>
     /// <returns></returns>
-    public SO_Quests GetRoomNode(QuestType questType)
+    public SO_Quests GetRoomNode(QuestNodeType questType)
     {
         foreach (SO_Quests node in questList)
         {
