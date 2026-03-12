@@ -8,7 +8,10 @@ using UnityEngine;
 [ExecuteAlways]
 public class NPCDetails : MonoBehaviour
 {
+    [Header("Script MUST be disabled after setting values!")]
     public NPCList npcDetails=new NPCList();
+    public SO_NPCQuestList npcQuestList = null;
+
     public NPCDetails()
     {
         this.npcDetails.NPCid = Guid.NewGuid().ToString();
@@ -34,10 +37,10 @@ public class NPCDetails : MonoBehaviour
     {
         if (!Application.IsPlaying(gameObject))
         {
-            AddToNPCList();
 
             if (npcs != null)
             {
+                AddToNPCList();
                 // this is required to ensure the update gridproperties game object gets saved.
                 EditorUtility.SetDirty(npcs);
             }

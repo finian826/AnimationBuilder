@@ -3,45 +3,44 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SO_QuestEndDetails", menuName = "Scriptable Objects/Quest System/Quests/End Details")]
-public class SO_QuestEndDetails : ScriptableObject
+[CreateAssetMenu(fileName = "so_ObjectiveCourier", menuName = "Scriptable Objects/Quest System/Quests/Courier Step")]
+public class SO_ObjectiveQuestCourier : ScriptableObject
 {
-    public string questEndID;
+    public string courierQuestStepID;
     public string questID;//id of quest this node belongs to
-    public List<string> parentQuestStepID = new List<string>();
-    public List<string> childQuestStepID = new List<string>();
+    public List<string> parentQuestStepIDList = new List<string>();
+    public List<string> childQuestStepIDList = new List<string>();
     [HideInInspector] public SO_Quests questNode;
-    public bool guarenteedReward;
-    public List<QuestItems> guarentedRewardItems;
-    public bool choiceReward;
-    public List<QuestItems> choiceRewardItems;
-    public string questFinishedText;
+    public string taskNPC;
+    public string npcDialog;
+    public QuestItems[] taskItems;
+
+
 
 
 #if UNITY_EDITOR
     [HideInInspector] public Rect rect;
     [HideInInspector] public bool isLeftClickDragging = false;
-    [HideInInspector] public bool isSelected = false;
+     public bool isSelected = false;
     [HideInInspector] public bool isConnected = false;
     [HideInInspector] public bool callEditor = false;
-
 
     public void Initialise(Rect rect, SO_Quests nodeGraph)
     {
         this.rect = rect;
-        this.questEndID = Guid.NewGuid().ToString();
-        this.name = "QuestEnd";
+        this.courierQuestStepID = Guid.NewGuid().ToString();
+        this.name = "QuestCourier";
         this.questNode = nodeGraph;
         this.questID = nodeGraph.questNodeID;
     }
 
     private void IsNodeConnected()
     {
-        if (parentQuestStepID.Count > 0 || childQuestStepID.Count > 0)
+        if (parentQuestStepIDList.Count > 0 || childQuestStepIDList.Count > 0)
         {
             isConnected = true;
         }
-        if (parentQuestStepID.Count == 0 && childQuestStepID.Count == 0)
+        if (parentQuestStepIDList.Count == 0 && childQuestStepIDList.Count == 0)
         {
             isConnected = false;
         }
@@ -91,7 +90,7 @@ public class SO_QuestEndDetails : ScriptableObject
         //start region to detect popup selection changes
         EditorGUI.BeginChangeCheck();
         //display a label that can't be changed
-        EditorGUILayout.LabelField("End Node");
+        EditorGUILayout.LabelField("Courier Task");
         if (GUILayout.Button("Edit Details"))
         {
             CallEditDetails();
@@ -125,6 +124,7 @@ public class SO_QuestEndDetails : ScriptableObject
         questNode.SetNodeToDrawConnectionLineFrom(this, currentEvent.mousePosition);
     }
 
+
     /// <summary>
     /// process mouse up event
     /// </summary>
@@ -151,6 +151,7 @@ public class SO_QuestEndDetails : ScriptableObject
         }
     }
 
+
     /// <summary>
     /// process left click events
     /// </summary>
@@ -169,6 +170,7 @@ public class SO_QuestEndDetails : ScriptableObject
             isSelected = true;
         }
     }
+
 
     /// <summary>
     /// process left click up event
@@ -202,7 +204,7 @@ public class SO_QuestEndDetails : ScriptableObject
     {
         if (IsChildRoomValid(childID))
         {
-            childQuestStepID.Add(childID);
+            childQuestStepIDList.Add(childID);
             IsNodeConnected();
             return true;
         }
@@ -213,11 +215,10 @@ public class SO_QuestEndDetails : ScriptableObject
     {
         //TODO: Have to comeup with some rules
         bool testValid = false;
-        if (childID != questEndID)
+        if (childID != courierQuestStepID)
             testValid = true;
         if (questNode.GetStepNodeType(childID) == CurrentWorkingNode.QuestStart)
             testValid = false;
-
         return testValid;
     }
 
@@ -228,37 +229,39 @@ public class SO_QuestEndDetails : ScriptableObject
     /// <returns></returns>
     public bool AddQuestStepIDToParent(string parentID)
     {
-        if (parentID != questEndID)
+        if (parentID != courierQuestStepID)
         {
-            parentQuestStepID.Add(parentID);
+            parentQuestStepIDList.Add(parentID);
             IsNodeConnected();
             return true;
         }
         return false;
     }
 
-        public bool RemoveChild(string childID)
+    public bool RemoveChild(string childID)
     {
         //if the node contains the child id, remove it
-        if (childQuestStepID.Contains(childID))
+        if (childQuestStepIDList.Contains(childID))
         {
-            childQuestStepID.Remove(childID);
+            childQuestStepIDList.Remove(childID);
             IsNodeConnected();
             return true;
         }
         return false;
+
     }
 
     public bool RemoveParent(string parentID)
     {
         //if the node contains the parentID remove it
-        if (parentQuestStepID.Contains(parentID))
+        if (parentQuestStepIDList.Contains(parentID))
         {
-            parentQuestStepID.Remove(parentID);
+            parentQuestStepIDList.Remove(parentID);
             IsNodeConnected();
             return true;
         }
         return false;
+
     }
 
 

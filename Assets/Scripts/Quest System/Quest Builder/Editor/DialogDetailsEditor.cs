@@ -148,15 +148,15 @@ public class DialogDetailsEditor : EditorWindow
         GUILayout.Label($"Dialog Start Node ID:\n {questBody.questStartStepID}");
         GUILayout.Space(_space);
         GUILayout.Label("Pre-requisate ID's:");
-        for (int i = 0; i < questBody.prerequisateQuests.Count; i++)
+        for (int i = 0; i < questBody.prerequisateQuestsList.Count; i++)
         {
-            GUILayout.Label($"{questBody.prerequisateQuests[i]}");
+            GUILayout.Label($"{questBody.prerequisateQuestsList[i]}");
         }
         GUILayout.Space(_space);
         GUILayout.Label("Required for:");
-        for (int i = 0; i < questBody.requiredFor.Count; i++)
+        for (int i = 0; i < questBody.requiredForList.Count; i++)
         {
-            GUILayout.Label($"{questBody.requiredFor[i]}");
+            GUILayout.Label($"{questBody.requiredForList[i]}");
         }
         GUILayout.Space(_space);
         QuestGiver oldGiver = questBody.questStartCondition;
@@ -958,9 +958,9 @@ public class DialogDetailsEditor : EditorWindow
             if(questBody.questDialogResultsDetails!=null)
             {
                 nodeIDToDelete.Enqueue(questBody.questDialogResultsDetails.questDialogResultsStepID);
-                for (int i = questBody.questDialogResultsDetails.parentQuestStepID.Count - 1; i >= 0; i--)
+                for (int i = questBody.questDialogResultsDetails.parentQuestStepIDList.Count - 1; i >= 0; i--)
                 {
-                    childID = questBody.questDialogResultsDetails.parentQuestStepID[i];
+                    childID = questBody.questDialogResultsDetails.parentQuestStepIDList[i];
                     nodeTypeToRemove = questBody.GetStepNodeType(childID);
                     DeleteChildren(CurrentWorkingNode.QuestDialogResults, nodeTypeToRemove, childID, questBody.questDialogResultsDetails.questDialogResultsStepID, true);
                 }
@@ -1291,11 +1291,11 @@ public class DialogDetailsEditor : EditorWindow
         }
         if (questBody.questDialogResultsDetails != null)
         {
-            if (questBody.questDialogResultsDetails.isSelected && questBody.questDialogResultsDetails.parentQuestStepID.Count > 0)
+            if (questBody.questDialogResultsDetails.isSelected && questBody.questDialogResultsDetails.parentQuestStepIDList.Count > 0)
             {
-                for (int i = questBody.questDialogResultsDetails.parentQuestStepID.Count - 1; i >= 0; i--)
+                for (int i = questBody.questDialogResultsDetails.parentQuestStepIDList.Count - 1; i >= 0; i--)
                 {
-                    nodeToRemove = questBody.questDialogResultsDetails.parentQuestStepID[i];
+                    nodeToRemove = questBody.questDialogResultsDetails.parentQuestStepIDList[i];
                     nodeTypeToRemove = questBody.GetStepNodeType(nodeToRemove);
                     DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestDialogResults, questBody.questDialogResultsDetails.questDialogResultsStepID, nodeToRemove);
                     DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestDialogResults, questBody.questDialogResultsDetails.questDialogResultsStepID, nodeToRemove);
@@ -1461,7 +1461,7 @@ public class DialogDetailsEditor : EditorWindow
         questBody.questDialogResultsDetails = results;
 
         nodeLocation.y = nodeLocation.y + (1.5f * nodeHeight);
-        results.Initialise(nodeLocation, questBody);
+        results.Initialise(nodeLocation, questBody, QuestNodeType.Dialog);
         results.questID = questBody.questNodeID;
         AssetDatabase.AddObjectToAsset(results, questBody);
         AssetDatabase.SaveAssets();

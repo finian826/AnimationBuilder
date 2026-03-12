@@ -76,8 +76,11 @@ MonoBehaviour:
   - fb1dbec8-e2b9-4de3-8db5-9fe634dd0410
   childQuestStepID:
   - 2d1d2db4-c6df-4a98-80ea-6e8ec530e0a9
+  taskNPC: 
+  taskNPCDialog: 
+  itemSource: []
+  itemDestination: []
   questNode: {fileID: -7846957237632048209}
-  stepCompleted: 0
   rect:
     serializedVersion: 2
     x: 332
@@ -85,7 +88,7 @@ MonoBehaviour:
     width: 160
     height: 75
   isLeftClickDragging: 0
-  isSelected: 1
+  isSelected: 0
   isConnected: 1
   callEditor: 0
 --- !u!114 &-4869285221302519883
@@ -106,11 +109,21 @@ MonoBehaviour:
   - 3b44a113-0b97-4f08-a4b2-c929affb1fb5
   - bcd5acb2-e465-4e1e-a4ca-cb81704c337e
   - e02eafe0-3c04-44ae-b0aa-4be3f61c6e63
-  questNode: {fileID: -7846957237632048209}
-  questTitle: 
-  questText: 
-  objectiveType: 0
+  questTitle: Introduction to Quests
+  questText: 'Please goto John and get Spam
+
+    Then see Paul to deliver Spam'
+  objectiveType: 30
   trackerTitle: 
+  trackerText: 
+  initialDialogBeforeQuest: 1
+  initialQuestDialog:
+    actorID: d8518ff4-9ae8-4d40-9aba-9d146937d4cb
+    actorDialog: 40
+    actorText: 
+    actorPortiatID: 
+    waitTimeBeforeContinuing: 5
+  questNode: {fileID: -7846957237632048209}
   rect:
     serializedVersion: 2
     x: 508
@@ -120,7 +133,7 @@ MonoBehaviour:
   isLeftClickDragging: 0
   isSelected: 1
   isConnected: 1
-  callEditor: 0
+  callEditor: 1
 --- !u!114 &-4351641374642079723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,11 +154,9 @@ MonoBehaviour:
   childQuestStepID:
   - 2d1d2db4-c6df-4a98-80ea-6e8ec530e0a9
   questNode: {fileID: -7846957237632048209}
-  stepCompleted: 0
   taskNPC: 
   npcDialog: 
   taskItems: []
-  taskItemInventory: 0
   rect:
     serializedVersion: 2
     x: 745
@@ -176,12 +187,8 @@ MonoBehaviour:
   - 3b44a113-0b97-4f08-a4b2-c929affb1fb5
   childQuestStepID:
   - 767d8e09-7e9a-4097-a750-befefaa3fe79
+  npcCompleteText: 
   questNode: {fileID: -7846957237632048209}
-  guarenteedReward: 0
-  guarentedRewardItems: []
-  choiceReward: 0
-  choiceRewardItems: []
-  questFinishedText: 
   rect:
     serializedVersion: 2
     x: 576
@@ -373,6 +380,22 @@ MonoBehaviour:
   questID: 9e77f596-b7ba-4ac1-83b6-01cf391767e3
   parentQuestStepID:
   - 2d1d2db4-c6df-4a98-80ea-6e8ec530e0a9
+  rewardType: 0
+  guarenteedQuestReward: 0
+  guarentedQuestRewardItemsList: []
+  choiceQuestReward: 0
+  choiceQuestRewardItemsList: []
+  questFinishedText: 
+  npcRepReward: []
+  fundsReward: 0
+  guarenteedDialogReward: 0
+  guarentedDialogRewardItemsList: []
+  choiceDialogReward: 0
+  choiceDialogRewardItemsList: []
+  dialogFinishedText: 
+  activateAllChildren: 0
+  onlyActivateTheseChildrenList: []
+  factionRepReward: []
   questNode: {fileID: -7846957237632048209}
   rect:
     serializedVersion: 2
@@ -456,6 +479,22 @@ MonoBehaviour:
   questID: d233cf23-a04d-47c8-824f-09a89d34ffb0
   parentQuestStepID:
   - 541d9b67-0ac8-431d-96dc-42a1d6dc6dcd
+  rewardType: 0
+  guarenteedQuestReward: 0
+  guarentedQuestRewardItemsList: []
+  choiceQuestReward: 0
+  choiceQuestRewardItemsList: []
+  questFinishedText: 
+  npcRepReward: []
+  fundsReward: 0
+  guarenteedDialogReward: 0
+  guarentedDialogRewardItemsList: []
+  choiceDialogReward: 0
+  choiceDialogRewardItemsList: []
+  dialogFinishedText: 
+  activateAllChildren: 0
+  onlyActivateTheseChildrenList: []
+  factionRepReward: []
   questNode: {fileID: 6117469609538997615}
   rect:
     serializedVersion: 2
@@ -486,8 +525,11 @@ MonoBehaviour:
   - fb1dbec8-e2b9-4de3-8db5-9fe634dd0410
   childQuestStepID:
   - 2d1d2db4-c6df-4a98-80ea-6e8ec530e0a9
+  taskNPC: 
+  taskNPCDialog: 
+  itemSource: []
+  itemDestination: []
   questNode: {fileID: -7846957237632048209}
-  stepCompleted: 0
   rect:
     serializedVersion: 2
     x: 540
@@ -660,6 +702,12 @@ MonoBehaviour:
   - 24fd82ef-9a78-4422-9f1a-22f7bc88669d
   npcID: 
   dialogName: 
+  initialDialogText:
+    actorID: 
+    actorDialog: 0
+    actorText: 
+    actorPortiatID: 
+    waitTimeBeforeContinuing: 0
   questNode: {fileID: 6117469609538997615}
   rect:
     serializedVersion: 2

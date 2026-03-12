@@ -58,7 +58,7 @@ public class SO_QuestNode : ScriptableObject
 
     public IEnumerable<SO_Quests> GetChildrenNodes(SO_Quests parentRoomNode)
     {
-        foreach (string childrenID in parentRoomNode.requiredFor)
+        foreach (string childrenID in parentRoomNode.requiredForList)
         {
             yield return GetRoomNode(childrenID);
         }

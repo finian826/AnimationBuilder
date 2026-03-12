@@ -6,7 +6,6 @@ public class QuestDialogData
 {
     public string questDialogID;
     public CurrentWorkingNode questDialogType;
-    public QuestDialogSubType subQuestDialogType;
     public List<string> questDialogStepIDList;
     public Dictionary<string, List<string>> childStepIDDictionary;
     public Dictionary<string, List<string>> parentStepIDDictionary;
@@ -17,6 +16,5 @@ public class QuestDialogData
         childStepIDDictionary = new Dictionary<string, List<string>>();
         parentStepIDDictionary = new Dictionary<string, List<string>>();
         questDialogType = CurrentWorkingNode.none;
-        subQuestDialogType = QuestDialogSubType.none;
     }
 }

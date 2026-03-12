@@ -151,10 +151,10 @@ public class QuestEditor : EditorWindow
         //loop through all room nodes
         foreach (SO_Quests roomNode in questNode.questList)
         {
-            if (roomNode.requiredFor.Count > 0)
+            if (roomNode.requiredForList.Count > 0)
             {
                 //loop through child room nodes
-                foreach (string childRoomNodeID in roomNode.requiredFor)
+                foreach (string childRoomNodeID in roomNode.requiredForList)
                 {
                     //get the child room node from dictionary
                     if (questNode.questNodeDictionary.ContainsKey(childRoomNodeID))
@@ -416,12 +416,12 @@ public class QuestEditor : EditorWindow
         //iterate through the room nodes
         foreach (SO_Quests quests in questNode.questList)
         {
-            if (quests.isSelected && quests.requiredFor.Count > 0)
+            if (quests.isSelected && quests.requiredForList.Count > 0)
             {
-                for (int i = quests.requiredFor.Count - 1; i >= 0; i--)
+                for (int i = quests.requiredForList.Count - 1; i >= 0; i--)
                 {
                     //get the child room node
-                    SO_Quests childRoomNode = questNode.GetRoomNode(quests.requiredFor[i]);
+                    SO_Quests childRoomNode = questNode.GetRoomNode(quests.requiredForList[i]);
                     //if the child room node is selected
                     if (childRoomNode != null && childRoomNode.isSelected)
                     {
@@ -466,7 +466,7 @@ public class QuestEditor : EditorWindow
                 roomNodeDeletionQueue.Enqueue(quest);
 
                 //iterate through child room nodes ids
-                foreach (string reguiredFor in quest.requiredFor)
+                foreach (string reguiredFor in quest.requiredForList)
                 {
                     //retrieve child room node
                     SO_Quests childRoomNode = questNode.GetRoomNode(reguiredFor);
@@ -477,7 +477,7 @@ public class QuestEditor : EditorWindow
                     }
                 }
                 //iterate through parent room node ids
-                foreach (string parentRoomNodeID in quest.prerequisateQuests)
+                foreach (string parentRoomNodeID in quest.prerequisateQuestsList)
                 {
                     SO_Quests parentRoomNode = questNode.GetRoomNode(parentRoomNodeID);
                     if (parentRoomNode != null)

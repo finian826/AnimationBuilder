@@ -3,22 +3,40 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "so_ObjectiveCollect", menuName = "Scriptable Objects/Quest System/Quests/Collect Step")]
-public class SO_ObjectiveCollect : ScriptableObject
+[CreateAssetMenu(fileName = "so_QuestDialogResults", menuName = "Scriptable Objects/Quest System/Common Nodes/Quest Dialog Results")]
+public class SO_QuestDialogResults : ScriptableObject
 {
-    public string collectQuestStepID;
+    public string questDialogResultsStepID;
     public string questID;//id of quest this node belongs to
-    public List<string> parentQuestStepID = new List<string>();
-    public List<string> childQuestStepID = new List<string>();
+    public List<string> parentQuestStepIDList = new List<string>();
+    public QuestNodeType rewardType = QuestNodeType.none;
+    [Header("Quest Rewards")]
+    public bool guarenteedQuestReward;
+    public List<QuestItems> guarentedQuestRewardItemsList;
+    public bool choiceQuestReward;
+    public List<QuestItems> choiceQuestRewardItemsList;
+    public string questFinishedText;
+    [Header("Rep Rewards (Not implimented yet)")]
+    public QuestNPCRepReward[] npcRepReward;
+    [Header("Money Rewards (Not Implimented Yet)")]
+    public int fundsReward;
+    [Header("Dialog Rewards")]
+    public bool guarenteedDialogReward;
+    public List<QuestItems> guarentedDialogRewardItemsList;
+    public bool choiceDialogReward;
+    public List<QuestItems> choiceDialogRewardItemsList;
+    public string dialogFinishedText;
+    public bool activateAllChildren = false;
+    public List<string> onlyActivateTheseChildrenList;
+    [Header("Rep Rewards (Not implimented yet)")]
+    public QuestFactionRepReward[] factionRepReward;
     [HideInInspector] public SO_Quests questNode;
-    public bool stepCompleted;
-
 
 
 #if UNITY_EDITOR
     [HideInInspector] public Rect rect;
     [HideInInspector] public bool isLeftClickDragging = false;
-     public bool isSelected = false;
+    [HideInInspector] public bool isSelected = false;
     [HideInInspector] public bool isConnected = false;
     [HideInInspector] public bool callEditor = false;
 
@@ -26,23 +44,39 @@ public class SO_ObjectiveCollect : ScriptableObject
     public void Initialise(Rect rect, SO_Quests nodeGraph)
     {
         this.rect = rect;
-        this.collectQuestStepID = Guid.NewGuid().ToString();
-        this.name = "QuestCollect";
+        this.questDialogResultsStepID = Guid.NewGuid().ToString();
+        this.name = "QuestDialogResults";
         this.questNode = nodeGraph;
         this.questID = nodeGraph.questNodeID;
     }
 
+    public void Initialise(Rect rect, SO_Quests nodeGraph,QuestNodeType rewardType)
+    {
+        this.rect = rect;
+        this.questDialogResultsStepID = Guid.NewGuid().ToString();
+        this.name = "QuestDialogResults";
+        this.questNode = nodeGraph;
+        this.questID = nodeGraph.questNodeID;
+        this.rewardType = rewardType;
+        this.guarentedQuestRewardItemsList = new List<QuestItems>();
+        this.guarentedDialogRewardItemsList = new List<QuestItems>();
+        this.choiceDialogRewardItemsList = new List<QuestItems>();
+        this.choiceQuestRewardItemsList = new List<QuestItems>();
+    }
+
+
     private void IsNodeConnected()
     {
-        if (parentQuestStepID.Count > 0 || childQuestStepID.Count > 0)
+        if (parentQuestStepIDList.Count > 0)
         {
             isConnected = true;
         }
-        if (parentQuestStepID.Count == 0 && childQuestStepID.Count == 0)
+        if (parentQuestStepIDList.Count == 0)
         {
             isConnected = false;
         }
     }
+
 
     private void CallEditDetails()
     {
@@ -88,7 +122,7 @@ public class SO_ObjectiveCollect : ScriptableObject
         //start region to detect popup selection changes
         EditorGUI.BeginChangeCheck();
         //display a label that can't be changed
-        EditorGUILayout.LabelField("Collect Task");
+        EditorGUILayout.LabelField("Results Node");
         if (GUILayout.Button("Edit Details"))
         {
             CallEditDetails();
@@ -194,76 +228,33 @@ public class SO_ObjectiveCollect : ScriptableObject
     }
 
     /// <summary>
-    /// add childid to the node returns true if node has been added, false otherwise
-    /// </summary>
-    /// <param name="childID"></param>
-    /// <returns></returns>
-    public bool AddChildStepToQuestStep(string childID)
-    {
-        if (IsChildRoomValid(childID))
-        {
-            childQuestStepID.Add(childID);
-            IsNodeConnected();
-            return true;
-        }
-        return false;
-    }
-
-    private bool IsChildRoomValid(string childID)
-    {
-        //TODO: Have to comeup with some rules
-        bool testValid = false;
-        if (childID != collectQuestStepID)
-            testValid = true;
-        if (questNode.GetStepNodeType(childID) == CurrentWorkingNode.QuestStart)
-            testValid = false;
-
-        return testValid;
-    }
-
-    /// <summary>
     /// add parentID to the node returns true if node has been added, false otherwise
     /// </summary>
     /// <param name="parentID"></param>
     /// <returns></returns>
     public bool AddQuestStepIDToParent(string parentID)
     {
-        if (parentID != collectQuestStepID)
+        if (parentID != questDialogResultsStepID)
         {
-            parentQuestStepID.Add(parentID);
+            parentQuestStepIDList.Add(parentID);
             IsNodeConnected();
             return true;
         }
         return false;
-    }
-
-    public bool RemoveChild(string childID)
-    {
-        //if the node contains the child id, remove it
-        if (childQuestStepID.Contains(childID))
-        {
-            childQuestStepID.Remove(childID);
-            IsNodeConnected();
-            return true;
-        }
-        return false;
-
     }
 
     public bool RemoveParent(string parentID)
     {
         //if the node contains the parentID remove it
-        if (parentQuestStepID.Contains(parentID))
+        if (parentQuestStepIDList.Contains(parentID))
         {
-            parentQuestStepID.Remove(parentID);
+            parentQuestStepIDList.Remove(parentID);
             IsNodeConnected();
             return true;
         }
         return false;
-
     }
 
+
 #endif
-
-
 }

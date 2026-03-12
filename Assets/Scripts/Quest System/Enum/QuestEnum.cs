@@ -3,11 +3,12 @@
 
 public enum QuestStatus
 {
-    Locked=10,
-    Available=20,
-    InProgress=30,
-    Complete=40,
-    none=0
+    Locked = 10,
+    Available = 20,
+    InProgress = 30,
+    ReadyToTurnIn = 40,
+    Complete = 50,
+    none = 0
 }
 
 public enum QuestGiver
@@ -22,15 +23,8 @@ public enum QuestNodeType
 {
     Quest=10,
     Dialog=20,
-    none=0
-}
-
-public enum QuestDialogSubType
-{
-    Quest=10,
-    Dialog=20,
-    DailyQuest=30,
-    none=0
+    DailyQuest = 30,
+    none = 0
 }
 
 public enum QuestObjectiveType
@@ -77,6 +71,16 @@ public enum DialogActor
 {
     Player = 10,
     NPC = 20,
-    EventSystem = 30,
+    EventTrigger = 30,
+    SceneItem=40,
+    none = 0
+}
+
+public enum NPCQuestDialogDetails
+{
+    QuestStarter = 10,
+    QuestFinisher = 20,
+    QuestTarget = 30,
+    DialogTarget = 40,
     none = 0
 }

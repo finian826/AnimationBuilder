@@ -10,10 +10,9 @@ public class SO_Quests : ScriptableObject
 {
     public string questNodeID;
     public QuestNodeType typeOfQuest = QuestNodeType.Quest;
-    public QuestDialogSubType subQuestDialogType = QuestDialogSubType.none;
     public string questStartStepID;
-    public List<string> prerequisateQuests=new List<string>();
-    public List<string> requiredFor=new List<string>();
+    public List<string> prerequisateQuestsList=new List<string>();
+    public List<string> requiredForList=new List<string>();
     public QuestGiver questStartCondition = QuestGiver.NPC;
     public string questStarter;
     public QuestStatus status = QuestStatus.Locked;
@@ -21,9 +20,9 @@ public class SO_Quests : ScriptableObject
     [HideInInspector] public SO_QuestNode questNode;
     [HideInInspector] public SO_QuestStartDetails questStartDetails = null;
     [HideInInspector] public SO_QuestEndDetails questEndDetails = null;
-    [HideInInspector] public List<SO_ObjectiveCollect> questCollectDetailsList = new List<SO_ObjectiveCollect>();
-    [HideInInspector] public List<SO_ObjectiveCourier> questCouierDetailsList = new List<SO_ObjectiveCourier>();
-    [HideInInspector] public List<SO_ObjectiveTask> questTaskDetailsList = new List<SO_ObjectiveTask>();
+    [HideInInspector] public List<SO_ObjectiveQuestCollect> questCollectDetailsList = new List<SO_ObjectiveQuestCollect>();
+    [HideInInspector] public List<SO_ObjectiveQuestCourier> questCouierDetailsList = new List<SO_ObjectiveQuestCourier>();
+    [HideInInspector] public List<SO_ObjectiveQuestTask> questTaskDetailsList = new List<SO_ObjectiveQuestTask>();
     [HideInInspector] public SO_ObjectiveDialogStart dialogStartDetails = null;
     [HideInInspector] public SO_ObjectiveDialogEnd dialogEndDetails = null;
     [HideInInspector] public List<SO_ObjectiveDialogBasic> dialogBasicDetailsList = new List<SO_ObjectiveDialogBasic>();
@@ -50,21 +49,21 @@ public class SO_Quests : ScriptableObject
         }
         if(questCollectDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCollect nodeID in questCollectDetailsList)
+            foreach(SO_ObjectiveQuestCollect nodeID in questCollectDetailsList)
             {
                 questStepDictionary[nodeID.collectQuestStepID] = CurrentWorkingNode.QuestCollect;
             }
         }
         if (questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier nodeID in questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier nodeID in questCouierDetailsList)
             {
                 questStepDictionary[nodeID.courierQuestStepID] = CurrentWorkingNode.QuestCourier;
             }
         }
         if (questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask nodeID in questTaskDetailsList)
+            foreach (SO_ObjectiveQuestTask nodeID in questTaskDetailsList)
             {
                 questStepDictionary[nodeID.taskQuestStepID] = CurrentWorkingNode.QuestTask;
             }
@@ -194,11 +193,11 @@ public class SO_Quests : ScriptableObject
         return null;
     }
 
-    public SO_ObjectiveTask GetTaskNodeByID(string nodeID)
+    public SO_ObjectiveQuestTask GetTaskNodeByID(string nodeID)
     {
         if (questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask item in questTaskDetailsList)
+            foreach (SO_ObjectiveQuestTask item in questTaskDetailsList)
             {
                 if (nodeID == item.taskQuestStepID)
                 {
@@ -209,11 +208,11 @@ public class SO_Quests : ScriptableObject
         return null;
     }
 
-    public SO_ObjectiveCollect GetCollectNodeByID(string nodeID)
+    public SO_ObjectiveQuestCollect GetCollectNodeByID(string nodeID)
     {
         if (questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect item in questCollectDetailsList)
+            foreach (SO_ObjectiveQuestCollect item in questCollectDetailsList)
             {
                 if (nodeID == item.collectQuestStepID)
                 {
@@ -224,11 +223,11 @@ public class SO_Quests : ScriptableObject
         return null;
     }
 
-    public SO_ObjectiveCourier GetCourierNodeByID(string nodeID)
+    public SO_ObjectiveQuestCourier GetCourierNodeByID(string nodeID)
     {
         if (questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier item in questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier item in questCouierDetailsList)
             {
                 if (nodeID == item.courierQuestStepID)
                 {
@@ -248,9 +247,9 @@ public class SO_Quests : ScriptableObject
     [HideInInspector] public bool callEditor = false;
     [HideInInspector] public SO_QuestStartDetails startNodeToDrawLineFrom = null;
     [HideInInspector] public SO_QuestEndDetails endNodeToDrawLineFrom = null;
-    [HideInInspector] public SO_ObjectiveCollect collectNodeToDrawLineFrom = null;
-    [HideInInspector] public SO_ObjectiveCourier couierNodeToDrawLineFrom = null;
-    [HideInInspector] public SO_ObjectiveTask taskNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_ObjectiveQuestCollect collectNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_ObjectiveQuestCourier couierNodeToDrawLineFrom = null;
+    [HideInInspector] public SO_ObjectiveQuestTask taskNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveDialogBranch dialogBranchNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveDialogEnd dialogEndNodeToDrawLineFrom = null;
     [HideInInspector] public SO_ObjectiveDialogStart dialogStartNodeToDrawLineFrom = null;
@@ -309,21 +308,21 @@ public class SO_Quests : ScriptableObject
         }
         if(questTaskDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveTask task in questTaskDetailsList)
+            foreach(SO_ObjectiveQuestTask task in questTaskDetailsList)
             {
                 nodeLocations[task.taskQuestStepID]=task.rect;
             }
         }
         if(questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect collect in questCollectDetailsList)
+            foreach (SO_ObjectiveQuestCollect collect in questCollectDetailsList)
             {
                 nodeLocations[collect.collectQuestStepID] = collect.rect;
             }
         }
         if(questCouierDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCourier couier in questCouierDetailsList)
+            foreach(SO_ObjectiveQuestCourier couier in questCouierDetailsList)
             {
                 nodeLocations[couier.courierQuestStepID] = couier.rect;
             }
@@ -479,11 +478,11 @@ public class SO_Quests : ScriptableObject
         }
     }
 
-    public void RemoveNode(SO_ObjectiveCollect node)
+    public void RemoveNode(SO_ObjectiveQuestCollect node)
     {
         if(questCollectDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCollect item in questCollectDetailsList)
+            foreach(SO_ObjectiveQuestCollect item in questCollectDetailsList)
             {
                 if (item == node)
                 {
@@ -501,11 +500,11 @@ public class SO_Quests : ScriptableObject
         }
     }
 
-    public void RemoveNode(SO_ObjectiveCourier node)
+    public void RemoveNode(SO_ObjectiveQuestCourier node)
     {
         if (questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier item in questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier item in questCouierDetailsList)
             {
                 if (item == node)
                 {
@@ -523,11 +522,11 @@ public class SO_Quests : ScriptableObject
         }
     }
 
-    public void RemoveNode(SO_ObjectiveTask node)
+    public void RemoveNode(SO_ObjectiveQuestTask node)
     {
         if (questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask item in questTaskDetailsList)
+            foreach (SO_ObjectiveQuestTask item in questTaskDetailsList)
             {
                 if (item == node)
                 {
@@ -586,21 +585,21 @@ public class SO_Quests : ScriptableObject
         nodeTypeLineFrom = CurrentWorkingNode.DialogBranch;
     }
 
-    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveTask node, Vector2 position)
+    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveQuestTask node, Vector2 position)
     {
         taskNodeToDrawLineFrom = node;
         linePosition = position;
         nodeTypeLineFrom = CurrentWorkingNode.QuestTask;
     }
 
-    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveCourier node, Vector2 position)
+    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveQuestCourier node, Vector2 position)
     {
         couierNodeToDrawLineFrom = node;
         linePosition = position;
         nodeTypeLineFrom = CurrentWorkingNode.QuestCourier;
     }
 
-    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveCollect node, Vector2 position)
+    public void SetNodeToDrawConnectionLineFrom(SO_ObjectiveQuestCollect node, Vector2 position)
     {
         collectNodeToDrawLineFrom = node;
         linePosition = position;
@@ -682,7 +681,7 @@ public class SO_Quests : ScriptableObject
         GUILayout.BeginArea(rect, nodeStyle);
         //start region to detect popup selection changes
         EditorGUI.BeginChangeCheck();
-        if (requiredFor.Count > 0 || prerequisateQuests.Count > 0)
+        if (requiredForList.Count > 0 || prerequisateQuestsList.Count > 0)
         {
             //display a label that can't be changed
             EditorGUILayout.LabelField(typeOfQuest.ToString());
@@ -699,12 +698,12 @@ public class SO_Quests : ScriptableObject
 
             typeOfQuest = selection;
             //if the room type selection has changed making child connections possibly invalid
-            if (prerequisateQuests.Count > 0)
+            if (prerequisateQuestsList.Count > 0)
             {
-                for (int i = prerequisateQuests.Count - 1; i >= 0; i--)
+                for (int i = prerequisateQuestsList.Count - 1; i >= 0; i--)
                 {
                     //get the child room node
-                    SO_Quests childRoomNode = questNode.GetRoomNode(prerequisateQuests[i]);
+                    SO_Quests childRoomNode = questNode.GetRoomNode(prerequisateQuestsList[i]);
                     //if the child room node is selected
                     if (childRoomNode != null)
                     {
@@ -729,11 +728,11 @@ public class SO_Quests : ScriptableObject
 
     private void IsNodeConnected()
     {
-        if(requiredFor.Count > 0 || prerequisateQuests.Count > 0)
+        if(requiredForList.Count > 0 || prerequisateQuestsList.Count > 0)
         {
             isConnected = true;
         }
-        if (requiredFor.Count == 0 && prerequisateQuests.Count == 0)
+        if (requiredForList.Count == 0 && prerequisateQuestsList.Count == 0)
         {
             isConnected = false;
         }
@@ -747,9 +746,9 @@ public class SO_Quests : ScriptableObject
     public bool RemoveRequiredForFromQuestNode(string questID)
     {
         //if the node contains the child id, remove it
-        if (requiredFor.Contains(questID))
+        if (requiredForList.Contains(questID))
         {
-            requiredFor.Remove(questID);
+            requiredForList.Remove(questID);
             IsNodeConnected();
             return true;
         }
@@ -765,7 +764,7 @@ public class SO_Quests : ScriptableObject
     {
         if (IsChildRoomValid(childID))
         {
-            requiredFor.Add(childID);
+            requiredForList.Add(childID);
             IsNodeConnected();
             return true;
         }
@@ -781,7 +780,7 @@ public class SO_Quests : ScriptableObject
     {
         if (parentID != questNodeID)
         {
-            prerequisateQuests.Add(parentID);
+            prerequisateQuestsList.Add(parentID);
             IsNodeConnected();
             return true;
         }
@@ -796,9 +795,9 @@ public class SO_Quests : ScriptableObject
     public bool RemoveQuestNodeIDFromPrerequisate(string questID)
     {
         //if the node contains the parentID remove it
-        if (prerequisateQuests.Contains(questID))
+        if (prerequisateQuestsList.Contains(questID))
         {
-            prerequisateQuests.Remove(questID);
+            prerequisateQuestsList.Remove(questID);
             IsNodeConnected();
             return true;
         }

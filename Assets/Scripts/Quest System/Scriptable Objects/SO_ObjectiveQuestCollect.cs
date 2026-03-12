@@ -3,19 +3,25 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "so_QuestDialogResults", menuName = "Scriptable Objects/Quest System/Common Nodes/Quest Dialog Results")]
-public class SO_QuestDialogResults : ScriptableObject
+[CreateAssetMenu(fileName = "so_ObjectiveCollect", menuName = "Scriptable Objects/Quest System/Quests/Collect Step")]
+public class SO_ObjectiveQuestCollect : ScriptableObject
 {
-    public string questDialogResultsStepID;
+    public string collectQuestStepID;
     public string questID;//id of quest this node belongs to
-    public List<string> parentQuestStepID = new List<string>();
+    public List<string> parentQuestStepIDList = new List<string>();
+    public List<string> childQuestStepIDList = new List<string>();
+    public string taskNPC;
+    public string taskNPCDialog;
+    public QuestItemSource[] itemSource;
+    public QuestItems[] itemDestination;
     [HideInInspector] public SO_Quests questNode;
+
 
 
 #if UNITY_EDITOR
     [HideInInspector] public Rect rect;
     [HideInInspector] public bool isLeftClickDragging = false;
-    [HideInInspector] public bool isSelected = false;
+     public bool isSelected = false;
     [HideInInspector] public bool isConnected = false;
     [HideInInspector] public bool callEditor = false;
 
@@ -23,24 +29,23 @@ public class SO_QuestDialogResults : ScriptableObject
     public void Initialise(Rect rect, SO_Quests nodeGraph)
     {
         this.rect = rect;
-        this.questDialogResultsStepID = Guid.NewGuid().ToString();
-        this.name = "QuestDialogResults";
+        this.collectQuestStepID = Guid.NewGuid().ToString();
+        this.name = "QuestCollect";
         this.questNode = nodeGraph;
         this.questID = nodeGraph.questNodeID;
     }
 
     private void IsNodeConnected()
     {
-        if (parentQuestStepID.Count > 0)
+        if (parentQuestStepIDList.Count > 0 || childQuestStepIDList.Count > 0)
         {
             isConnected = true;
         }
-        if (parentQuestStepID.Count == 0)
+        if (parentQuestStepIDList.Count == 0 && childQuestStepIDList.Count == 0)
         {
             isConnected = false;
         }
     }
-
 
     private void CallEditDetails()
     {
@@ -86,7 +91,7 @@ public class SO_QuestDialogResults : ScriptableObject
         //start region to detect popup selection changes
         EditorGUI.BeginChangeCheck();
         //display a label that can't be changed
-        EditorGUILayout.LabelField("Results Node");
+        EditorGUILayout.LabelField("Collect Task");
         if (GUILayout.Button("Edit Details"))
         {
             CallEditDetails();
@@ -192,33 +197,76 @@ public class SO_QuestDialogResults : ScriptableObject
     }
 
     /// <summary>
+    /// add childid to the node returns true if node has been added, false otherwise
+    /// </summary>
+    /// <param name="childID"></param>
+    /// <returns></returns>
+    public bool AddChildStepToQuestStep(string childID)
+    {
+        if (IsChildRoomValid(childID))
+        {
+            childQuestStepIDList.Add(childID);
+            IsNodeConnected();
+            return true;
+        }
+        return false;
+    }
+
+    private bool IsChildRoomValid(string childID)
+    {
+        //TODO: Have to comeup with some rules
+        bool testValid = false;
+        if (childID != collectQuestStepID)
+            testValid = true;
+        if (questNode.GetStepNodeType(childID) == CurrentWorkingNode.QuestStart)
+            testValid = false;
+
+        return testValid;
+    }
+
+    /// <summary>
     /// add parentID to the node returns true if node has been added, false otherwise
     /// </summary>
     /// <param name="parentID"></param>
     /// <returns></returns>
     public bool AddQuestStepIDToParent(string parentID)
     {
-        if (parentID != questDialogResultsStepID)
+        if (parentID != collectQuestStepID)
         {
-            parentQuestStepID.Add(parentID);
+            parentQuestStepIDList.Add(parentID);
             IsNodeConnected();
             return true;
         }
         return false;
+    }
+
+    public bool RemoveChild(string childID)
+    {
+        //if the node contains the child id, remove it
+        if (childQuestStepIDList.Contains(childID))
+        {
+            childQuestStepIDList.Remove(childID);
+            IsNodeConnected();
+            return true;
+        }
+        return false;
+
     }
 
     public bool RemoveParent(string parentID)
     {
         //if the node contains the parentID remove it
-        if (parentQuestStepID.Contains(parentID))
+        if (parentQuestStepIDList.Contains(parentID))
         {
-            parentQuestStepID.Remove(parentID);
+            parentQuestStepIDList.Remove(parentID);
             IsNodeConnected();
             return true;
         }
         return false;
+
     }
 
-
 #endif
+
+
 }

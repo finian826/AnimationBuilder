@@ -37,9 +37,9 @@ public class QuestDetailsEditor : EditorWindow
     private SO_NPCList so_NPCS = null;
     private static SO_QuestStartDetails questStartDetails = null;
     private static SO_QuestEndDetails questEndDetails = null;
-    private static SO_ObjectiveCollect collectDetails = null;
-    private static SO_ObjectiveCourier courierDetails = null;
-    private static SO_ObjectiveTask taskDetails = null;
+    private static SO_ObjectiveQuestCollect collectDetails = null;
+    private static SO_ObjectiveQuestCourier courierDetails = null;
+    private static SO_ObjectiveQuestTask taskDetails = null;
     private static SO_QuestDialogResults resultsDetails = null;
     private CurrentWorkingNode currentNode = CurrentWorkingNode.none;
 
@@ -131,15 +131,15 @@ public class QuestDetailsEditor : EditorWindow
         GUILayout.Label($"Quest Start Node ID:\n {questBody.questStartStepID}");
         GUILayout.Space(_space);
         GUILayout.Label("Pre-requisate ID's:");
-        for(int i=0;i<questBody.prerequisateQuests.Count;i++) 
+        for(int i=0;i<questBody.prerequisateQuestsList.Count;i++) 
         {
-            GUILayout.Label($"{questBody.prerequisateQuests[i]}");
+            GUILayout.Label($"{questBody.prerequisateQuestsList[i]}");
         }
         GUILayout.Space(_space);
         GUILayout.Label("Required for:");
-        for(int i = 0; i < questBody.requiredFor.Count; i++)
+        for(int i = 0; i < questBody.requiredForList.Count; i++)
         {
-            GUILayout.Label($"{questBody.requiredFor[i]}");
+            GUILayout.Label($"{questBody.requiredForList[i]}");
         }
         GUILayout.Space(_space);
         QuestGiver oldGiver = questBody.questStartCondition;
@@ -224,9 +224,9 @@ public class QuestDetailsEditor : EditorWindow
         //start room first
         if (questBody.questStartDetails != null)
         {
-            if (questBody.questStartDetails.childQuestStepID.Count > 0)
+            if (questBody.questStartDetails.childQuestStepIDList.Count > 0)
             {
-                foreach (string node in questBody.questStartDetails.childQuestStepID)
+                foreach (string node in questBody.questStartDetails.childQuestStepIDList)
                 {
                     DrawConnectionLine(questBody.questStartDetails.questStartID, node);
                 }
@@ -234,9 +234,9 @@ public class QuestDetailsEditor : EditorWindow
         }
         if(questBody.questEndDetails != null)
         {
-            if (questBody.questEndDetails.childQuestStepID.Count > 0)
+            if (questBody.questEndDetails.childQuestStepIDList.Count > 0)
             {
-                foreach(string node in questBody.questEndDetails.childQuestStepID)
+                foreach(string node in questBody.questEndDetails.childQuestStepIDList)
                 {
                     DrawConnectionLine(questBody.questEndDetails.questEndID, node);
                 }
@@ -244,13 +244,13 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask so_node in questBody.questTaskDetailsList)
+            foreach (SO_ObjectiveQuestTask so_node in questBody.questTaskDetailsList)
             {
                 if (so_node != null)
                 {
-                    if (so_node.childQuestStepID.Count > 0)
+                    if (so_node.childQuestStepIDList.Count > 0)
                     {
-                        foreach (string node in so_node.childQuestStepID)
+                        foreach (string node in so_node.childQuestStepIDList)
                         {
                             DrawConnectionLine(so_node.taskQuestStepID, node);
                         }
@@ -260,13 +260,13 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier so_node in questBody.questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier so_node in questBody.questCouierDetailsList)
             {
                 if (so_node != null)
                 {
-                    if (so_node.childQuestStepID.Count > 0)
+                    if (so_node.childQuestStepIDList.Count > 0)
                     {
-                        foreach (string node in so_node.childQuestStepID)
+                        foreach (string node in so_node.childQuestStepIDList)
                         {
                             DrawConnectionLine(so_node.courierQuestStepID, node);
                         }
@@ -276,13 +276,13 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect so_node in questBody.questCollectDetailsList)
+            foreach (SO_ObjectiveQuestCollect so_node in questBody.questCollectDetailsList)
             {
                 if (so_node != null)
                 {
-                    if (so_node.childQuestStepID.Count > 0)
+                    if (so_node.childQuestStepIDList.Count > 0)
                     {
-                        foreach (string node in so_node.childQuestStepID)
+                        foreach (string node in so_node.childQuestStepIDList)
                         {
                             DrawConnectionLine(so_node.collectQuestStepID, node);
                         }
@@ -606,21 +606,21 @@ public class QuestDetailsEditor : EditorWindow
                     }
                     break;
                 case CurrentWorkingNode.QuestCourier:
-                    SO_ObjectiveCourier so_CourierNode = questBody.GetCourierNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestCourier so_CourierNode = questBody.GetCourierNodeByID(nodeIDChild);
                     if (questBody.startNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_CourierNode.AddQuestStepIDToParent(nodeIDParent);
                     }
                     break;
                 case CurrentWorkingNode.QuestCollect:
-                    SO_ObjectiveCollect so_CollectNode=questBody.GetCollectNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestCollect so_CollectNode=questBody.GetCollectNodeByID(nodeIDChild);
                     if (questBody.startNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_CollectNode.AddQuestStepIDToParent(nodeIDParent);
                     }
                     break;
                 case CurrentWorkingNode.QuestTask:
-                    SO_ObjectiveTask so_TaskNode=questBody.GetTaskNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestTask so_TaskNode=questBody.GetTaskNodeByID(nodeIDChild);
                     if (questBody.startNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_TaskNode.AddQuestStepIDToParent(nodeIDParent);
@@ -646,21 +646,21 @@ public class QuestDetailsEditor : EditorWindow
                     }
                     break;
                 case CurrentWorkingNode.QuestCourier:
-                    SO_ObjectiveCourier so_CourierNode = questBody.GetCourierNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestCourier so_CourierNode = questBody.GetCourierNodeByID(nodeIDChild);
                     if (questBody.taskNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_CourierNode.AddQuestStepIDToParent(nodeIDParent);
                     }
                     break;
                 case CurrentWorkingNode.QuestCollect:
-                    SO_ObjectiveCollect so_CollectNode = questBody.GetCollectNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestCollect so_CollectNode = questBody.GetCollectNodeByID(nodeIDChild);
                     if (questBody.taskNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_CollectNode.AddQuestStepIDToParent(nodeIDParent);
                     }
                     break;
                 case CurrentWorkingNode.QuestTask:
-                    SO_ObjectiveTask so_TaskNode = questBody.GetTaskNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestTask so_TaskNode = questBody.GetTaskNodeByID(nodeIDChild);
                     if (questBody.taskNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_TaskNode.AddQuestStepIDToParent(nodeIDParent);
@@ -687,7 +687,7 @@ public class QuestDetailsEditor : EditorWindow
                     }
                     break;
                 case CurrentWorkingNode.QuestCourier:
-                    SO_ObjectiveCourier so_CourierNode = questBody.GetCourierNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestCourier so_CourierNode = questBody.GetCourierNodeByID(nodeIDChild);
                     if (questBody.collectNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_CourierNode.AddQuestStepIDToParent(nodeIDParent);
@@ -695,7 +695,7 @@ public class QuestDetailsEditor : EditorWindow
 
                     break;
                 case CurrentWorkingNode.QuestCollect:
-                    SO_ObjectiveCollect so_CollectNode = questBody.GetCollectNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestCollect so_CollectNode = questBody.GetCollectNodeByID(nodeIDChild);
                     if (questBody.collectNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_CollectNode.AddQuestStepIDToParent(nodeIDParent);
@@ -703,7 +703,7 @@ public class QuestDetailsEditor : EditorWindow
 
                     break;
                 case CurrentWorkingNode.QuestTask:
-                    SO_ObjectiveTask so_TaskNode = questBody.GetTaskNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestTask so_TaskNode = questBody.GetTaskNodeByID(nodeIDChild);
                     if (questBody.collectNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_TaskNode.AddQuestStepIDToParent(nodeIDParent);
@@ -731,7 +731,7 @@ public class QuestDetailsEditor : EditorWindow
                     }
                     break;
                 case CurrentWorkingNode.QuestCourier:
-                    SO_ObjectiveCourier so_CourierNode = questBody.GetCourierNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestCourier so_CourierNode = questBody.GetCourierNodeByID(nodeIDChild);
                     if (questBody.couierNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_CourierNode.AddQuestStepIDToParent(nodeIDParent);
@@ -739,7 +739,7 @@ public class QuestDetailsEditor : EditorWindow
 
                     break;
                 case CurrentWorkingNode.QuestCollect:
-                    SO_ObjectiveCollect so_CollectNode = questBody.GetCollectNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestCollect so_CollectNode = questBody.GetCollectNodeByID(nodeIDChild);
                     if (questBody.couierNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_CollectNode.AddQuestStepIDToParent(nodeIDParent);
@@ -747,7 +747,7 @@ public class QuestDetailsEditor : EditorWindow
 
                     break;
                 case CurrentWorkingNode.QuestTask:
-                    SO_ObjectiveTask so_TaskNode = questBody.GetTaskNodeByID(nodeIDChild);
+                    SO_ObjectiveQuestTask so_TaskNode = questBody.GetTaskNodeByID(nodeIDChild);
                     if (questBody.couierNodeToDrawLineFrom.AddChildStepToQuestStep(nodeIDChild))
                     {
                         so_TaskNode.AddQuestStepIDToParent(nodeIDParent);
@@ -904,7 +904,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect collect in questBody.questCollectDetailsList)
+            foreach (SO_ObjectiveQuestCollect collect in questBody.questCollectDetailsList)
             {
                 if (collect.isSelected)
                 {
@@ -914,7 +914,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier courier in questBody.questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier courier in questBody.questCouierDetailsList)
             {
                 if (courier.isSelected)
                 {
@@ -924,7 +924,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask task in questBody.questTaskDetailsList)
+            foreach (SO_ObjectiveQuestTask task in questBody.questTaskDetailsList)
             {
                 if (task.isSelected)
                 {
@@ -1045,10 +1045,10 @@ public class QuestDetailsEditor : EditorWindow
             questBody.questTaskDetailsList.Count == 0 && questBody.questCollectDetailsList.Count == 0 && questBody.questCouierDetailsList.Count == 0)
         {
             nodeIDToDelete.Enqueue(questBody.questStartDetails.questStartID);
-            for (int i = questBody.questStartDetails.childQuestStepID.Count - 1; i >= 0; i--)
+            for (int i = questBody.questStartDetails.childQuestStepIDList.Count - 1; i >= 0; i--)
             {
-                childID = questBody.questStartDetails.childQuestStepID[i];
-                nodeTypeToRemove = questBody.GetStepNodeType(questBody.questStartDetails.childQuestStepID[i]);
+                childID = questBody.questStartDetails.childQuestStepIDList[i];
+                nodeTypeToRemove = questBody.GetStepNodeType(questBody.questStartDetails.childQuestStepIDList[i]);
                 DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestStart, questBody.questStartDetails.questStartID, childID, true);
                 DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestStart, questBody.questStartDetails.questStartID, childID, true);
             }
@@ -1061,16 +1061,16 @@ public class QuestDetailsEditor : EditorWindow
         {
             //TODO: add steps to remove results node with end node
             nodeIDToDelete.Enqueue(questBody.questEndDetails.questEndID);
-            for (int i = questBody.questEndDetails.parentQuestStepID.Count - 1; i >= 0; i--)
+            for (int i = questBody.questEndDetails.parentQuestStepIDList.Count - 1; i >= 0; i--)
             {
-                childID = questBody.questEndDetails.parentQuestStepID[i];
+                childID = questBody.questEndDetails.parentQuestStepIDList[i];
                 nodeTypeToRemove = questBody.GetStepNodeType(childID);
                 DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestEnd, questBody.questEndDetails.questEndID, childID, true);
                 DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestEnd, questBody.questEndDetails.questEndID, childID, true);
             }
-            for (int i = questBody.questEndDetails.parentQuestStepID.Count - 1; i >= 0; i--)
+            for (int i = questBody.questEndDetails.parentQuestStepIDList.Count - 1; i >= 0; i--)
             {
-                childID = questBody.questEndDetails.parentQuestStepID[i];
+                childID = questBody.questEndDetails.parentQuestStepIDList[i];
                 nodeTypeToRemove = questBody.GetStepNodeType(childID);
                 DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestEnd, questBody.questEndDetails.questEndID, childID, true);
                 DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestEnd, questBody.questEndDetails.questEndID, childID, true);
@@ -1078,9 +1078,9 @@ public class QuestDetailsEditor : EditorWindow
             if (questBody.questDialogResultsDetails != null && questBody.questDialogResultsDetails.isSelected)
             {
                 nodeIDToDelete.Enqueue(questBody.questDialogResultsDetails.questDialogResultsStepID);
-                for (int i = questBody.questDialogResultsDetails.parentQuestStepID.Count - 1; i >= 0; i--)
+                for (int i = questBody.questDialogResultsDetails.parentQuestStepIDList.Count - 1; i >= 0; i--)
                 {
-                    childID = questBody.questDialogResultsDetails.parentQuestStepID[i];
+                    childID = questBody.questDialogResultsDetails.parentQuestStepIDList[i];
                     nodeTypeToRemove = questBody.GetStepNodeType(childID);
                     DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestDialogResults, questBody.questDialogResultsDetails.questDialogResultsStepID, childID, true);
                     DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestDialogResults, questBody.questDialogResultsDetails.questDialogResultsStepID, childID, true);
@@ -1091,21 +1091,21 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCollectDetailsList.Count>0)
         {
-            foreach(SO_ObjectiveCollect node in questBody.questCollectDetailsList)
+            foreach(SO_ObjectiveQuestCollect node in questBody.questCollectDetailsList)
             {
                 if (node.isSelected)
                 {
                     nodeIDToDelete.Enqueue(node.collectQuestStepID);
-                    for (int i = node.childQuestStepID.Count - 1; i >= 0; i--)
+                    for (int i = node.childQuestStepIDList.Count - 1; i >= 0; i--)
                     {
-                        childID = node.childQuestStepID[i];
-                        nodeTypeToRemove = questBody.GetStepNodeType(node.childQuestStepID[i]);
+                        childID = node.childQuestStepIDList[i];
+                        nodeTypeToRemove = questBody.GetStepNodeType(node.childQuestStepIDList[i]);
                         DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestCollect, node.collectQuestStepID, childID, true);
                         DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestCollect, node.collectQuestStepID, childID, true);
                     }
-                    for (int i = node.parentQuestStepID.Count - 1; i >= 0; i--)
+                    for (int i = node.parentQuestStepIDList.Count - 1; i >= 0; i--)
                     {
-                        childID = node.parentQuestStepID[i];
+                        childID = node.parentQuestStepIDList[i];
                         nodeTypeToRemove = questBody.GetStepNodeType(childID);
                         DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestCollect, node.collectQuestStepID, childID, true);
                         DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestCollect, node.collectQuestStepID, childID, true);
@@ -1116,21 +1116,21 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier node in questBody.questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier node in questBody.questCouierDetailsList)
             {
                 if (node.isSelected)
                 {
                     nodeIDToDelete.Enqueue(node.courierQuestStepID);
-                    for (int i = node.childQuestStepID.Count - 1; i >= 0; i--)
+                    for (int i = node.childQuestStepIDList.Count - 1; i >= 0; i--)
                     {
-                        childID = node.childQuestStepID[i];
-                        nodeTypeToRemove = questBody.GetStepNodeType(node.childQuestStepID[i]);
+                        childID = node.childQuestStepIDList[i];
+                        nodeTypeToRemove = questBody.GetStepNodeType(node.childQuestStepIDList[i]);
                         DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestCourier, node.courierQuestStepID, childID, true);
                         DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestCourier, node.courierQuestStepID, childID, true);
                     }
-                    for (int i = node.parentQuestStepID.Count - 1; i >= 0; i--)
+                    for (int i = node.parentQuestStepIDList.Count - 1; i >= 0; i--)
                     {
-                        childID = node.parentQuestStepID[i];
+                        childID = node.parentQuestStepIDList[i];
                         nodeTypeToRemove = questBody.GetStepNodeType(childID);
                         DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestCourier, node.courierQuestStepID, childID, true);
                         DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestCourier, node.courierQuestStepID, childID, true);
@@ -1141,21 +1141,21 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask node in questBody.questTaskDetailsList)
+            foreach (SO_ObjectiveQuestTask node in questBody.questTaskDetailsList)
             {
                 if (node.isSelected)
                 {
                     nodeIDToDelete.Enqueue(node.taskQuestStepID);
-                    for (int i = node.childQuestStepID.Count - 1; i >= 0; i--)
+                    for (int i = node.childQuestStepIDList.Count - 1; i >= 0; i--)
                     {
-                        childID = node.childQuestStepID[i];
-                        nodeTypeToRemove = questBody.GetStepNodeType(node.childQuestStepID[i]);
+                        childID = node.childQuestStepIDList[i];
+                        nodeTypeToRemove = questBody.GetStepNodeType(node.childQuestStepIDList[i]);
                         DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestTask, node.taskQuestStepID, childID, true);
                         DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestTask, node.taskQuestStepID, childID, true);
                     }
-                    for (int i = node.parentQuestStepID.Count - 1; i >= 0; i--)
+                    for (int i = node.parentQuestStepIDList.Count - 1; i >= 0; i--)
                     {
-                        childID = node.parentQuestStepID[i];
+                        childID = node.parentQuestStepIDList[i];
                         nodeTypeToRemove = questBody.GetStepNodeType(childID);
                         DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestTask, node.taskQuestStepID, childID, true);
                         DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestTask, node.taskQuestStepID, childID, true);
@@ -1183,15 +1183,15 @@ public class QuestDetailsEditor : EditorWindow
                     questBody.RemoveNode(endNode);
                     break;
                 case CurrentWorkingNode.QuestCollect:
-                    SO_ObjectiveCollect collectNode = questBody.GetCollectNodeByID(roomNodeToDelete);
+                    SO_ObjectiveQuestCollect collectNode = questBody.GetCollectNodeByID(roomNodeToDelete);
                     questBody.RemoveNode(collectNode);
                     break;
                 case CurrentWorkingNode.QuestCourier:
-                    SO_ObjectiveCourier courierNode = questBody.GetCourierNodeByID(roomNodeToDelete);
+                    SO_ObjectiveQuestCourier courierNode = questBody.GetCourierNodeByID(roomNodeToDelete);
                     questBody.RemoveNode(courierNode);
                     break;
                 case CurrentWorkingNode.QuestTask:
-                    SO_ObjectiveTask taskNode = questBody.GetTaskNodeByID(roomNodeToDelete);
+                    SO_ObjectiveQuestTask taskNode = questBody.GetTaskNodeByID(roomNodeToDelete);
                     questBody.RemoveNode(taskNode);
                     break;
             }
@@ -1259,7 +1259,7 @@ public class QuestDetailsEditor : EditorWindow
         switch (parentNodeType)
         {
             case CurrentWorkingNode.QuestCollect:
-                SO_ObjectiveCollect so_CollectParent = questBody.GetCollectNodeByID(parentID);
+                SO_ObjectiveQuestCollect so_CollectParent = questBody.GetCollectNodeByID(parentID);
                 if ((childSelected && so_CollectParent != null))
                 {
                     so_CollectParent.RemoveChild(nodeToRemove);
@@ -1267,7 +1267,7 @@ public class QuestDetailsEditor : EditorWindow
                 }
                 break;
             case CurrentWorkingNode.QuestCourier:
-                SO_ObjectiveCourier so_CourierParent = questBody.GetCourierNodeByID(parentID);
+                SO_ObjectiveQuestCourier so_CourierParent = questBody.GetCourierNodeByID(parentID);
                 if ((childSelected && so_CourierParent != null))
                 {
                     so_CourierParent.RemoveChild(nodeToRemove);
@@ -1275,7 +1275,7 @@ public class QuestDetailsEditor : EditorWindow
                 }
                 break;
             case CurrentWorkingNode.QuestTask:
-                SO_ObjectiveTask so_TaskParent = questBody.GetTaskNodeByID(parentID);
+                SO_ObjectiveQuestTask so_TaskParent = questBody.GetTaskNodeByID(parentID);
                 if ((childSelected && so_TaskParent != null))
                 {
                     so_TaskParent.RemoveChild(nodeToRemove);
@@ -1324,7 +1324,7 @@ public class QuestDetailsEditor : EditorWindow
         switch (nodeTypeToRemove)
         {
             case CurrentWorkingNode.QuestCollect:
-                SO_ObjectiveCollect so_Collect = questBody.GetCollectNodeByID(nodeToRemove);
+                SO_ObjectiveQuestCollect so_Collect = questBody.GetCollectNodeByID(nodeToRemove);
                 if ((so_Collect != null && so_Collect.isSelected) || (so_Collect != null && ignoreSelected))
                 {
                     //remove parent from child
@@ -1333,7 +1333,7 @@ public class QuestDetailsEditor : EditorWindow
                 }
                 break;
             case CurrentWorkingNode.QuestCourier:
-                SO_ObjectiveCourier so_Courier = questBody.GetCourierNodeByID(nodeToRemove);
+                SO_ObjectiveQuestCourier so_Courier = questBody.GetCourierNodeByID(nodeToRemove);
                 if ((so_Courier != null && so_Courier.isSelected) || (so_Courier != null && ignoreSelected))
                 {
                     //remove parent from child
@@ -1342,7 +1342,7 @@ public class QuestDetailsEditor : EditorWindow
                 }
                 break;
             case CurrentWorkingNode.QuestTask:
-                SO_ObjectiveTask so_Task = questBody.GetTaskNodeByID(nodeToRemove);
+                SO_ObjectiveQuestTask so_Task = questBody.GetTaskNodeByID(nodeToRemove);
                 if ((so_Task != null && so_Task.isSelected) || (so_Task != null && ignoreSelected))
                 {
                     //remove parent from child
@@ -1386,11 +1386,11 @@ public class QuestDetailsEditor : EditorWindow
         CurrentWorkingNode nodeTypeToRemove = CurrentWorkingNode.none;
         if (questBody.questStartDetails != null)
         {
-            if (questBody.questStartDetails.isSelected && questBody.questStartDetails.childQuestStepID.Count > 0)
+            if (questBody.questStartDetails.isSelected && questBody.questStartDetails.childQuestStepIDList.Count > 0)
             {
-                for (int i = questBody.questStartDetails.childQuestStepID.Count - 1; i >= 0; i--)
+                for (int i = questBody.questStartDetails.childQuestStepIDList.Count - 1; i >= 0; i--)
                 {
-                    nodeToRemove = questBody.questStartDetails.childQuestStepID[i];
+                    nodeToRemove = questBody.questStartDetails.childQuestStepIDList[i];
                     nodeTypeToRemove = questBody.GetStepNodeType(nodeToRemove);
                     DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestStart, questBody.questStartDetails.questStartID, nodeToRemove);
                     DeleteParent(nodeTypeToRemove,CurrentWorkingNode.QuestStart ,questBody.questStartDetails.questStartID, nodeToRemove);
@@ -1400,13 +1400,13 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect collectNode in questBody.questCollectDetailsList)
+            foreach (SO_ObjectiveQuestCollect collectNode in questBody.questCollectDetailsList)
             {
-                if (collectNode.isSelected && collectNode.parentQuestStepID.Count > 0)
+                if (collectNode.isSelected && collectNode.parentQuestStepIDList.Count > 0)
                 {
-                    for (int i = collectNode.parentQuestStepID.Count - 1; i >= 0; i--)
+                    for (int i = collectNode.parentQuestStepIDList.Count - 1; i >= 0; i--)
                     {
-                        nodeToRemove = collectNode.parentQuestStepID[i];
+                        nodeToRemove = collectNode.parentQuestStepIDList[i];
                         nodeTypeToRemove = questBody.GetStepNodeType(nodeToRemove);
                         DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestCollect, collectNode.collectQuestStepID, nodeToRemove);
                         DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestCollect, collectNode.collectQuestStepID, nodeToRemove);
@@ -1416,11 +1416,11 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questEndDetails != null)
         {
-            if (questBody.questEndDetails.isSelected && questBody.questEndDetails.parentQuestStepID.Count > 0)
+            if (questBody.questEndDetails.isSelected && questBody.questEndDetails.parentQuestStepIDList.Count > 0)
             {
-                for (int i = questBody.questEndDetails.parentQuestStepID.Count - 1; i >= 0; i--)
+                for (int i = questBody.questEndDetails.parentQuestStepIDList.Count - 1; i >= 0; i--)
                 {
-                    nodeToRemove = questBody.questEndDetails.parentQuestStepID[i];
+                    nodeToRemove = questBody.questEndDetails.parentQuestStepIDList[i];
                     nodeTypeToRemove = questBody.GetStepNodeType(nodeToRemove);
                     DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestEnd, questBody.questEndDetails.questEndID, nodeToRemove);
                     DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestEnd, questBody.questEndDetails.questEndID, nodeToRemove);
@@ -1430,11 +1430,11 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questDialogResultsDetails != null)
         {
-            if (questBody.questDialogResultsDetails.isSelected && questBody.questDialogResultsDetails.parentQuestStepID.Count > 0)
+            if (questBody.questDialogResultsDetails.isSelected && questBody.questDialogResultsDetails.parentQuestStepIDList.Count > 0)
             {
-                for (int i = questBody.questEndDetails.parentQuestStepID.Count - 1; i >= 0; i--)
+                for (int i = questBody.questEndDetails.parentQuestStepIDList.Count - 1; i >= 0; i--)
                 {
-                    nodeToRemove = questBody.questDialogResultsDetails.parentQuestStepID[i];
+                    nodeToRemove = questBody.questDialogResultsDetails.parentQuestStepIDList[i];
                     nodeTypeToRemove = questBody.GetStepNodeType(nodeToRemove);
                     DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestDialogResults, questBody.questEndDetails.questEndID, nodeToRemove);
                     DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestDialogResults, questBody.questEndDetails.questEndID, nodeToRemove);
@@ -1444,13 +1444,13 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier courierNode in questBody.questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier courierNode in questBody.questCouierDetailsList)
             {
-                if (courierNode.isSelected && courierNode.parentQuestStepID.Count > 0)
+                if (courierNode.isSelected && courierNode.parentQuestStepIDList.Count > 0)
                 {
-                    for (int i = courierNode.parentQuestStepID.Count - 1; i >= 0; i--)
+                    for (int i = courierNode.parentQuestStepIDList.Count - 1; i >= 0; i--)
                     {
-                        nodeToRemove = courierNode.parentQuestStepID[i];
+                        nodeToRemove = courierNode.parentQuestStepIDList[i];
                         nodeTypeToRemove = questBody.GetStepNodeType(nodeToRemove);
                         DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestCourier, courierNode.courierQuestStepID, nodeToRemove);
                         DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestCourier, courierNode.courierQuestStepID, nodeToRemove);
@@ -1460,13 +1460,13 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask taskNode in questBody.questTaskDetailsList)
+            foreach (SO_ObjectiveQuestTask taskNode in questBody.questTaskDetailsList)
             {
-                if (taskNode.isSelected && taskNode.parentQuestStepID.Count > 0)
+                if (taskNode.isSelected && taskNode.parentQuestStepIDList.Count > 0)
                 {
-                    for (int i = taskNode.parentQuestStepID.Count - 1; i >= 0; i--)
+                    for (int i = taskNode.parentQuestStepIDList.Count - 1; i >= 0; i--)
                     {
-                        nodeToRemove = taskNode.parentQuestStepID[i];
+                        nodeToRemove = taskNode.parentQuestStepIDList[i];
                         nodeTypeToRemove = questBody.GetStepNodeType(nodeToRemove);
                         DeleteChildren(nodeTypeToRemove, CurrentWorkingNode.QuestTask, taskNode.taskQuestStepID, nodeToRemove);
                         DeleteParent(nodeTypeToRemove, CurrentWorkingNode.QuestTask, taskNode.taskQuestStepID, nodeToRemove);
@@ -1497,7 +1497,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCollect collect in questBody.questCollectDetailsList)
+            foreach (SO_ObjectiveQuestCollect collect in questBody.questCollectDetailsList)
             {
                 if (collect.isSelected)
                 {
@@ -1507,7 +1507,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier courier in questBody.questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier courier in questBody.questCouierDetailsList)
             {
                 if (courier.isSelected)
                 {
@@ -1517,7 +1517,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask task in questBody.questTaskDetailsList)
+            foreach (SO_ObjectiveQuestTask task in questBody.questTaskDetailsList)
             {
                 if (task.isSelected)
                 {
@@ -1545,21 +1545,21 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCollect collect in questBody.questCollectDetailsList)
+            foreach(SO_ObjectiveQuestCollect collect in questBody.questCollectDetailsList)
             {
                 collect.isSelected = true;
             }
         }
         if(questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier courier in questBody.questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier courier in questBody.questCouierDetailsList)
             {
                 courier.isSelected = true;
             }
         }
         if(questBody.questTaskDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveTask task in questBody.questTaskDetailsList)
+            foreach(SO_ObjectiveQuestTask task in questBody.questTaskDetailsList)
             {
                 task.isSelected = true;
             }
@@ -1590,7 +1590,7 @@ public class QuestDetailsEditor : EditorWindow
         switch (nodeToCreate)
         {
             case CurrentWorkingNode.QuestCollect:
-                SO_ObjectiveCollect collectNode = ScriptableObject.CreateInstance<SO_ObjectiveCollect>();
+                SO_ObjectiveQuestCollect collectNode = ScriptableObject.CreateInstance<SO_ObjectiveQuestCollect>();
                 questBody.questCollectDetailsList.Add(collectNode);
                 collectNode.Initialise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), questBody);
                 collectNode.questID = questBody.questNodeID;               
@@ -1598,7 +1598,7 @@ public class QuestDetailsEditor : EditorWindow
                 AssetDatabase.SaveAssets();
                 break;
             case CurrentWorkingNode.QuestCourier:
-                SO_ObjectiveCourier courierNode = ScriptableObject.CreateInstance<SO_ObjectiveCourier>();
+                SO_ObjectiveQuestCourier courierNode = ScriptableObject.CreateInstance<SO_ObjectiveQuestCourier>();
                 questBody.questCouierDetailsList.Add(courierNode);
                 courierNode.Initialise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), questBody);
                 courierNode.questID = questBody.questNodeID;
@@ -1606,7 +1606,7 @@ public class QuestDetailsEditor : EditorWindow
                 AssetDatabase.SaveAssets();
                 break;
             case CurrentWorkingNode.QuestTask:
-                SO_ObjectiveTask taskNode = ScriptableObject.CreateInstance<SO_ObjectiveTask>();
+                SO_ObjectiveQuestTask taskNode = ScriptableObject.CreateInstance<SO_ObjectiveQuestTask>();
                 questBody.questTaskDetailsList.Add(taskNode);
                 taskNode.Initialise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), questBody);
                 taskNode.questID = questBody.questNodeID;
@@ -1639,9 +1639,9 @@ public class QuestDetailsEditor : EditorWindow
         SO_QuestDialogResults results = ScriptableObject.CreateInstance<SO_QuestDialogResults>();
         questBody.questDialogResultsDetails = results;
         
-        nodeLocation.y = nodeLocation.y + (1.5f * nodeHeight);       
-        results.Initialise(nodeLocation, questBody);
-        results.questID = questBody.questNodeID;
+        nodeLocation.y = nodeLocation.y + (1.5f * nodeHeight);
+        results.Initialise(nodeLocation, questBody, QuestNodeType.Quest);
+        results.rewardType = QuestNodeType.Quest;
         AssetDatabase.AddObjectToAsset(results, questBody);
         AssetDatabase.SaveAssets();
         //link node
@@ -1687,7 +1687,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCollectDetailsList.Count > 0)
         {
-            foreach(SO_ObjectiveCollect quests in questBody.questCollectDetailsList)
+            foreach(SO_ObjectiveQuestCollect quests in questBody.questCollectDetailsList)
             {
                 if (quests.isSelected)
                 {
@@ -1701,7 +1701,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questCouierDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveCourier quests in questBody.questCouierDetailsList)
+            foreach (SO_ObjectiveQuestCourier quests in questBody.questCouierDetailsList)
             {
                 if (quests.isSelected)
                 {
@@ -1715,7 +1715,7 @@ public class QuestDetailsEditor : EditorWindow
         }
         if (questBody.questTaskDetailsList.Count > 0)
         {
-            foreach (SO_ObjectiveTask quests in questBody.questTaskDetailsList)
+            foreach (SO_ObjectiveQuestTask quests in questBody.questTaskDetailsList)
             {
                 if (quests.isSelected)
                 {

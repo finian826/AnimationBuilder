@@ -629,6 +629,109 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &698476183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1106647348}
+    m_Modifications:
+    - target: {fileID: 3294198700791569271, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_Name
+      value: Old Man Jenkins
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704450313640881484, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -194673650, guid: f5116a5f3c0143944bb9744fa183bea4, type: 3}
+    - target: {fileID: 4364806847739282453, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_SpriteLibraryAsset
+      value: 
+      objectReference: {fileID: 7108339969198208228, guid: cfec84703e511734084e628c928baec8, type: 3}
+    - target: {fileID: 6535058471987340516, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_labelHash
+      value: 6.085802e-29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535058471987340516, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_CategoryHash
+      value: 0.0000000025175628
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.7367
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.19375
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3294198700791569271, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 698476186}
+  m_SourcePrefab: {fileID: 100100000, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+--- !u!4 &698476184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+  m_PrefabInstance: {fileID: 698476183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &698476185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3294198700791569271, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+  m_PrefabInstance: {fileID: 698476183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &698476186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698476185}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71dfe047bb7f98439e4b052350fa6fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDetails
+  npcDetails:
+    NPCid: 5730b4d4-21df-4c5b-94c0-c54820258c11
+    NPCName: Old Man Jenkins
+    startingType: 10
+  npcQuestList: {fileID: 0}
 --- !u!1 &736213441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1302,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1106647347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106647348}
+  m_Layer: 0
+  m_Name: NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106647348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106647347}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.2633, y: 2.19375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5259182061597199984}
+  - {fileID: 6013060988209958051}
+  - {fileID: 5546522594135467977}
+  - {fileID: 3418925553375315150}
+  - {fileID: 698476184}
+  - {fileID: 1302250539}
+  - {fileID: 1396907538}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1142734486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,7 +1466,7 @@ GameObject:
   - component: {fileID: 1302250538}
   - component: {fileID: 1302250537}
   m_Layer: 0
-  m_Name: farming crops 1 giant pumpkin 48x48
+  m_Name: Giant Pumpkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1347,6 +1488,7 @@ MonoBehaviour:
     NPCid: ac29eb02-2650-4810-8550-cadb22796511
     NPCName: Giant Pumpkin
     startingType: 30
+  npcQuestList: {fileID: 11400000, guid: 6813618a7d7a8264f85214d4e06ab4de, type: 2}
 --- !u!212 &1302250538
 SpriteRenderer:
   serializedVersion: 2
@@ -1414,12 +1556,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302250536}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.490194, y: 0.89066184, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.226894, y: -1.3030881, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1106647348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1348659928
 GameObject:
@@ -1547,7 +1689,7 @@ GameObject:
   - component: {fileID: 1396907537}
   - component: {fileID: 1396907536}
   m_Layer: 0
-  m_Name: farming crops 1-B 16x32_10
+  m_Name: Scary Beet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1569,6 +1711,7 @@ MonoBehaviour:
     NPCid: d8518ff4-9ae8-4d40-9aba-9d146937d4cb
     NPCName: Scary Beet
     startingType: 30
+  npcQuestList: {fileID: 0}
 --- !u!212 &1396907537
 SpriteRenderer:
   serializedVersion: 2
@@ -1636,12 +1779,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396907535}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3301573, y: 4.8394036, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0668573, y: 2.6456537, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1106647348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1465031309
 GameObject:
@@ -2512,7 +2655,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1106647348}
     m_Modifications:
     - target: {fileID: 331176666523556080, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_SpriteHash
@@ -2520,11 +2663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 384944241951479321, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: 1.2633
       objectReference: {fileID: 0}
     - target: {fileID: 384944241951479321, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.19375
       objectReference: {fileID: 0}
     - target: {fileID: 384944241951479321, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2536,15 +2679,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 384944241951479321, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 384944241951479321, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 384944241951479321, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 384944241951479321, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2576,7 +2719,7 @@ PrefabInstance:
       objectReference: {fileID: -2073008713, guid: 783751a21bd27054582f278261dd20e1, type: 3}
     - target: {fileID: 8331371384131463011, guid: fe216710826c909419ee60da699c7f1d, type: 3}
       propertyPath: m_Name
-      value: BasicNPC
+      value: Jed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2607,6 +2750,12 @@ MonoBehaviour:
     NPCid: b9914ce7-ff0a-444c-a50a-4882e6a9c15a
     NPCName: Jed
     startingType: 10
+  npcQuestList: {fileID: 0}
+--- !u!4 &3418925553375315150 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 384944241951479321, guid: fe216710826c909419ee60da699c7f1d, type: 3}
+  m_PrefabInstance: {fileID: 3418925553375315147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3567790192676618486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2844,15 +2993,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1106647348}
     m_Modifications:
     - target: {fileID: 3919960867668969856, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 5.2633
       objectReference: {fileID: 0}
     - target: {fileID: 3919960867668969856, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: -0.1937499
       objectReference: {fileID: 0}
     - target: {fileID: 3919960867668969856, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2864,15 +3013,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919960867668969856, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3919960867668969856, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3919960867668969856, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3919960867668969856, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2891,29 +3040,67 @@ PrefabInstance:
       value: 2.1957988e-10
       objectReference: {fileID: 0}
     - target: {fileID: 4010864967988676457, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
+      propertyPath: m_SpriteHash
+      value: 950321733
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010864967988676457, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
       propertyPath: m_CategoryHash
       value: 5.8232634e-18
       objectReference: {fileID: 0}
     - target: {fileID: 4660976289699363066, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
       propertyPath: m_Name
-      value: Pig
+      value: Farmers Pig
       objectReference: {fileID: 0}
+    - target: {fileID: 6805111182108020417, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1177760064, guid: 1d59202dd088f65469fe1fa5369cab4a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4660976289699363066, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5259182061597199986}
   m_SourcePrefab: {fileID: 100100000, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
+--- !u!4 &5259182061597199984 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3919960867668969856, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
+  m_PrefabInstance: {fileID: 5259182061597199983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5259182061597199985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4660976289699363066, guid: f2acdbd7cf0f5764b825a7388bcdc9b7, type: 3}
+  m_PrefabInstance: {fileID: 5259182061597199983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5259182061597199986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259182061597199985}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71dfe047bb7f98439e4b052350fa6fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDetails
+  npcDetails:
+    NPCid: cf26f641-c778-4c36-9ad5-1d949a00590b
+    NPCName: Farmers Pig
+    startingType: 30
+  npcQuestList: {fileID: 0}
 --- !u!1001 &5546522594135467974
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1106647348}
     m_Modifications:
     - target: {fileID: 3294198700791569271, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_Name
-      value: EventAnimationNPC
+      value: Nun
       objectReference: {fileID: 0}
     - target: {fileID: 4364806847739282453, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_SpriteLibraryAsset
@@ -2929,11 +3116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 5.2633
       objectReference: {fileID: 0}
     - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -4.19375
       objectReference: {fileID: 0}
     - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2945,15 +3132,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2996,25 +3183,31 @@ MonoBehaviour:
     NPCid: e866edde-e8a2-450f-815b-6a5c7bc83e91
     NPCName: Nun
     startingType: 10
+  npcQuestList: {fileID: 0}
+--- !u!4 &5546522594135467977 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6592771628212890125, guid: 78ed8e70dd7df8e48a7f5a8e25d6b8ec, type: 3}
+  m_PrefabInstance: {fileID: 5546522594135467974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6013060988209958050
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1106647348}
     m_Modifications:
     - target: {fileID: 3877197571784616248, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
       propertyPath: m_Name
-      value: Deer
+      value: Wandering Deer
       objectReference: {fileID: 0}
     - target: {fileID: 4830093249943279682, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: 1.2633
       objectReference: {fileID: 0}
     - target: {fileID: 4830093249943279682, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: -0.1937499
       objectReference: {fileID: 0}
     - target: {fileID: 4830093249943279682, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3026,15 +3219,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4830093249943279682, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4830093249943279682, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4830093249943279682, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4830093249943279682, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3051,8 +3244,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3877197571784616248, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6013060988209958053}
   m_SourcePrefab: {fileID: 100100000, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
+--- !u!4 &6013060988209958051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4830093249943279682, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
+  m_PrefabInstance: {fileID: 6013060988209958050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6013060988209958052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3877197571784616248, guid: dba4f9d4b071d1f4aa866c6e2e23d53a, type: 3}
+  m_PrefabInstance: {fileID: 6013060988209958050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6013060988209958053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6013060988209958052}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71dfe047bb7f98439e4b052350fa6fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDetails
+  npcDetails:
+    NPCid: 33ca523f-2565-4115-8041-c364a414df39
+    NPCName: Wandering Deer
+    startingType: 10
+  npcQuestList: {fileID: 0}
 --- !u!1001 &7210898611408783323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3126,13 +3349,8 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 367651257}
   - {fileID: 4077437631821821415}
-  - {fileID: 5259182061597199983}
-  - {fileID: 6013060988209958050}
   - {fileID: 7210898611408783323}
   - {fileID: 1501724234056439500}
   - {fileID: 4161287216569448301}
-  - {fileID: 5546522594135467974}
-  - {fileID: 3418925553375315147}
   - {fileID: 3567790192676618486}
-  - {fileID: 1302250539}
-  - {fileID: 1396907538}
+  - {fileID: 1106647348}
