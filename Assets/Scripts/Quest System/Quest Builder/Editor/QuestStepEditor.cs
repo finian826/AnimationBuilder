@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Callbacks;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static TreeEditor.TreeEditorHelper;
@@ -22,9 +23,9 @@ public class QuestStepEditor : EditorWindow
     private static SO_QuestDialogResults resultsDetail = null;
     private static CurrentWorkingNode currentNode = CurrentWorkingNode.none;
 
-    private Dictionary<string, string> npcStarters = new Dictionary<string, string>();
-    private Dictionary<string, string> sceneItemStarters = new Dictionary<string, string>();
-
+    private Dictionary<string, string> npcStartersDictionary = new Dictionary<string, string>();
+    private Dictionary<string, string> sceneItemStartersDictionary = new Dictionary<string, string>();
+    private Dictionary<string, string> masterNPCDictionary = new Dictionary<string, string>();
 
     [MenuItem("Quest Step Editor", menuItem = "Tools/Quest Editor/Quest Step Editor")]
     public static void OpenWindow()
@@ -54,14 +55,15 @@ public class QuestStepEditor : EditorWindow
             switch (npc.startingType)
             {
                 case QuestGiver.SceneItem:
-                    sceneItemStarters.Add(npc.NPCid, npc.NPCName);
+                    sceneItemStartersDictionary.Add(npc.NPCid, npc.NPCName);
                     break;
                 case QuestGiver.NPC:
-                    npcStarters.Add(npc.NPCid, npc.NPCName);
+                    npcStartersDictionary.Add(npc.NPCid, npc.NPCName);
                     break;
                 default:
                     break;
             }
+            masterNPCDictionary.Add(npc.NPCid, npc.NPCName);
         }
     }
 
@@ -124,6 +126,7 @@ public class QuestStepEditor : EditorWindow
     }
     public void ViewEditStartDetails()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.Label("Node ID");
         GUILayout.Label($"{questStartDetails.questStartID.ToString()}");
         GUILayout.Space(_space);
@@ -137,18 +140,34 @@ public class QuestStepEditor : EditorWindow
         }
         GUILayout.Space(_space);
         GUILayout.Label("Quest Title");
+        if (questStartDetails.questTitle == null)
+        {
+            questStartDetails.questTitle = "";
+        }
         questStartDetails.questTitle = GUILayout.TextField(questStartDetails.questTitle, 32);
         GUILayout.Space(_space);
         GUILayout.Label("Quest Text Body");
+        if(questStartDetails.questText == null)
+        {
+            questStartDetails.questText = "";
+        }
         questStartDetails.questText = GUILayout.TextArea(questStartDetails.questText, 640);
         GUILayout.Space(_space);
         questStartDetails.objectiveType=(QuestObjectiveType)EditorGUILayout.EnumPopup("Quest Objective Types: ",
             questStartDetails.objectiveType);
         GUILayout.Space(_space);
         GUILayout.Label("Quest Tracker Title");
+        if(questStartDetails.trackerTitle == null)
+        {
+            questStartDetails.trackerTitle = "";
+        }
         questStartDetails.trackerTitle = GUILayout.TextField(questStartDetails.trackerTitle, 32);
         GUILayout.Space(_space);
         GUILayout.Label("Quest Tracker Text");
+        if (questStartDetails.trackerText == null)
+        {
+            questStartDetails.trackerText = "";
+        }
         questStartDetails.trackerText = GUILayout.TextArea(questStartDetails.trackerText, 64);
         GUILayout.Space(_space);
         questStartDetails.initialDialogBeforeQuest = EditorGUILayout.ToggleLeft("Initial Dialog Before Quest",
@@ -167,11 +186,11 @@ public class QuestStepEditor : EditorWindow
             {
                 case DialogActor.NPC:
                     GUILayout.Label("Please select NPC to give dialog:");
-                    questStartDetails.initialQuestDialog.actorID = BuildPopupElement(npcStarters, questStartDetails.initialQuestDialog.actorID);
+                    questStartDetails.initialQuestDialog.actorID = BuildPopupElement(npcStartersDictionary, questStartDetails.initialQuestDialog.actorID);
                     break;
                 case DialogActor.SceneItem:
                     GUILayout.Label("Please select scene item to start dialog:");
-                    questStartDetails.initialQuestDialog.actorID = BuildPopupElement(sceneItemStarters, questStartDetails.initialQuestDialog.actorID);
+                    questStartDetails.initialQuestDialog.actorID = BuildPopupElement(sceneItemStartersDictionary, questStartDetails.initialQuestDialog.actorID);
 
                     break;
                 case DialogActor.EventTrigger:
@@ -192,12 +211,14 @@ public class QuestStepEditor : EditorWindow
             GUILayout.Space(_space);
             questStartDetails.initialQuestDialog.waitTimeBeforeContinuing = EditorGUILayout.FloatField("Wait Time Before Continuing",
                 questStartDetails.initialQuestDialog.waitTimeBeforeContinuing);
-
         }
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(questStartDetails);
     }
 
     public void ViewEditEndDetails()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.Label("Node ID");
         GUILayout.Label($"{questEndDetails.questEndID.ToString()}");
         GUILayout.Space(_space);
@@ -221,11 +242,14 @@ public class QuestStepEditor : EditorWindow
         GUILayout.Space(_space);
         GUILayout.Label("Quest Finished Text");
         questEndDetails.npcCompleteText = GUILayout.TextArea(questEndDetails.npcCompleteText, 320);
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(questEndDetails);
 
     }
 
     public void ViewEditCollectDetails()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.Label("Node ID");
         GUILayout.Label($"{collectDetails.collectQuestStepID.ToString()}");
         GUILayout.Space(_space);
@@ -248,15 +272,95 @@ public class QuestStepEditor : EditorWindow
         }
         GUILayout.Space(_space);
         GUILayout.Label("Please select NPC to give dialog:");
-        collectDetails.taskNPC = BuildPopupElement(npcStarters, collectDetails.taskNPC);
+        collectDetails.taskNPC = BuildPopupElement(npcStartersDictionary, collectDetails.taskNPC);
         GUILayout.Space(_space);
         GUILayout.Label("Quest Text Body");
         collectDetails.taskNPCDialog = GUILayout.TextArea(collectDetails.taskNPCDialog, 640);
+        GUILayout.Space(_space);
+        GUILayout.Label("Required Quest Items from Source");
+        if (collectDetails.itemSourceList.Count == 0)
+        {
+            GUILayout.Label("No Quest Items Defined");
+            if (GUILayout.Button("Add new Quest Source"))
+            {
+                QuestItemSource newItemSource = new QuestItemSource();
+                GUILayout.Label("Source NPC");
+                newItemSource.sourceNPCID = BuildPopupElement(masterNPCDictionary, newItemSource.sourceNPCID);
+                GUILayout.Label("Item");//need to create drop down for here based on item codes for quest items
+                newItemSource.itemCode = EditorGUILayout.IntField(newItemSource.itemCode);
+                GUILayout.Label("Minimum Drop");
+                newItemSource.minDrop = EditorGUILayout.IntField(newItemSource.minDrop);
+                GUILayout.Label("Maximum Drop");
+                newItemSource.maxDrop = EditorGUILayout.IntField(newItemSource.maxDrop);
+                if (GUILayout.Button("Add Source"))
+                {
+                    collectDetails.itemSourceList.Add(newItemSource);
+                    GUI.changed = true;
+                }
+                GUI.changed = false;
+            }
 
+        }
+        else
+        {
+            QuestItemSource[] tempItemSource = new QuestItemSource[collectDetails.itemSourceList.Count];
+            bool[] toggles=new bool[collectDetails.itemSourceList.Count];
+            for(int i=0;i<toggles.Length;i++)
+            {
+                toggles[i] = false;
+            }
+            int itemIndex = 0;
+            foreach(QuestItemSource items in collectDetails.itemSourceList)
+            {
+                tempItemSource[itemIndex] = items;
+                GUILayout.Label("Source NPC");
+                tempItemSource[itemIndex].sourceNPCID = BuildPopupElement(masterNPCDictionary, tempItemSource[itemIndex].sourceNPCID);
+                GUILayout.Label("Item");//need to create drop down for here based on item codes for quest items
+                tempItemSource[itemIndex].itemCode = EditorGUILayout.IntField(tempItemSource[itemIndex].itemCode);
+                GUILayout.Label("Minimum Drop");
+                tempItemSource[itemIndex].minDrop = EditorGUILayout.IntField(tempItemSource[itemIndex].minDrop);
+                GUILayout.Label("Maximum Drop");
+                tempItemSource[itemIndex].maxDrop = EditorGUILayout.IntField(tempItemSource[itemIndex].maxDrop);
+                toggles[itemIndex] = EditorGUILayout.Toggle("Delete", toggles[itemIndex]);
+            }
+            if(GUILayout.Button("Delete Selected"))
+            {
+                for(int i=0;i< toggles.Length;i++)
+                {
+                    if (toggles[i] == true)
+                    {
+                        collectDetails.itemSourceList.Remove(tempItemSource[i]);
+                    }
+                }
+                GUI.changed = true;
+            }
+            if(GUILayout.Button("Add new Quest Source"))
+            {
+                QuestItemSource newItemSource=new QuestItemSource();
+                GUILayout.Label("Source NPC");
+                newItemSource.sourceNPCID = BuildPopupElement(masterNPCDictionary, newItemSource.sourceNPCID);
+                GUILayout.Label("Item");//need to create drop down for here based on item codes for quest items
+                newItemSource.itemCode = EditorGUILayout.IntField(newItemSource.itemCode);
+                GUILayout.Label("Minimum Drop");
+                newItemSource.minDrop = EditorGUILayout.IntField(newItemSource.minDrop);
+                GUILayout.Label("Maximum Drop");
+                newItemSource.maxDrop = EditorGUILayout.IntField(newItemSource.maxDrop);
+                if(GUILayout.Button("Add Source"))
+                {
+                    collectDetails.itemSourceList.Add(newItemSource);
+                    GUI.changed = true;
+                }
+            }
+            
+        }
+
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(collectDetails);
     }
 
     public void ViewEditCourierDetails()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.Label("Node ID");
         GUILayout.Label($"{courierDetails.courierQuestStepID.ToString()}");
         GUILayout.Space(_space);
@@ -279,10 +383,14 @@ public class QuestStepEditor : EditorWindow
         }
         GUILayout.Space(_space);
 
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(courierDetails);
+
     }
 
     public void ViewEditTaskDetails()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.Label("Node ID");
         GUILayout.Label($"{taskDetails.taskQuestStepID.ToString()}");
         GUILayout.Space(_space);
@@ -305,10 +413,14 @@ public class QuestStepEditor : EditorWindow
         }
         GUILayout.Space(_space);
 
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(taskDetails);
+
     }
 
     public void ViewEditResultsDetails()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.Label("Node ID");
         GUILayout.Label($"{resultsDetail.questDialogResultsStepID.ToString()}");
         GUILayout.Space(_space);
@@ -321,6 +433,9 @@ public class QuestStepEditor : EditorWindow
             }
         }
         GUILayout.Space(_space);
+
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(resultsDetail);
 
     }
 

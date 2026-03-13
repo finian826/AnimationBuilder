@@ -12,8 +12,8 @@ public class SO_ObjectiveQuestCollect : ScriptableObject
     public List<string> childQuestStepIDList = new List<string>();
     public string taskNPC;
     public string taskNPCDialog;
-    public QuestItemSource[] itemSource;
-    public QuestItems[] itemDestination;
+    public List<QuestItemSource> itemSourceList;
+    public List<QuestItems> itemDestinationList;
     [HideInInspector] public SO_Quests questNode;
 
 
