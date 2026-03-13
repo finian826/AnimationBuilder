@@ -180,8 +180,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_QuestEndDetails
   questEndID: 7b6586b3-08b6-4b1a-a59d-9069cd9b5b51
   questID: 71e0400f-ddb1-4ed3-84c4-01393f658aea
-  parentQuestStepIDList: []
-  childQuestStepIDList: []
+  parentQuestStepIDList:
+  - 30fc6776-a217-4074-a951-923d0355c3d5
+  - f87a2b46-6dd5-4c1a-a07b-631dfdfc2ff5
+  - a98fbad3-3bbb-4e92-a57e-2d2bff96def1
+  childQuestStepIDList:
+  - 7bbddcb2-89d8-4b16-b797-eec35b8119e9
   npcCompleteText: 
   questNode: {fileID: 8007362599394881781}
   rect:
@@ -192,7 +196,7 @@ MonoBehaviour:
     height: 75
   isLeftClickDragging: 0
   isSelected: 0
-  isConnected: 0
+  isConnected: 1
   callEditor: 0
 --- !u!114 &-2582443351816999220
 MonoBehaviour:
@@ -284,8 +288,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_ObjectiveQuestTask
   taskQuestStepID: a98fbad3-3bbb-4e92-a57e-2d2bff96def1
   questID: 71e0400f-ddb1-4ed3-84c4-01393f658aea
-  parentQuestStepIDList: []
-  childQuestStepIDList: []
+  parentQuestStepIDList:
+  - 9083186c-2276-4028-9dc5-92eca63ae44e
+  childQuestStepIDList:
+  - 7b6586b3-08b6-4b1a-a59d-9069cd9b5b51
   questNode: {fileID: 8007362599394881781}
   taskNPC: 
   npcDialog: 
@@ -298,8 +304,8 @@ MonoBehaviour:
     width: 160
     height: 75
   isLeftClickDragging: 0
-  isSelected: 1
-  isConnected: 0
+  isSelected: 0
+  isConnected: 1
   callEditor: 0
 --- !u!114 &1308823540131878746
 MonoBehaviour:
@@ -315,7 +321,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_QuestDialogResults
   questDialogResultsStepID: 7bbddcb2-89d8-4b16-b797-eec35b8119e9
   questID: 71e0400f-ddb1-4ed3-84c4-01393f658aea
-  parentQuestStepIDList: []
+  parentQuestStepIDList:
+  - 7b6586b3-08b6-4b1a-a59d-9069cd9b5b51
   rewardType: 10
   guarenteedQuestReward: 0
   guarentedQuestRewardItemsList: []
@@ -341,7 +348,7 @@ MonoBehaviour:
     height: 75
   isLeftClickDragging: 0
   isSelected: 0
-  isConnected: 0
+  isConnected: 1
   callEditor: 0
 --- !u!114 &3394394319423754883
 MonoBehaviour:
@@ -413,30 +420,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_QuestStartDetails
   questStartID: 9083186c-2276-4028-9dc5-92eca63ae44e
   questID: 71e0400f-ddb1-4ed3-84c4-01393f658aea
-  childQuestStepIDList: []
+  childQuestStepIDList:
+  - 30fc6776-a217-4074-a951-923d0355c3d5
+  - f87a2b46-6dd5-4c1a-a07b-631dfdfc2ff5
+  - a98fbad3-3bbb-4e92-a57e-2d2bff96def1
   questTitle: 
   questText: 
-  objectiveType: 0
+  objectiveType: 20
   trackerTitle: 
   trackerText: 
-  initialDialogBeforeQuest: 0
+  initialDialogBeforeQuest: 1
   initialQuestDialog:
-    actorID: 
-    actorDialog: 0
+    actorID: 5730b4d4-21df-4c5b-94c0-c54820258c11
+    actorDialog: 20
     actorText: 
     actorPortiatID: 
     waitTimeBeforeContinuing: 0
   questNode: {fileID: 8007362599394881781}
   rect:
     serializedVersion: 2
-    x: 494
+    x: 495
     y: 18
     width: 160
     height: 75
-  isLeftClickDragging: 0
-  isSelected: 1
-  isConnected: 0
-  callEditor: 0
+  isLeftClickDragging: 1
+  isSelected: 0
+  isConnected: 1
+  callEditor: 1
 --- !u!114 &6211178910393248060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,8 +461,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_ObjectiveQuestCourier
   courierQuestStepID: f87a2b46-6dd5-4c1a-a07b-631dfdfc2ff5
   questID: 71e0400f-ddb1-4ed3-84c4-01393f658aea
-  parentQuestStepIDList: []
-  childQuestStepIDList: []
+  parentQuestStepIDList:
+  - 9083186c-2276-4028-9dc5-92eca63ae44e
+  childQuestStepIDList:
+  - 7b6586b3-08b6-4b1a-a59d-9069cd9b5b51
   questNode: {fileID: 8007362599394881781}
   taskNPC: 
   npcDialog: 
@@ -464,8 +476,8 @@ MonoBehaviour:
     width: 160
     height: 75
   isLeftClickDragging: 0
-  isSelected: 1
-  isConnected: 0
+  isSelected: 0
+  isConnected: 1
   callEditor: 0
 --- !u!114 &7840801394481862591
 MonoBehaviour:
@@ -481,9 +493,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SO_ObjectiveQuestCollect
   collectQuestStepID: 30fc6776-a217-4074-a951-923d0355c3d5
   questID: 71e0400f-ddb1-4ed3-84c4-01393f658aea
-  parentQuestStepIDList: []
-  childQuestStepIDList: []
-  taskNPC: 
+  parentQuestStepIDList:
+  - 9083186c-2276-4028-9dc5-92eca63ae44e
+  childQuestStepIDList:
+  - 7b6586b3-08b6-4b1a-a59d-9069cd9b5b51
+  taskNPC: e866edde-e8a2-450f-815b-6a5c7bc83e91
   taskNPCDialog: 
   itemSourceList: []
   itemDestinationList: []
@@ -495,9 +509,9 @@ MonoBehaviour:
     width: 160
     height: 75
   isLeftClickDragging: 0
-  isSelected: 1
-  isConnected: 0
-  callEditor: 0
+  isSelected: 0
+  isConnected: 1
+  callEditor: 1
 --- !u!114 &8007362599394881781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +555,7 @@ MonoBehaviour:
     width: 160
     height: 75
   isLeftClickDragging: 0
-  isSelected: 1
+  isSelected: 0
   isConnected: 1
   callEditor: 0
   startNodeToDrawLineFrom: {fileID: 0}
@@ -555,4 +569,4 @@ MonoBehaviour:
   dialogBasicNodeToDrawLineFrom: {fileID: 0}
   dialogResultsNodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
-  nodeTypeLineFrom: 0
+  nodeTypeLineFrom: 50

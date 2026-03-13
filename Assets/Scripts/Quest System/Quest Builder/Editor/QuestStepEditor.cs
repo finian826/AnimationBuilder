@@ -23,6 +23,18 @@ public class QuestStepEditor : EditorWindow
     private static SO_QuestDialogResults resultsDetail = null;
     private static CurrentWorkingNode currentNode = CurrentWorkingNode.none;
 
+    //Node temp variables
+    private bool collectFlagSource = false;
+    private bool collectFlagDestination = false;
+    //Collect Node Globals
+    private QuestItemSource newItemSource = new QuestItemSource();
+    private QuestItemSource[] collectTempItemSource;
+    private bool[] collectItemSourceToggles;
+    private QuestItems newItemDestination = new QuestItems();
+    private QuestItems[] collectTempItemDestination;
+    private bool[] collectItemDesinationToggles;
+
+
     private Dictionary<string, string> npcStartersDictionary = new Dictionary<string, string>();
     private Dictionary<string, string> sceneItemStartersDictionary = new Dictionary<string, string>();
     private Dictionary<string, string> masterNPCDictionary = new Dictionary<string, string>();
@@ -44,7 +56,28 @@ public class QuestStepEditor : EditorWindow
     {
         so_NPCS = GameResources.Instance.npcList;
         BuildDictionaries();
+        BuildBools();
+    }
 
+    private void BuildBools()
+    {
+        if (collectDetails != null)
+        {
+            collectTempItemSource=new QuestItemSource[collectDetails.itemSourceList.Count];
+            collectItemSourceToggles=new bool[collectDetails.itemSourceList.Count];
+            for (int i = 0; i < collectItemSourceToggles.Length; i++)
+            {
+                collectItemSourceToggles[i] = false;
+            }
+            collectTempItemDestination = new QuestItems[collectDetails.itemDestinationList.Count];
+            collectItemDesinationToggles=new bool[collectDetails.itemDestinationList.Count];
+            for(int i = 0; i < collectDetails.itemDestinationList.Count; i++)
+            {
+                collectItemDesinationToggles[i] = false;
+            }
+            newItemSource = new QuestItemSource();
+            newItemDestination=new QuestItems();
+        }
     }
 
     private void BuildDictionaries()
@@ -281,78 +314,153 @@ public class QuestStepEditor : EditorWindow
         if (collectDetails.itemSourceList.Count == 0)
         {
             GUILayout.Label("No Quest Items Defined");
-            if (GUILayout.Button("Add new Quest Source"))
-            {
-                QuestItemSource newItemSource = new QuestItemSource();
-                GUILayout.Label("Source NPC");
-                newItemSource.sourceNPCID = BuildPopupElement(masterNPCDictionary, newItemSource.sourceNPCID);
-                GUILayout.Label("Item");//need to create drop down for here based on item codes for quest items
-                newItemSource.itemCode = EditorGUILayout.IntField(newItemSource.itemCode);
-                GUILayout.Label("Minimum Drop");
-                newItemSource.minDrop = EditorGUILayout.IntField(newItemSource.minDrop);
-                GUILayout.Label("Maximum Drop");
-                newItemSource.maxDrop = EditorGUILayout.IntField(newItemSource.maxDrop);
-                if (GUILayout.Button("Add Source"))
-                {
-                    collectDetails.itemSourceList.Add(newItemSource);
-                    GUI.changed = true;
-                }
-                GUI.changed = false;
-            }
-
         }
         else
         {
-            QuestItemSource[] tempItemSource = new QuestItemSource[collectDetails.itemSourceList.Count];
-            bool[] toggles=new bool[collectDetails.itemSourceList.Count];
-            for(int i=0;i<toggles.Length;i++)
-            {
-                toggles[i] = false;
-            }
             int itemIndex = 0;
-            foreach(QuestItemSource items in collectDetails.itemSourceList)
+            foreach (QuestItemSource items in collectDetails.itemSourceList)
             {
-                tempItemSource[itemIndex] = items;
-                GUILayout.Label("Source NPC");
-                tempItemSource[itemIndex].sourceNPCID = BuildPopupElement(masterNPCDictionary, tempItemSource[itemIndex].sourceNPCID);
-                GUILayout.Label("Item");//need to create drop down for here based on item codes for quest items
-                tempItemSource[itemIndex].itemCode = EditorGUILayout.IntField(tempItemSource[itemIndex].itemCode);
-                GUILayout.Label("Minimum Drop");
-                tempItemSource[itemIndex].minDrop = EditorGUILayout.IntField(tempItemSource[itemIndex].minDrop);
-                GUILayout.Label("Maximum Drop");
-                tempItemSource[itemIndex].maxDrop = EditorGUILayout.IntField(tempItemSource[itemIndex].maxDrop);
-                toggles[itemIndex] = EditorGUILayout.Toggle("Delete", toggles[itemIndex]);
+                EditorGUILayout.BeginHorizontal();
+                collectTempItemSource[itemIndex] = items;
+                GUILayout.Label("Source NPC", GUILayout.Width(96));
+                collectTempItemSource[itemIndex].sourceNPCID = BuildPopupElement(masterNPCDictionary, collectTempItemSource[itemIndex].sourceNPCID);
+                EditorGUILayout.EndHorizontal();
+                EditorGUILayout.BeginHorizontal();
+                GUILayout.Label("Item", GUILayout.Width(96));//need to create drop down for here based on item codes for quest items
+                collectTempItemSource[itemIndex].itemCode = EditorGUILayout.IntField(collectTempItemSource[itemIndex].itemCode);
+                EditorGUILayout.EndHorizontal();
+                EditorGUILayout.BeginHorizontal();
+                GUILayout.Label("Minimum Drop", GUILayout.Width(96));
+                collectTempItemSource[itemIndex].minDrop = EditorGUILayout.IntField(collectTempItemSource[itemIndex].minDrop);
+                EditorGUILayout.EndHorizontal();
+                EditorGUILayout.BeginHorizontal();
+                GUILayout.Label("Maximum Drop", GUILayout.Width(96));
+                collectTempItemSource[itemIndex].maxDrop = EditorGUILayout.IntField(collectTempItemSource[itemIndex].maxDrop);
+                EditorGUILayout.EndHorizontal();
+                collectItemSourceToggles[itemIndex] = EditorGUILayout.Toggle("Delete", collectItemSourceToggles[itemIndex]);
+                itemIndex++;
             }
-            if(GUILayout.Button("Delete Selected"))
+            if (GUILayout.Button("Delete Selected"))
             {
-                for(int i=0;i< toggles.Length;i++)
+                for (int i = 0; i < collectItemSourceToggles.Length; i++)
                 {
-                    if (toggles[i] == true)
+                    if (collectItemSourceToggles[i] == true)
                     {
-                        collectDetails.itemSourceList.Remove(tempItemSource[i]);
+                        collectDetails.itemSourceList.Remove(collectTempItemSource[i]);
                     }
                 }
+                BuildBools();
                 GUI.changed = true;
             }
-            if(GUILayout.Button("Add new Quest Source"))
-            {
-                QuestItemSource newItemSource=new QuestItemSource();
-                GUILayout.Label("Source NPC");
-                newItemSource.sourceNPCID = BuildPopupElement(masterNPCDictionary, newItemSource.sourceNPCID);
-                GUILayout.Label("Item");//need to create drop down for here based on item codes for quest items
-                newItemSource.itemCode = EditorGUILayout.IntField(newItemSource.itemCode);
-                GUILayout.Label("Minimum Drop");
-                newItemSource.minDrop = EditorGUILayout.IntField(newItemSource.minDrop);
-                GUILayout.Label("Maximum Drop");
-                newItemSource.maxDrop = EditorGUILayout.IntField(newItemSource.maxDrop);
-                if(GUILayout.Button("Add Source"))
-                {
-                    collectDetails.itemSourceList.Add(newItemSource);
-                    GUI.changed = true;
-                }
-            }
-            
         }
+        if (GUILayout.Button("Add new Quest Source") || collectFlagSource)
+        {
+            collectFlagSource = true;
+            
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Source NPC", GUILayout.Width(96));
+            newItemSource.sourceNPCID = BuildPopupElement(masterNPCDictionary, newItemSource.sourceNPCID);
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Item", GUILayout.Width(96));//need to create drop down for here based on item codes for quest items
+            newItemSource.itemCode = EditorGUILayout.IntField(newItemSource.itemCode);
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Minimum Drop", GUILayout.Width(96));
+            newItemSource.minDrop = EditorGUILayout.IntField(newItemSource.minDrop);
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Maximum Drop", GUILayout.Width(96));
+            newItemSource.maxDrop = EditorGUILayout.IntField(newItemSource.maxDrop); 
+            EditorGUILayout.EndHorizontal();
+            if (GUILayout.Button("Add Source"))
+            {
+                collectDetails.itemSourceList.Add(newItemSource);
+                GUI.changed = true;
+                collectFlagSource = false;
+                BuildBools();
+            }
+        }
+        //work down from here
+        GUILayout.Space(_space);
+        GUILayout.Label("Quest Item Destinations");
+        if (collectDetails.itemDestinationList.Count == 0)
+        {
+            GUILayout.Label("No Quest Item Destinations Defined");
+        }
+        else
+        {
+            int itemIndex = 0;
+            foreach (QuestItems items in collectDetails.itemDestinationList)
+            {
+                collectTempItemDestination[itemIndex] = items;
+
+                EditorGUILayout.BeginHorizontal();
+                GUILayout.Label("Item", GUILayout.Width(96));//need to create drop down for here based on item codes for quest items
+                collectTempItemDestination[itemIndex].questItem = EditorGUILayout.IntField(collectTempItemDestination[itemIndex].questItem);
+                EditorGUILayout.EndHorizontal();
+                EditorGUILayout.BeginHorizontal();
+                GUILayout.Label("Qunatity", GUILayout.Width(96));
+                collectTempItemDestination[itemIndex].questItemQuantity = EditorGUILayout.IntField(collectTempItemDestination[itemIndex].questItemQuantity);
+                EditorGUILayout.EndHorizontal();
+                EditorGUILayout.BeginHorizontal();
+                GUILayout.Label("Target NPC", GUILayout.Width(96));
+                collectTempItemDestination[itemIndex].targetNPC = BuildPopupElement(masterNPCDictionary, collectTempItemDestination[itemIndex].targetNPC);
+                EditorGUILayout.EndHorizontal();
+                EditorGUILayout.BeginHorizontal();
+                GUILayout.Label("Tracker Detail", GUILayout.Width(96));
+                collectTempItemDestination[itemIndex].trackerStepDecscription = GUILayout.TextField(collectTempItemDestination[itemIndex].trackerStepDecscription,32);
+                EditorGUILayout.EndHorizontal();
+                collectItemDesinationToggles[itemIndex] = EditorGUILayout.Toggle("Delete", collectItemDesinationToggles[itemIndex]);
+                itemIndex++;
+            }
+            if (GUILayout.Button("Delete Selected"))
+            {
+                for (int i = 0; i < collectItemDesinationToggles.Length; i++)
+                {
+                    if (collectItemDesinationToggles[i] == true)
+                    {
+                        collectDetails.itemDestinationList.Remove(collectTempItemDestination[i]);
+                    }
+                }
+                BuildBools();
+                GUI.changed = true;
+            }
+        }
+        if (GUILayout.Button("Add new Quest Destination") || collectFlagDestination)
+        {
+            collectFlagDestination = true;
+
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Item", GUILayout.Width(96));//need to create drop down for here based on item codes for quest items
+            newItemDestination.questItem = EditorGUILayout.IntField(newItemDestination.questItem);
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Qunatity", GUILayout.Width(96));
+            newItemDestination.questItemQuantity = EditorGUILayout.IntField(newItemDestination.questItemQuantity);
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Target NPC", GUILayout.Width(96));
+            newItemDestination.targetNPC = BuildPopupElement(masterNPCDictionary, newItemDestination.targetNPC);
+            EditorGUILayout.EndHorizontal();
+            if (newItemDestination.trackerStepDecscription == null)
+            {
+                newItemDestination.trackerStepDecscription = "";
+            }
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Label("Tracker Detail", GUILayout.Width(96));
+            newItemDestination.trackerStepDecscription = GUILayout.TextField(newItemDestination.trackerStepDecscription, 32);
+            EditorGUILayout.EndHorizontal();
+
+            if (GUILayout.Button("Add Destination"))
+            {
+                collectDetails.itemDestinationList.Add(newItemDestination);
+                GUI.changed = true;
+                collectFlagDestination = false;
+                BuildBools();
+            }
+        }
+        GUI.changed = false;
 
         if (EditorGUI.EndChangeCheck())
             EditorUtility.SetDirty(collectDetails);

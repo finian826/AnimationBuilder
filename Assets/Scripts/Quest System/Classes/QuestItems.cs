@@ -10,5 +10,5 @@ public class QuestItems
     public string targetNPC;
     public string trackerStepDecscription;
     public QuestInventoryStatus targetInventoryStatus = QuestInventoryStatus.none;
-    public bool stepCompleted = false;
+    public bool stepCompleted = false;//used in main quest routines
 }
