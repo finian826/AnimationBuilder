@@ -10,10 +10,10 @@ public class SO_ObjectiveQuestCourier : ScriptableObject
     public string questID;//id of quest this node belongs to
     public List<string> parentQuestStepIDList = new List<string>();
     public List<string> childQuestStepIDList = new List<string>();
-    [HideInInspector] public SO_Quests questNode;
     public string taskNPC;
     public string npcDialog;
     public QuestItems[] taskItems;
+    [HideInInspector] public SO_Quests questNode;
 
 
 

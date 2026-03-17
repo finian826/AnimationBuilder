@@ -293,9 +293,10 @@ namespace ManaSeedTools.CharacterAnimator
 
         private void ReworkAnimationController()
         {
-            if (clipSubFolders.Count == 0 && farmerBaseAnimations != null)
+            if (farmerBaseAnimations != null)
             {
                 string prevType = "";
+                clipSubFolders.Clear();
                 foreach (MSCFarmerAnimation anim in farmerBaseAnimations.list)
                 {
                     if (anim.animationType != prevType)
