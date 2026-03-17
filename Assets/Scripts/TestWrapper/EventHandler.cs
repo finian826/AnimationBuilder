@@ -22,7 +22,17 @@ public static class EventHandler
                 isHorseWalking, isHorseTrotting, isHorseGalloping, horseIdle);
     }
 
- 
+    // NPC Movement Event
+    public static Action<float, float, int, bool, bool, bool,bool> NPCMovementEvent;
+
+    //NPC Movement Event Call for Publishers
+    public static void CallNPCMovementEvent(float xInput, float yInput, int direction, bool isWalking,
+        bool isRunning, bool isIdle, bool eventAnimation)
+    {
+        if (NPCMovementEvent != null)
+            NPCMovementEvent(xInput, yInput, direction, isWalking, isRunning, isIdle, eventAnimation);
+    }
+
     //Scene load events - in order that they happen
 
     //before scene unload fade out

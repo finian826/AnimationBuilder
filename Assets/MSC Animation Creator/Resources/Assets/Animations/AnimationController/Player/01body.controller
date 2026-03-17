@@ -42,7 +42,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: xInput
+    m_ConditionEvent: yInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8262441773616195195}
@@ -1320,7 +1320,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isRunning
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1876423745407463878}
@@ -4743,7 +4743,7 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
+  - m_ConditionMode: 4
     m_ConditionEvent: yInput
     m_EventTreshold: -0.01
   - m_ConditionMode: 1
@@ -5069,7 +5069,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5135133288594812127}
@@ -5416,7 +5416,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isRunning
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: xInput
+    m_ConditionEvent: yInput
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2638557049033267264}
@@ -5497,7 +5497,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: xInput
+    m_ConditionEvent: yInput
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -547059625939850235}
@@ -6087,7 +6087,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isRunning
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 100839763139379414}
@@ -6388,7 +6388,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isRunning
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 100839763139379414}
@@ -9035,7 +9035,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4513890868785326750}
@@ -9466,7 +9466,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isRunning
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 100839763139379414}
@@ -9919,7 +9919,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: xInput
+    m_ConditionEvent: yInput
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -547059625939850235}
@@ -10309,7 +10309,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isRunning
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: xInput
+    m_ConditionEvent: yInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6590959990001726015}
@@ -11472,7 +11472,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: xInput
+    m_ConditionEvent: yInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8262441773616195195}
@@ -11950,7 +11950,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: xInput
+    m_ConditionEvent: yInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8262441773616195195}
@@ -12499,7 +12499,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5135133288594812127}
@@ -12634,7 +12634,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4513890868785326750}
@@ -13290,7 +13290,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isRunning
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1876423745407463878}
@@ -14680,7 +14680,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5135133288594812127}
@@ -15180,7 +15180,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isWalking
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4513890868785326750}
@@ -15208,7 +15208,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isRunning
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: xInput
+    m_ConditionEvent: yInput
     m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6590959990001726015}
@@ -15300,7 +15300,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isRunning
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: yInput
+    m_ConditionEvent: xInput
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1876423745407463878}

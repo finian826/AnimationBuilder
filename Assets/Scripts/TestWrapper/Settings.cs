@@ -17,6 +17,9 @@ public static class Settings
     public static int isHorseGalloping;
     public static int horseIdle;
 
+    //NPC Related
+    public static int eventAnimation;
+
 
     // static Constructor
     static Settings()
@@ -34,5 +37,6 @@ public static class Settings
         isHorseGalloping = Animator.StringToHash("isHorseGalloping");
         isHorseTrotting = Animator.StringToHash("isHorseTrotting");
         horseIdle = Animator.StringToHash("horseIdle");
+        eventAnimation = Animator.StringToHash("eventAnimation");
     }
 }

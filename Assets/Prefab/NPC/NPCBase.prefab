@@ -106,8 +106,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8250807157524938485, guid: 3edc3293884936a4f928af1f5750d0ae, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 9132820600145073045}
   m_SourcePrefab: {fileID: 100100000, guid: 3edc3293884936a4f928af1f5750d0ae, type: 3}
+--- !u!1 &7263364839425209300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8250807157524938485, guid: 3edc3293884936a4f928af1f5750d0ae, type: 3}
+  m_PrefabInstance: {fileID: 1606772088440769825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9132820600145073045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7263364839425209300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c4c807c768e6948ae41877510f8fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCMovementAnimationControl
 --- !u!4 &8280183840102701265 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7252336806363272688, guid: 3edc3293884936a4f928af1f5750d0ae, type: 3}
@@ -168,10 +188,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4067729479786818001, guid: 307f5875eaa06564fa1977d0a01e3b9a, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 5735442727501223901}
   m_SourcePrefab: {fileID: 100100000, guid: 307f5875eaa06564fa1977d0a01e3b9a, type: 3}
 --- !u!4 &2901373494479226198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4598927883933584432, guid: 307f5875eaa06564fa1977d0a01e3b9a, type: 3}
   m_PrefabInstance: {fileID: 1698159809190889830}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3450435926306119863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4067729479786818001, guid: 307f5875eaa06564fa1977d0a01e3b9a, type: 3}
+  m_PrefabInstance: {fileID: 1698159809190889830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5735442727501223901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450435926306119863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c4c807c768e6948ae41877510f8fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCMovementAnimationControl
